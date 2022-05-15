@@ -35,6 +35,7 @@ class QJSEngine(QtCore.QObject):
     class ObjectOwnership(enum.Enum):
         CppOwnership = ...  # type: QJSEngine.ObjectOwnership
         JavaScriptOwnership = ...  # type: QJSEngine.ObjectOwnership
+
     class Extension(enum.Flag):
         TranslationExtension = ...  # type: QJSEngine.Extension
         ConsoleExtension = ...  # type: QJSEngine.Extension
@@ -207,9 +208,11 @@ class QJSValue(PyQt6.sip.simplewrapper):
         SyntaxError = ...  # type: QJSValue.ErrorType
         TypeError = ...  # type: QJSValue.ErrorType
         URIError = ...  # type: QJSValue.ErrorType
+
     class ObjectConversionBehavior(enum.Enum):
         ConvertJSObjects = ...  # type: QJSValue.ObjectConversionBehavior
         RetainJSObjects = ...  # type: QJSValue.ObjectConversionBehavior
+
     class SpecialValue(enum.Enum):
         NullValue = ...  # type: QJSValue.SpecialValue
         UndefinedValue = ...  # type: QJSValue.SpecialValue
@@ -331,6 +334,7 @@ class QQmlApplicationEngine(QQmlEngine):
     def __init__(self, url: QtCore.QUrl, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, filePath: str, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     objectCreated: typing.ClassVar[QtCore.pyqtSignal]
     def setInitialProperties(self, initialProperties: typing.Dict[str, typing.Any]) -> None: ...
     def setExtraFileSelectors(self, extraFileSelectors: typing.Iterable[str]) -> None: ...
@@ -347,6 +351,7 @@ class QQmlComponent(QtCore.QObject):
         Ready = ...  # type: QQmlComponent.Status
         Loading = ...  # type: QQmlComponent.Status
         Error = ...  # type: QQmlComponent.Status
+
     class CompilationMode(enum.Enum):
         PreferSynchronous = ...  # type: QQmlComponent.CompilationMode
         Asynchronous = ...  # type: QQmlComponent.CompilationMode
@@ -393,10 +398,12 @@ class QQmlContext(QtCore.QObject):
 
         name = ...  # type: str
         value = ...  # type: typing.Any
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QQmlContext.PropertyPair") -> None: ...
+
     @typing.overload
     def __init__(self, engine: QQmlEngine, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
@@ -421,6 +428,7 @@ class QQmlContext(QtCore.QObject):
 class QQmlImageProviderBase(QtCore.QObject):
     class Flag(enum.Flag):
         ForceAsynchronousImageLoading = ...  # type: QQmlImageProviderBase.Flag
+
     class ImageType(enum.Enum):
         Image = ...  # type: QQmlImageProviderBase.ImageType
         Pixmap = ...  # type: QQmlImageProviderBase.ImageType
@@ -456,6 +464,7 @@ class QQmlExpression(QtCore.QObject):
     def __init__(self, a0: QQmlContext, a1: QtCore.QObject, a2: str, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, a0: "QQmlScriptString", context: typing.Optional[QQmlContext] = ..., scope: typing.Optional[QtCore.QObject] = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     valueChanged: typing.ClassVar[QtCore.pyqtSignal]
     def evaluate(self) -> typing.Tuple[typing.Any, bool]: ...
     def error(self) -> QQmlError: ...
@@ -495,6 +504,7 @@ class QQmlIncubator(PyQt6.sip.simplewrapper):
         Ready = ...  # type: QQmlIncubator.Status
         Loading = ...  # type: QQmlIncubator.Status
         Error = ...  # type: QQmlIncubator.Status
+
     class IncubationMode(enum.Enum):
         Asynchronous = ...  # type: QQmlIncubator.IncubationMode
         AsynchronousIfNested = ...  # type: QQmlIncubator.IncubationMode
@@ -569,6 +579,7 @@ class QQmlProperty(PyQt6.sip.simplewrapper):
         Invalid = ...  # type: QQmlProperty.Type
         Property = ...  # type: QQmlProperty.Type
         SignalProperty = ...  # type: QQmlProperty.Type
+
     class PropertyTypeCategory(enum.Enum):
         InvalidCategory = ...  # type: QQmlProperty.PropertyTypeCategory
         List = ...  # type: QQmlProperty.PropertyTypeCategory

@@ -86,6 +86,7 @@ class QGeoAreaMonitorSource(QtCore.QObject):
     class AreaMonitorFeature(enum.Flag):
         PersistentAreaMonitorFeature = ...  # type: QGeoAreaMonitorSource.AreaMonitorFeature
         AnyAreaMonitorFeature = ...  # type: QGeoAreaMonitorSource.AreaMonitorFeature
+
     class Error(enum.Enum):
         AccessError = ...  # type: QGeoAreaMonitorSource.Error
         InsufficientPositionInfo = ...  # type: QGeoAreaMonitorSource.Error
@@ -163,6 +164,7 @@ class QGeoCoordinate(PyQt6.sip.wrapper):
         DegreesMinutesWithHemisphere = ...  # type: QGeoCoordinate.CoordinateFormat
         DegreesMinutesSeconds = ...  # type: QGeoCoordinate.CoordinateFormat
         DegreesMinutesSecondsWithHemisphere = ...  # type: QGeoCoordinate.CoordinateFormat
+
     class CoordinateType(enum.Enum):
         InvalidCoordinate = ...  # type: QGeoCoordinate.CoordinateType
         Coordinate2D = ...  # type: QGeoCoordinate.CoordinateType
@@ -302,6 +304,7 @@ class QGeoPositionInfoSource(QtCore.QObject):
         SatellitePositioningMethods = ...  # type: QGeoPositionInfoSource.PositioningMethod
         NonSatellitePositioningMethods = ...  # type: QGeoPositionInfoSource.PositioningMethod
         AllPositioningMethods = ...  # type: QGeoPositionInfoSource.PositioningMethod
+
     class Error(enum.Enum):
         AccessError = ...  # type: QGeoPositionInfoSource.Error
         ClosedError = ...  # type: QGeoPositionInfoSource.Error
@@ -386,6 +389,7 @@ class QGeoSatelliteInfo(PyQt6.sip.wrapper):
         QZSS = ...  # type: QGeoSatelliteInfo.SatelliteSystem
         Multiple = ...  # type: QGeoSatelliteInfo.SatelliteSystem
         CustomType = ...  # type: QGeoSatelliteInfo.SatelliteSystem
+
     class Attribute(enum.Enum):
         Elevation = ...  # type: QGeoSatelliteInfo.Attribute
         Azimuth = ...  # type: QGeoSatelliteInfo.Attribute
@@ -467,10 +471,12 @@ class QNmeaSatelliteInfoSource(QGeoSatelliteInfoSource):
         NotParsed = ...  # type: QNmeaSatelliteInfoSource.SatelliteInfoParseStatus
         PartiallyParsed = ...  # type: QNmeaSatelliteInfoSource.SatelliteInfoParseStatus
         FullyParsed = ...  # type: QNmeaSatelliteInfoSource.SatelliteInfoParseStatus
+
     class UpdateMode(enum.Enum):
         RealTimeMode = ...  # type: QNmeaSatelliteInfoSource.UpdateMode
         SimulationMode = ...  # type: QNmeaSatelliteInfoSource.UpdateMode
     SimulationUpdateInterval = ...  # type: str
+
     def __init__(self, mode: "QNmeaSatelliteInfoSource.UpdateMode", parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     def parseSatelliteInfoFromNmea(self, data: bytes, size: int, infos: typing.Iterable[QGeoSatelliteInfo]) -> typing.Tuple["QNmeaSatelliteInfoSource.SatelliteInfoParseStatus", QGeoSatelliteInfo.SatelliteSystem]: ...
     def parseSatellitesInUseFromNmea(self, data: bytes, size: int, pnrsInUse: typing.Iterable[int]) -> QGeoSatelliteInfo.SatelliteSystem: ...

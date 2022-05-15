@@ -36,6 +36,7 @@ class QBluetooth(PyQt6.sip.simplewrapper):
         AttAuthorizationRequired = ...  # type: QBluetooth.AttAccessConstraint
         AttAuthenticationRequired = ...  # type: QBluetooth.AttAccessConstraint
         AttEncryptionRequired = ...  # type: QBluetooth.AttAccessConstraint
+
     class Security(enum.Flag):
         NoSecurity = ...  # type: QBluetooth.Security
         Authorization = ...  # type: QBluetooth.Security
@@ -62,6 +63,7 @@ class QBluetoothDeviceDiscoveryAgent(QtCore.QObject):
         NoMethod = ...  # type: QBluetoothDeviceDiscoveryAgent.DiscoveryMethod
         ClassicMethod = ...  # type: QBluetoothDeviceDiscoveryAgent.DiscoveryMethod
         LowEnergyMethod = ...  # type: QBluetoothDeviceDiscoveryAgent.DiscoveryMethod
+
     class Error(enum.Enum):
         NoError = ...  # type: QBluetoothDeviceDiscoveryAgent.Error
         InputOutputError = ...  # type: QBluetoothDeviceDiscoveryAgent.Error
@@ -100,11 +102,13 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         RSSI = ...  # type: QBluetoothDeviceInfo.Field
         ManufacturerData = ...  # type: QBluetoothDeviceInfo.Field
         All = ...  # type: QBluetoothDeviceInfo.Field
+
     class CoreConfiguration(enum.Flag):
         UnknownCoreConfiguration = ...  # type: QBluetoothDeviceInfo.CoreConfiguration
         LowEnergyCoreConfiguration = ...  # type: QBluetoothDeviceInfo.CoreConfiguration
         BaseRateCoreConfiguration = ...  # type: QBluetoothDeviceInfo.CoreConfiguration
         BaseRateAndLowEnergyCoreConfiguration = ...  # type: QBluetoothDeviceInfo.CoreConfiguration
+
     class ServiceClass(enum.Flag):
         NoService = ...  # type: QBluetoothDeviceInfo.ServiceClass
         PositioningService = ...  # type: QBluetoothDeviceInfo.ServiceClass
@@ -116,6 +120,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         TelephonyService = ...  # type: QBluetoothDeviceInfo.ServiceClass
         InformationService = ...  # type: QBluetoothDeviceInfo.ServiceClass
         AllServices = ...  # type: QBluetoothDeviceInfo.ServiceClass
+
     class MinorHealthClass(enum.Enum):
         UncategorizedHealthDevice = ...  # type: QBluetoothDeviceInfo.MinorHealthClass
         HealthBloodPressureMonitor = ...  # type: QBluetoothDeviceInfo.MinorHealthClass
@@ -125,6 +130,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         HealthPulseOximeter = ...  # type: QBluetoothDeviceInfo.MinorHealthClass
         HealthDataDisplay = ...  # type: QBluetoothDeviceInfo.MinorHealthClass
         HealthStepCounter = ...  # type: QBluetoothDeviceInfo.MinorHealthClass
+
     class MinorToyClass(enum.Enum):
         UncategorizedToy = ...  # type: QBluetoothDeviceInfo.MinorToyClass
         ToyRobot = ...  # type: QBluetoothDeviceInfo.MinorToyClass
@@ -132,6 +138,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         ToyDoll = ...  # type: QBluetoothDeviceInfo.MinorToyClass
         ToyController = ...  # type: QBluetoothDeviceInfo.MinorToyClass
         ToyGame = ...  # type: QBluetoothDeviceInfo.MinorToyClass
+
     class MinorWearableClass(enum.Enum):
         UncategorizedWearableDevice = ...  # type: QBluetoothDeviceInfo.MinorWearableClass
         WearableWristWatch = ...  # type: QBluetoothDeviceInfo.MinorWearableClass
@@ -139,12 +146,14 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         WearableJacket = ...  # type: QBluetoothDeviceInfo.MinorWearableClass
         WearableHelmet = ...  # type: QBluetoothDeviceInfo.MinorWearableClass
         WearableGlasses = ...  # type: QBluetoothDeviceInfo.MinorWearableClass
+
     class MinorImagingClass(enum.Enum):
         UncategorizedImagingDevice = ...  # type: QBluetoothDeviceInfo.MinorImagingClass
         ImageDisplay = ...  # type: QBluetoothDeviceInfo.MinorImagingClass
         ImageCamera = ...  # type: QBluetoothDeviceInfo.MinorImagingClass
         ImageScanner = ...  # type: QBluetoothDeviceInfo.MinorImagingClass
         ImagePrinter = ...  # type: QBluetoothDeviceInfo.MinorImagingClass
+
     class MinorPeripheralClass(enum.Enum):
         UncategorizedPeripheral = ...  # type: QBluetoothDeviceInfo.MinorPeripheralClass
         KeyboardPeripheral = ...  # type: QBluetoothDeviceInfo.MinorPeripheralClass
@@ -156,6 +165,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         SensingDevicePeripheral = ...  # type: QBluetoothDeviceInfo.MinorPeripheralClass
         DigitizerTabletPeripheral = ...  # type: QBluetoothDeviceInfo.MinorPeripheralClass
         CardReaderPeripheral = ...  # type: QBluetoothDeviceInfo.MinorPeripheralClass
+
     class MinorAudioVideoClass(enum.Enum):
         UncategorizedAudioVideoDevice = ...  # type: QBluetoothDeviceInfo.MinorAudioVideoClass
         WearableHeadsetDevice = ...  # type: QBluetoothDeviceInfo.MinorAudioVideoClass
@@ -174,6 +184,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         VideoDisplayAndLoudspeaker = ...  # type: QBluetoothDeviceInfo.MinorAudioVideoClass
         VideoConferencing = ...  # type: QBluetoothDeviceInfo.MinorAudioVideoClass
         GamingDevice = ...  # type: QBluetoothDeviceInfo.MinorAudioVideoClass
+
     class MinorNetworkClass(enum.Enum):
         NetworkFullService = ...  # type: QBluetoothDeviceInfo.MinorNetworkClass
         NetworkLoadFactorOne = ...  # type: QBluetoothDeviceInfo.MinorNetworkClass
@@ -183,6 +194,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         NetworkLoadFactorFive = ...  # type: QBluetoothDeviceInfo.MinorNetworkClass
         NetworkLoadFactorSix = ...  # type: QBluetoothDeviceInfo.MinorNetworkClass
         NetworkNoService = ...  # type: QBluetoothDeviceInfo.MinorNetworkClass
+
     class MinorPhoneClass(enum.Enum):
         UncategorizedPhone = ...  # type: QBluetoothDeviceInfo.MinorPhoneClass
         CellularPhone = ...  # type: QBluetoothDeviceInfo.MinorPhoneClass
@@ -190,6 +202,7 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         SmartPhone = ...  # type: QBluetoothDeviceInfo.MinorPhoneClass
         WiredModemOrVoiceGatewayPhone = ...  # type: QBluetoothDeviceInfo.MinorPhoneClass
         CommonIsdnAccessPhone = ...  # type: QBluetoothDeviceInfo.MinorPhoneClass
+
     class MinorComputerClass(enum.Enum):
         UncategorizedComputer = ...  # type: QBluetoothDeviceInfo.MinorComputerClass
         DesktopComputer = ...  # type: QBluetoothDeviceInfo.MinorComputerClass
@@ -198,8 +211,10 @@ class QBluetoothDeviceInfo(PyQt6.sip.simplewrapper):
         HandheldClamShellComputer = ...  # type: QBluetoothDeviceInfo.MinorComputerClass
         HandheldComputer = ...  # type: QBluetoothDeviceInfo.MinorComputerClass
         WearableComputer = ...  # type: QBluetoothDeviceInfo.MinorComputerClass
+
     class MinorMiscellaneousClass(enum.Enum):
         UncategorizedMiscellaneous = ...  # type: QBluetoothDeviceInfo.MinorMiscellaneousClass
+
     class MajorDeviceClass(enum.Enum):
         MiscellaneousDevice = ...  # type: QBluetoothDeviceInfo.MajorDeviceClass
         ComputerDevice = ...  # type: QBluetoothDeviceInfo.MajorDeviceClass
@@ -259,11 +274,13 @@ class QBluetoothLocalDevice(QtCore.QObject):
         NoError = ...  # type: QBluetoothLocalDevice.Error
         PairingError = ...  # type: QBluetoothLocalDevice.Error
         UnknownError = ...  # type: QBluetoothLocalDevice.Error
+
     class HostMode(enum.Enum):
         HostPoweredOff = ...  # type: QBluetoothLocalDevice.HostMode
         HostConnectable = ...  # type: QBluetoothLocalDevice.HostMode
         HostDiscoverable = ...  # type: QBluetoothLocalDevice.HostMode
         HostDiscoverableLimitedInquiry = ...  # type: QBluetoothLocalDevice.HostMode
+
     class Pairing(enum.Enum):
         Unpaired = ...  # type: QBluetoothLocalDevice.Pairing
         Paired = ...  # type: QBluetoothLocalDevice.Pairing
@@ -272,6 +289,7 @@ class QBluetoothLocalDevice(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, address: QBluetoothAddress, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     deviceDisconnected: typing.ClassVar[QtCore.pyqtSignal]
     deviceConnected: typing.ClassVar[QtCore.pyqtSignal]
     errorOccurred: typing.ClassVar[QtCore.pyqtSignal]
@@ -298,6 +316,7 @@ class QBluetoothServer(QtCore.QObject):
         ServiceAlreadyRegisteredError = ...  # type: QBluetoothServer.Error
         UnsupportedProtocolError = ...  # type: QBluetoothServer.Error
     def __init__(self, serverType: "QBluetoothServiceInfo.Protocol", parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     errorOccurred: typing.ClassVar[QtCore.pyqtSignal]
     newConnection: typing.ClassVar[QtCore.pyqtSignal]
     def error(self) -> "QBluetoothServer.Error": ...
@@ -321,6 +340,7 @@ class QBluetoothServiceDiscoveryAgent(QtCore.QObject):
     class DiscoveryMode(enum.Enum):
         MinimalDiscovery = ...  # type: QBluetoothServiceDiscoveryAgent.DiscoveryMode
         FullDiscovery = ...  # type: QBluetoothServiceDiscoveryAgent.DiscoveryMode
+
     class Error(enum.Enum):
         NoError = ...  # type: QBluetoothServiceDiscoveryAgent.Error
         InputOutputError = ...  # type: QBluetoothServiceDiscoveryAgent.Error
@@ -331,6 +351,7 @@ class QBluetoothServiceDiscoveryAgent(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, deviceAdapter: QBluetoothAddress, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     errorOccurred: typing.ClassVar[QtCore.pyqtSignal]
     canceled: typing.ClassVar[QtCore.pyqtSignal]
     finished: typing.ClassVar[QtCore.pyqtSignal]
@@ -355,6 +376,7 @@ class QBluetoothServiceInfo(PyQt6.sip.simplewrapper):
         UnknownProtocol = ...  # type: QBluetoothServiceInfo.Protocol
         L2capProtocol = ...  # type: QBluetoothServiceInfo.Protocol
         RfcommProtocol = ...  # type: QBluetoothServiceInfo.Protocol
+
     class AttributeId(enum.Enum):
         ServiceRecordHandle = ...  # type: QBluetoothServiceInfo.AttributeId
         ServiceClassIds = ...  # type: QBluetoothServiceInfo.AttributeId
@@ -421,6 +443,7 @@ class QBluetoothSocket(QtCore.QIODevice):
         NetworkError = ...  # type: QBluetoothSocket.SocketError
         UnsupportedProtocolError = ...  # type: QBluetoothSocket.SocketError
         OperationError = ...  # type: QBluetoothSocket.SocketError
+
     class SocketState(enum.Enum):
         UnconnectedState = ...  # type: QBluetoothSocket.SocketState
         ServiceLookupState = ...  # type: QBluetoothSocket.SocketState
@@ -487,6 +510,7 @@ class QBluetoothUuid(QtCore.QUuid):
         EnvironmentalSensingConfiguration = ...  # type: QBluetoothUuid.DescriptorType
         EnvironmentalSensingMeasurement = ...  # type: QBluetoothUuid.DescriptorType
         EnvironmentalSensingTriggerSetting = ...  # type: QBluetoothUuid.DescriptorType
+
     class CharacteristicType(enum.Enum):
         DeviceName = ...  # type: QBluetoothUuid.CharacteristicType
         Appearance = ...  # type: QBluetoothUuid.CharacteristicType
@@ -625,6 +649,7 @@ class QBluetoothUuid(QtCore.QUuid):
         MagneticFluxDensity3D = ...  # type: QBluetoothUuid.CharacteristicType
         Language = ...  # type: QBluetoothUuid.CharacteristicType
         BarometricPressureTrend = ...  # type: QBluetoothUuid.CharacteristicType
+
     class ServiceClassUuid(enum.Enum):
         ServiceDiscoveryServer = ...  # type: QBluetoothUuid.ServiceClassUuid
         BrowseGroupDescriptor = ...  # type: QBluetoothUuid.ServiceClassUuid
@@ -717,6 +742,7 @@ class QBluetoothUuid(QtCore.QUuid):
         WeightScale = ...  # type: QBluetoothUuid.ServiceClassUuid
         BondManagement = ...  # type: QBluetoothUuid.ServiceClassUuid
         ContinuousGlucoseMonitoring = ...  # type: QBluetoothUuid.ServiceClassUuid
+
     class ProtocolUuid(enum.Enum):
         Sdp = ...  # type: QBluetoothUuid.ProtocolUuid
         Udp = ...  # type: QBluetoothUuid.ProtocolUuid
@@ -808,20 +834,24 @@ class QLowEnergyAdvertisingParameters(PyQt6.sip.simplewrapper):
         UseWhiteListForScanning = ...  # type: QLowEnergyAdvertisingParameters.FilterPolicy
         UseWhiteListForConnecting = ...  # type: QLowEnergyAdvertisingParameters.FilterPolicy
         UseWhiteListForScanningAndConnecting = ...  # type: QLowEnergyAdvertisingParameters.FilterPolicy
+
     class Mode(enum.Enum):
         AdvInd = ...  # type: QLowEnergyAdvertisingParameters.Mode
         AdvScanInd = ...  # type: QLowEnergyAdvertisingParameters.Mode
         AdvNonConnInd = ...  # type: QLowEnergyAdvertisingParameters.Mode
+
     class AddressInfo(PyQt6.sip.simplewrapper):
 
         address = ...  # type: QBluetoothAddress
         type = ...  # type: 'QLowEnergyController.RemoteAddressType'
+
         @typing.overload
         def __init__(self, addr: QBluetoothAddress, t: "QLowEnergyController.RemoteAddressType") -> None: ...
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QLowEnergyAdvertisingParameters.AddressInfo") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -850,6 +880,7 @@ class QLowEnergyCharacteristic(PyQt6.sip.simplewrapper):
     CCCDDisable = ...  # type: QtCore.QByteArray
     CCCDEnableIndication = ...  # type: QtCore.QByteArray
     CCCDEnableNotification = ...  # type: QtCore.QByteArray
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -905,9 +936,11 @@ class QLowEnergyController(QtCore.QObject):
     class Role(enum.Enum):
         CentralRole = ...  # type: QLowEnergyController.Role
         PeripheralRole = ...  # type: QLowEnergyController.Role
+
     class RemoteAddressType(enum.Enum):
         PublicAddress = ...  # type: QLowEnergyController.RemoteAddressType
         RandomAddress = ...  # type: QLowEnergyController.RemoteAddressType
+
     class ControllerState(enum.Enum):
         UnconnectedState = ...  # type: QLowEnergyController.ControllerState
         ConnectingState = ...  # type: QLowEnergyController.ControllerState
@@ -916,6 +949,7 @@ class QLowEnergyController(QtCore.QObject):
         DiscoveredState = ...  # type: QLowEnergyController.ControllerState
         ClosingState = ...  # type: QLowEnergyController.ControllerState
         AdvertisingState = ...  # type: QLowEnergyController.ControllerState
+
     class Error(enum.Enum):
         NoError = ...  # type: QLowEnergyController.Error
         UnknownError = ...  # type: QLowEnergyController.Error
@@ -1003,6 +1037,7 @@ class QLowEnergyService(QtCore.QObject):
         WriteWithResponse = ...  # type: QLowEnergyService.WriteMode
         WriteWithoutResponse = ...  # type: QLowEnergyService.WriteMode
         WriteSigned = ...  # type: QLowEnergyService.WriteMode
+
     class ServiceState(enum.Enum):
         InvalidService = ...  # type: QLowEnergyService.ServiceState
         DiscoveryRequired = ...  # type: QLowEnergyService.ServiceState
@@ -1012,6 +1047,7 @@ class QLowEnergyService(QtCore.QObject):
         RemoteServiceDiscovering = ...  # type: QLowEnergyService.ServiceState
         RemoteServiceDiscovered = ...  # type: QLowEnergyService.ServiceState
         DiscoveringService = ...  # type: QLowEnergyService.ServiceState
+
     class ServiceError(enum.Enum):
         NoError = ...  # type: QLowEnergyService.ServiceError
         OperationError = ...  # type: QLowEnergyService.ServiceError
@@ -1020,9 +1056,11 @@ class QLowEnergyService(QtCore.QObject):
         CharacteristicReadError = ...  # type: QLowEnergyService.ServiceError
         DescriptorReadError = ...  # type: QLowEnergyService.ServiceError
         UnknownError = ...  # type: QLowEnergyService.ServiceError
+
     class ServiceType(enum.Flag):
         PrimaryService = ...  # type: QLowEnergyService.ServiceType
         IncludedService = ...  # type: QLowEnergyService.ServiceType
+
     class DiscoveryMode(enum.Enum):
         FullDiscovery = ...  # type: QLowEnergyService.DiscoveryMode
         SkipValueDiscovery = ...  # type: QLowEnergyService.DiscoveryMode

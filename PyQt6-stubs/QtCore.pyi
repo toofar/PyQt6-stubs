@@ -30,6 +30,7 @@ import PyQt6.sip
 class pyqtSignal:
 
     signatures = ...  # type: typing.Tuple[str, ...]
+
     def __init__(self, *types: typing.Any, name: str = ...) -> None: ...
     @typing.overload
     def __get__(self, instance: None, owner: typing.Type["QObject"]) -> "pyqtSignal": ...
@@ -39,6 +40,7 @@ class pyqtSignal:
 class pyqtBoundSignal:
 
     signal = ...  # type: str
+
     def __getitem__(self, key: object) -> "pyqtBoundSignal": ...
     def connect(self, slot: "PYQT_SLOT") -> "QMetaObject.Connection": ...
     @typing.overload
@@ -98,9 +100,11 @@ class Qt(PyQt6.sip.simplewrapper):
         Floor = ...  # type: Qt.HighDpiScaleFactorRoundingPolicy
         RoundPreferFloor = ...  # type: Qt.HighDpiScaleFactorRoundingPolicy
         PassThrough = ...  # type: Qt.HighDpiScaleFactorRoundingPolicy
+
     class ChecksumType(enum.Enum):
         ChecksumIso3309 = ...  # type: Qt.ChecksumType
         ChecksumItuV41 = ...  # type: Qt.ChecksumType
+
     class EnterKeyType(enum.Enum):
         EnterKeyDefault = ...  # type: Qt.EnterKeyType
         EnterKeyReturn = ...  # type: Qt.EnterKeyType
@@ -110,27 +114,33 @@ class Qt(PyQt6.sip.simplewrapper):
         EnterKeySearch = ...  # type: Qt.EnterKeyType
         EnterKeyNext = ...  # type: Qt.EnterKeyType
         EnterKeyPrevious = ...  # type: Qt.EnterKeyType
+
     class ItemSelectionOperation(enum.Enum):
         ReplaceSelection = ...  # type: Qt.ItemSelectionOperation
         AddToSelection = ...  # type: Qt.ItemSelectionOperation
+
     class TabFocusBehavior(enum.Enum):
         NoTabFocus = ...  # type: Qt.TabFocusBehavior
         TabFocusTextControls = ...  # type: Qt.TabFocusBehavior
         TabFocusListControls = ...  # type: Qt.TabFocusBehavior
         TabFocusAllControls = ...  # type: Qt.TabFocusBehavior
+
     class MouseEventFlag(enum.Flag):
         MouseEventCreatedDoubleClick = ...  # type: Qt.MouseEventFlag
+
     class MouseEventSource(enum.Enum):
         MouseEventNotSynthesized = ...  # type: Qt.MouseEventSource
         MouseEventSynthesizedBySystem = ...  # type: Qt.MouseEventSource
         MouseEventSynthesizedByQt = ...  # type: Qt.MouseEventSource
         MouseEventSynthesizedByApplication = ...  # type: Qt.MouseEventSource
+
     class ScrollPhase(enum.Enum):
         ScrollBegin = ...  # type: Qt.ScrollPhase
         ScrollUpdate = ...  # type: Qt.ScrollPhase
         ScrollEnd = ...  # type: Qt.ScrollPhase
         NoScrollPhase = ...  # type: Qt.ScrollPhase
         ScrollMomentum = ...  # type: Qt.ScrollPhase
+
     class NativeGestureType(enum.Enum):
         BeginNativeGesture = ...  # type: Qt.NativeGestureType
         EndNativeGesture = ...  # type: Qt.NativeGestureType
@@ -139,46 +149,56 @@ class Qt(PyQt6.sip.simplewrapper):
         SmartZoomNativeGesture = ...  # type: Qt.NativeGestureType
         RotateNativeGesture = ...  # type: Qt.NativeGestureType
         SwipeNativeGesture = ...  # type: Qt.NativeGestureType
+
     class Edge(enum.Flag):
         TopEdge = ...  # type: Qt.Edge
         LeftEdge = ...  # type: Qt.Edge
         RightEdge = ...  # type: Qt.Edge
         BottomEdge = ...  # type: Qt.Edge
+
     class ApplicationState(enum.Flag):
         ApplicationSuspended = ...  # type: Qt.ApplicationState
         ApplicationHidden = ...  # type: Qt.ApplicationState
         ApplicationInactive = ...  # type: Qt.ApplicationState
         ApplicationActive = ...  # type: Qt.ApplicationState
+
     class HitTestAccuracy(enum.Enum):
         ExactHit = ...  # type: Qt.HitTestAccuracy
         FuzzyHit = ...  # type: Qt.HitTestAccuracy
+
     class WhiteSpaceMode(enum.Enum):
         WhiteSpaceNormal = ...  # type: Qt.WhiteSpaceMode
         WhiteSpacePre = ...  # type: Qt.WhiteSpaceMode
         WhiteSpaceNoWrap = ...  # type: Qt.WhiteSpaceMode
         WhiteSpaceModeUndefined = ...  # type: Qt.WhiteSpaceMode
+
     class FindChildOption(enum.Flag):
         FindDirectChildrenOnly = ...  # type: Qt.FindChildOption
         FindChildrenRecursively = ...  # type: Qt.FindChildOption
+
     class ScreenOrientation(enum.Flag):
         PrimaryOrientation = ...  # type: Qt.ScreenOrientation
         PortraitOrientation = ...  # type: Qt.ScreenOrientation
         LandscapeOrientation = ...  # type: Qt.ScreenOrientation
         InvertedPortraitOrientation = ...  # type: Qt.ScreenOrientation
         InvertedLandscapeOrientation = ...  # type: Qt.ScreenOrientation
+
     class CursorMoveStyle(enum.Enum):
         LogicalMoveStyle = ...  # type: Qt.CursorMoveStyle
         VisualMoveStyle = ...  # type: Qt.CursorMoveStyle
+
     class NavigationMode(enum.Enum):
         NavigationModeNone = ...  # type: Qt.NavigationMode
         NavigationModeKeypadTabOrder = ...  # type: Qt.NavigationMode
         NavigationModeKeypadDirectional = ...  # type: Qt.NavigationMode
         NavigationModeCursorAuto = ...  # type: Qt.NavigationMode
         NavigationModeCursorForceVisible = ...  # type: Qt.NavigationMode
+
     class GestureFlag(enum.Flag):
         DontStartGestureOnChildren = ...  # type: Qt.GestureFlag
         ReceivePartialGestures = ...  # type: Qt.GestureFlag
         IgnoredGesturesPropagateToParent = ...  # type: Qt.GestureFlag
+
     class GestureType(enum.IntEnum):
         TapGesture = ...  # type: Qt.GestureType
         TapAndHoldGesture = ...  # type: Qt.GestureType
@@ -186,20 +206,24 @@ class Qt(PyQt6.sip.simplewrapper):
         PinchGesture = ...  # type: Qt.GestureType
         SwipeGesture = ...  # type: Qt.GestureType
         CustomGesture = ...  # type: Qt.GestureType
+
     class GestureState(enum.Enum):
         GestureStarted = ...  # type: Qt.GestureState
         GestureUpdated = ...  # type: Qt.GestureState
         GestureFinished = ...  # type: Qt.GestureState
         GestureCanceled = ...  # type: Qt.GestureState
+
     class TouchPointState(enum.Flag):
         TouchPointUnknownState = ...  # type: Qt.TouchPointState
         TouchPointPressed = ...  # type: Qt.TouchPointState
         TouchPointMoved = ...  # type: Qt.TouchPointState
         TouchPointStationary = ...  # type: Qt.TouchPointState
         TouchPointReleased = ...  # type: Qt.TouchPointState
+
     class CoordinateSystem(enum.Enum):
         DeviceCoordinates = ...  # type: Qt.CoordinateSystem
         LogicalCoordinates = ...  # type: Qt.CoordinateSystem
+
     class AnchorPoint(enum.Enum):
         AnchorLeft = ...  # type: Qt.AnchorPoint
         AnchorHorizontalCenter = ...  # type: Qt.AnchorPoint
@@ -207,6 +231,7 @@ class Qt(PyQt6.sip.simplewrapper):
         AnchorTop = ...  # type: Qt.AnchorPoint
         AnchorVerticalCenter = ...  # type: Qt.AnchorPoint
         AnchorBottom = ...  # type: Qt.AnchorPoint
+
     class InputMethodHint(enum.Flag):
         ImhNone = ...  # type: Qt.InputMethodHint
         ImhHiddenText = ...  # type: Qt.InputMethodHint
@@ -231,10 +256,12 @@ class Qt(PyQt6.sip.simplewrapper):
         ImhMultiLine = ...  # type: Qt.InputMethodHint
         ImhNoEditMenu = ...  # type: Qt.InputMethodHint
         ImhNoTextHandles = ...  # type: Qt.InputMethodHint
+
     class TileRule(enum.Enum):
         StretchTile = ...  # type: Qt.TileRule
         RepeatTile = ...  # type: Qt.TileRule
         RoundTile = ...  # type: Qt.TileRule
+
     class WindowFrameSection(enum.Enum):
         NoSection = ...  # type: Qt.WindowFrameSection
         LeftSection = ...  # type: Qt.WindowFrameSection
@@ -246,25 +273,31 @@ class Qt(PyQt6.sip.simplewrapper):
         BottomSection = ...  # type: Qt.WindowFrameSection
         BottomLeftSection = ...  # type: Qt.WindowFrameSection
         TitleBarArea = ...  # type: Qt.WindowFrameSection
+
     class SizeHint(enum.Enum):
         MinimumSize = ...  # type: Qt.SizeHint
         PreferredSize = ...  # type: Qt.SizeHint
         MaximumSize = ...  # type: Qt.SizeHint
         MinimumDescent = ...  # type: Qt.SizeHint
+
     class SizeMode(enum.Enum):
         AbsoluteSize = ...  # type: Qt.SizeMode
         RelativeSize = ...  # type: Qt.SizeMode
+
     class EventPriority(enum.Enum):
         HighEventPriority = ...  # type: Qt.EventPriority
         NormalEventPriority = ...  # type: Qt.EventPriority
         LowEventPriority = ...  # type: Qt.EventPriority
+
     class Axis(enum.Enum):
         XAxis = ...  # type: Qt.Axis
         YAxis = ...  # type: Qt.Axis
         ZAxis = ...  # type: Qt.Axis
+
     class MaskMode(enum.Enum):
         MaskInColor = ...  # type: Qt.MaskMode
         MaskOutColor = ...  # type: Qt.MaskMode
+
     class TextInteractionFlag(enum.Flag):
         NoTextInteraction = ...  # type: Qt.TextInteractionFlag
         TextSelectableByMouse = ...  # type: Qt.TextInteractionFlag
@@ -274,11 +307,13 @@ class Qt(PyQt6.sip.simplewrapper):
         TextEditable = ...  # type: Qt.TextInteractionFlag
         TextEditorInteraction = ...  # type: Qt.TextInteractionFlag
         TextBrowserInteraction = ...  # type: Qt.TextInteractionFlag
+
     class ItemSelectionMode(enum.Enum):
         ContainsItemShape = ...  # type: Qt.ItemSelectionMode
         IntersectsItemShape = ...  # type: Qt.ItemSelectionMode
         ContainsItemBoundingRect = ...  # type: Qt.ItemSelectionMode
         IntersectsItemBoundingRect = ...  # type: Qt.ItemSelectionMode
+
     class ApplicationAttribute(enum.Enum):
         AA_DontShowIconsInMenus = ...  # type: Qt.ApplicationAttribute
         AA_NativeWindows = ...  # type: Qt.ApplicationAttribute
@@ -305,10 +340,12 @@ class Qt(PyQt6.sip.simplewrapper):
         AA_CompressTabletEvents = ...  # type: Qt.ApplicationAttribute
         AA_DisableSessionManager = ...  # type: Qt.ApplicationAttribute
         AA_DisableNativeVirtualKeyboard = ...  # type: Qt.ApplicationAttribute
+
     class WindowModality(enum.Enum):
         NonModal = ...  # type: Qt.WindowModality
         WindowModal = ...  # type: Qt.WindowModality
         ApplicationModal = ...  # type: Qt.WindowModality
+
     class MatchFlag(enum.Flag):
         MatchExactly = ...  # type: Qt.MatchFlag
         MatchFixedString = ...  # type: Qt.MatchFlag
@@ -320,6 +357,7 @@ class Qt(PyQt6.sip.simplewrapper):
         MatchWrap = ...  # type: Qt.MatchFlag
         MatchRecursive = ...  # type: Qt.MatchFlag
         MatchRegularExpression = ...  # type: Qt.MatchFlag
+
     class ItemFlag(enum.Flag):
         NoItemFlags = ...  # type: Qt.ItemFlag
         ItemIsSelectable = ...  # type: Qt.ItemFlag
@@ -331,6 +369,7 @@ class Qt(PyQt6.sip.simplewrapper):
         ItemNeverHasChildren = ...  # type: Qt.ItemFlag
         ItemIsUserTristate = ...  # type: Qt.ItemFlag
         ItemIsAutoTristate = ...  # type: Qt.ItemFlag
+
     class ItemDataRole(enum.IntEnum):
         DisplayRole = ...  # type: Qt.ItemDataRole
         DecorationRole = ...  # type: Qt.ItemDataRole
@@ -348,10 +387,12 @@ class Qt(PyQt6.sip.simplewrapper):
         SizeHintRole = ...  # type: Qt.ItemDataRole
         InitialSortOrderRole = ...  # type: Qt.ItemDataRole
         UserRole = ...  # type: Qt.ItemDataRole
+
     class CheckState(enum.Enum):
         Unchecked = ...  # type: Qt.CheckState
         PartiallyChecked = ...  # type: Qt.CheckState
         Checked = ...  # type: Qt.CheckState
+
     class DropAction(enum.Flag):
         CopyAction = ...  # type: Qt.DropAction
         MoveAction = ...  # type: Qt.DropAction
@@ -359,16 +400,19 @@ class Qt(PyQt6.sip.simplewrapper):
         ActionMask = ...  # type: Qt.DropAction
         TargetMoveAction = ...  # type: Qt.DropAction
         IgnoreAction = ...  # type: Qt.DropAction
+
     class LayoutDirection(enum.Enum):
         LeftToRight = ...  # type: Qt.LayoutDirection
         RightToLeft = ...  # type: Qt.LayoutDirection
         LayoutDirectionAuto = ...  # type: Qt.LayoutDirection
+
     class ToolButtonStyle(enum.Enum):
         ToolButtonIconOnly = ...  # type: Qt.ToolButtonStyle
         ToolButtonTextOnly = ...  # type: Qt.ToolButtonStyle
         ToolButtonTextBesideIcon = ...  # type: Qt.ToolButtonStyle
         ToolButtonTextUnderIcon = ...  # type: Qt.ToolButtonStyle
         ToolButtonFollowStyle = ...  # type: Qt.ToolButtonStyle
+
     class InputMethodQuery(enum.Flag):
         ImFont = ...  # type: Qt.InputMethodQuery
         ImCursorPosition = ...  # type: Qt.InputMethodQuery
@@ -390,12 +434,14 @@ class Qt(PyQt6.sip.simplewrapper):
         ImAnchorRectangle = ...  # type: Qt.InputMethodQuery
         ImInputItemClipRectangle = ...  # type: Qt.InputMethodQuery
         ImReadOnly = ...  # type: Qt.InputMethodQuery
+
     class ContextMenuPolicy(enum.Enum):
         NoContextMenu = ...  # type: Qt.ContextMenuPolicy
         PreventContextMenu = ...  # type: Qt.ContextMenuPolicy
         DefaultContextMenu = ...  # type: Qt.ContextMenuPolicy
         ActionsContextMenu = ...  # type: Qt.ContextMenuPolicy
         CustomContextMenu = ...  # type: Qt.ContextMenuPolicy
+
     class FocusReason(enum.Enum):
         MouseFocusReason = ...  # type: Qt.FocusReason
         TabFocusReason = ...  # type: Qt.FocusReason
@@ -406,21 +452,26 @@ class Qt(PyQt6.sip.simplewrapper):
         MenuBarFocusReason = ...  # type: Qt.FocusReason
         OtherFocusReason = ...  # type: Qt.FocusReason
         NoFocusReason = ...  # type: Qt.FocusReason
+
     class TransformationMode(enum.Enum):
         FastTransformation = ...  # type: Qt.TransformationMode
         SmoothTransformation = ...  # type: Qt.TransformationMode
+
     class ClipOperation(enum.Enum):
         NoClip = ...  # type: Qt.ClipOperation
         ReplaceClip = ...  # type: Qt.ClipOperation
         IntersectClip = ...  # type: Qt.ClipOperation
+
     class FillRule(enum.Enum):
         OddEvenFill = ...  # type: Qt.FillRule
         WindingFill = ...  # type: Qt.FillRule
+
     class ShortcutContext(enum.Enum):
         WidgetShortcut = ...  # type: Qt.ShortcutContext
         WindowShortcut = ...  # type: Qt.ShortcutContext
         ApplicationShortcut = ...  # type: Qt.ShortcutContext
         WidgetWithChildrenShortcut = ...  # type: Qt.ShortcutContext
+
     class ConnectionType(enum.Enum):
         AutoConnection = ...  # type: Qt.ConnectionType
         DirectConnection = ...  # type: Qt.ConnectionType
@@ -428,18 +479,22 @@ class Qt(PyQt6.sip.simplewrapper):
         BlockingQueuedConnection = ...  # type: Qt.ConnectionType
         UniqueConnection = ...  # type: Qt.ConnectionType
         SingleShotConnection = ...  # type: Qt.ConnectionType
+
     class Corner(enum.Enum):
         TopLeftCorner = ...  # type: Qt.Corner
         TopRightCorner = ...  # type: Qt.Corner
         BottomLeftCorner = ...  # type: Qt.Corner
         BottomRightCorner = ...  # type: Qt.Corner
+
     class CaseSensitivity(enum.Enum):
         CaseInsensitive = ...  # type: Qt.CaseSensitivity
         CaseSensitive = ...  # type: Qt.CaseSensitivity
+
     class ScrollBarPolicy(enum.Enum):
         ScrollBarAsNeeded = ...  # type: Qt.ScrollBarPolicy
         ScrollBarAlwaysOff = ...  # type: Qt.ScrollBarPolicy
         ScrollBarAlwaysOn = ...  # type: Qt.ScrollBarPolicy
+
     class DayOfWeek(enum.Enum):
         Monday = ...  # type: Qt.DayOfWeek
         Tuesday = ...  # type: Qt.DayOfWeek
@@ -448,16 +503,19 @@ class Qt(PyQt6.sip.simplewrapper):
         Friday = ...  # type: Qt.DayOfWeek
         Saturday = ...  # type: Qt.DayOfWeek
         Sunday = ...  # type: Qt.DayOfWeek
+
     class TimeSpec(enum.Enum):
         LocalTime = ...  # type: Qt.TimeSpec
         UTC = ...  # type: Qt.TimeSpec
         OffsetFromUTC = ...  # type: Qt.TimeSpec
         TimeZone = ...  # type: Qt.TimeSpec
+
     class DateFormat(enum.Enum):
         TextDate = ...  # type: Qt.DateFormat
         ISODate = ...  # type: Qt.DateFormat
         ISODateWithMs = ...  # type: Qt.DateFormat
         RFC2822Date = ...  # type: Qt.DateFormat
+
     class ToolBarArea(enum.Flag):
         LeftToolBarArea = ...  # type: Qt.ToolBarArea
         RightToolBarArea = ...  # type: Qt.ToolBarArea
@@ -465,10 +523,12 @@ class Qt(PyQt6.sip.simplewrapper):
         BottomToolBarArea = ...  # type: Qt.ToolBarArea
         AllToolBarAreas = ...  # type: Qt.ToolBarArea
         NoToolBarArea = ...  # type: Qt.ToolBarArea
+
     class TimerType(enum.Enum):
         PreciseTimer = ...  # type: Qt.TimerType
         CoarseTimer = ...  # type: Qt.TimerType
         VeryCoarseTimer = ...  # type: Qt.TimerType
+
     class DockWidgetArea(enum.Flag):
         LeftDockWidgetArea = ...  # type: Qt.DockWidgetArea
         RightDockWidgetArea = ...  # type: Qt.DockWidgetArea
@@ -476,15 +536,18 @@ class Qt(PyQt6.sip.simplewrapper):
         BottomDockWidgetArea = ...  # type: Qt.DockWidgetArea
         AllDockWidgetAreas = ...  # type: Qt.DockWidgetArea
         NoDockWidgetArea = ...  # type: Qt.DockWidgetArea
+
     class AspectRatioMode(enum.Enum):
         IgnoreAspectRatio = ...  # type: Qt.AspectRatioMode
         KeepAspectRatio = ...  # type: Qt.AspectRatioMode
         KeepAspectRatioByExpanding = ...  # type: Qt.AspectRatioMode
+
     class TextFormat(enum.Enum):
         PlainText = ...  # type: Qt.TextFormat
         RichText = ...  # type: Qt.TextFormat
         AutoText = ...  # type: Qt.TextFormat
         MarkdownText = ...  # type: Qt.TextFormat
+
     class CursorShape(enum.Enum):
         ArrowCursor = ...  # type: Qt.CursorShape
         UpArrowCursor = ...  # type: Qt.CursorShape
@@ -511,6 +574,7 @@ class Qt(PyQt6.sip.simplewrapper):
         DragCopyCursor = ...  # type: Qt.CursorShape
         DragMoveCursor = ...  # type: Qt.CursorShape
         DragLinkCursor = ...  # type: Qt.CursorShape
+
     class UIEffect(enum.Enum):
         UI_General = ...  # type: Qt.UIEffect
         UI_AnimateMenu = ...  # type: Qt.UIEffect
@@ -519,6 +583,7 @@ class Qt(PyQt6.sip.simplewrapper):
         UI_AnimateTooltip = ...  # type: Qt.UIEffect
         UI_FadeTooltip = ...  # type: Qt.UIEffect
         UI_AnimateToolBox = ...  # type: Qt.UIEffect
+
     class BrushStyle(enum.Enum):
         NoBrush = ...  # type: Qt.BrushStyle
         SolidPattern = ...  # type: Qt.BrushStyle
@@ -539,16 +604,19 @@ class Qt(PyQt6.sip.simplewrapper):
         RadialGradientPattern = ...  # type: Qt.BrushStyle
         ConicalGradientPattern = ...  # type: Qt.BrushStyle
         TexturePattern = ...  # type: Qt.BrushStyle
+
     class PenJoinStyle(enum.Enum):
         MiterJoin = ...  # type: Qt.PenJoinStyle
         BevelJoin = ...  # type: Qt.PenJoinStyle
         RoundJoin = ...  # type: Qt.PenJoinStyle
         MPenJoinStyle = ...  # type: Qt.PenJoinStyle
         SvgMiterJoin = ...  # type: Qt.PenJoinStyle
+
     class PenCapStyle(enum.Enum):
         FlatCap = ...  # type: Qt.PenCapStyle
         SquareCap = ...  # type: Qt.PenCapStyle
         RoundCap = ...  # type: Qt.PenCapStyle
+
     class PenStyle(enum.Enum):
         NoPen = ...  # type: Qt.PenStyle
         SolidLine = ...  # type: Qt.PenStyle
@@ -557,12 +625,14 @@ class Qt(PyQt6.sip.simplewrapper):
         DashDotLine = ...  # type: Qt.PenStyle
         DashDotDotLine = ...  # type: Qt.PenStyle
         CustomDashLine = ...  # type: Qt.PenStyle
+
     class ArrowType(enum.Enum):
         NoArrow = ...  # type: Qt.ArrowType
         UpArrow = ...  # type: Qt.ArrowType
         DownArrow = ...  # type: Qt.ArrowType
         LeftArrow = ...  # type: Qt.ArrowType
         RightArrow = ...  # type: Qt.ArrowType
+
     class Key(enum.IntEnum):
         Key_Escape = ...  # type: Qt.Key
         Key_Tab = ...  # type: Qt.Key
@@ -1033,9 +1103,11 @@ class Qt(PyQt6.sip.simplewrapper):
         Key_Dead_Aboveverticalline = ...  # type: Qt.Key
         Key_Dead_Belowverticalline = ...  # type: Qt.Key
         Key_Dead_Longsolidusoverlay = ...  # type: Qt.Key
+
     class BGMode(enum.Enum):
         TransparentMode = ...  # type: Qt.BGMode
         OpaqueMode = ...  # type: Qt.BGMode
+
     class ImageConversionFlag(enum.Flag):
         AutoColor = ...  # type: Qt.ImageConversionFlag
         ColorOnly = ...  # type: Qt.ImageConversionFlag
@@ -1051,6 +1123,7 @@ class Qt(PyQt6.sip.simplewrapper):
         AvoidDither = ...  # type: Qt.ImageConversionFlag
         NoOpaqueDetection = ...  # type: Qt.ImageConversionFlag
         NoFormatConversion = ...  # type: Qt.ImageConversionFlag
+
     class WidgetAttribute(enum.Enum):
         WA_Disabled = ...  # type: Qt.WidgetAttribute
         WA_UnderMouse = ...  # type: Qt.WidgetAttribute
@@ -1148,12 +1221,14 @@ class Qt(PyQt6.sip.simplewrapper):
         WA_TabletTracking = ...  # type: Qt.WidgetAttribute
         WA_ContentsMarginsRespectsSafeArea = ...  # type: Qt.WidgetAttribute
         WA_StyleSheetTarget = ...  # type: Qt.WidgetAttribute
+
     class WindowState(enum.Flag):
         WindowNoState = ...  # type: Qt.WindowState
         WindowMinimized = ...  # type: Qt.WindowState
         WindowMaximized = ...  # type: Qt.WindowState
         WindowFullScreen = ...  # type: Qt.WindowState
         WindowActive = ...  # type: Qt.WindowState
+
     class WindowType(enum.IntFlag):
         Widget = ...  # type: Qt.WindowType
         Window = ...  # type: Qt.WindowType
@@ -1193,11 +1268,13 @@ class Qt(PyQt6.sip.simplewrapper):
         BypassWindowManagerHint = ...  # type: Qt.WindowType
         CoverWindow = ...  # type: Qt.WindowType
         MaximizeUsingFullscreenGeometryHint = ...  # type: Qt.WindowType
+
     class TextElideMode(enum.Enum):
         ElideLeft = ...  # type: Qt.TextElideMode
         ElideRight = ...  # type: Qt.TextElideMode
         ElideMiddle = ...  # type: Qt.TextElideMode
         ElideNone = ...  # type: Qt.TextElideMode
+
     class TextFlag(enum.IntFlag):
         TextSingleLine = ...  # type: Qt.TextFlag
         TextDontClip = ...  # type: Qt.TextFlag
@@ -1209,6 +1286,7 @@ class Qt(PyQt6.sip.simplewrapper):
         TextIncludeTrailingSpaces = ...  # type: Qt.TextFlag
         TextHideMnemonic = ...  # type: Qt.TextFlag
         TextJustificationForced = ...  # type: Qt.TextFlag
+
     class AlignmentFlag(enum.IntFlag):
         AlignLeft = ...  # type: Qt.AlignmentFlag
         AlignLeading = ...  # type: Qt.AlignmentFlag
@@ -1224,18 +1302,22 @@ class Qt(PyQt6.sip.simplewrapper):
         AlignVertical_Mask = ...  # type: Qt.AlignmentFlag
         AlignCenter = ...  # type: Qt.AlignmentFlag
         AlignBaseline = ...  # type: Qt.AlignmentFlag
+
     class SortOrder(enum.Enum):
         AscendingOrder = ...  # type: Qt.SortOrder
         DescendingOrder = ...  # type: Qt.SortOrder
+
     class FocusPolicy(enum.Flag):
         NoFocus = ...  # type: Qt.FocusPolicy
         TabFocus = ...  # type: Qt.FocusPolicy
         ClickFocus = ...  # type: Qt.FocusPolicy
         StrongFocus = ...  # type: Qt.FocusPolicy
         WheelFocus = ...  # type: Qt.FocusPolicy
+
     class Orientation(enum.Flag):
         Horizontal = ...  # type: Qt.Orientation
         Vertical = ...  # type: Qt.Orientation
+
     class MouseButton(enum.Flag):
         NoButton = ...  # type: Qt.MouseButton
         AllButtons = ...  # type: Qt.MouseButton
@@ -1271,12 +1353,14 @@ class Qt(PyQt6.sip.simplewrapper):
         ExtraButton22 = ...  # type: Qt.MouseButton
         ExtraButton23 = ...  # type: Qt.MouseButton
         ExtraButton24 = ...  # type: Qt.MouseButton
+
     class Modifier(enum.Flag):
         META = ...  # type: Qt.Modifier
         SHIFT = ...  # type: Qt.Modifier
         CTRL = ...  # type: Qt.Modifier
         ALT = ...  # type: Qt.Modifier
         MODIFIER_MASK = ...  # type: Qt.Modifier
+
     class KeyboardModifier(enum.Flag):
         NoModifier = ...  # type: Qt.KeyboardModifier
         ShiftModifier = ...  # type: Qt.KeyboardModifier
@@ -1286,6 +1370,7 @@ class Qt(PyQt6.sip.simplewrapper):
         KeypadModifier = ...  # type: Qt.KeyboardModifier
         GroupSwitchModifier = ...  # type: Qt.KeyboardModifier
         KeyboardModifierMask = ...  # type: Qt.KeyboardModifier
+
     class GlobalColor(enum.Enum):
         color0 = ...  # type: Qt.GlobalColor
         color1 = ...  # type: Qt.GlobalColor
@@ -1351,6 +1436,7 @@ class QKeyCombination(PyQt6.sip.simplewrapper):
 class QObject(PyQt6.sip.wrapper):
 
     staticMetaObject = ...  # type: 'QMetaObject'
+
     def __init__(self, parent: typing.Optional["QObject"] = ...) -> None: ...
     @typing.overload  # type: ignore[misc]
     @staticmethod
@@ -1413,10 +1499,12 @@ class QAbstractAnimation(QObject):
     class DeletionPolicy(enum.Enum):
         KeepWhenStopped = ...  # type: QAbstractAnimation.DeletionPolicy
         DeleteWhenStopped = ...  # type: QAbstractAnimation.DeletionPolicy
+
     class State(enum.Enum):
         Stopped = ...  # type: QAbstractAnimation.State
         Paused = ...  # type: QAbstractAnimation.State
         Running = ...  # type: QAbstractAnimation.State
+
     class Direction(enum.Enum):
         Forward = ...  # type: QAbstractAnimation.Direction
         Backward = ...  # type: QAbstractAnimation.Direction
@@ -1453,11 +1541,14 @@ class QAbstractEventDispatcher(QObject):
         interval = ...  # type: int
         timerId = ...  # type: int
         timerType = ...  # type: Qt.TimerType
+
         @typing.overload
         def __init__(self, id: int, i: int, t: Qt.TimerType) -> None: ...
         @typing.overload
         def __init__(self, a0: "QAbstractEventDispatcher.TimerInfo") -> None: ...
+
     def __init__(self, parent: typing.Optional[QObject] = ...) -> None: ...
+
     awake: typing.ClassVar[pyqtSignal]
     aboutToBlock: typing.ClassVar[pyqtSignal]
     def filterNativeEvent(self, eventType: "QByteArray", message: PyQt6.sip.voidptr) -> typing.Tuple[bool, PyQt6.sip.voidptr]: ...
@@ -1524,6 +1615,7 @@ class QAbstractItemModel(QObject):
         IndexIsValid = ...  # type: QAbstractItemModel.CheckIndexOption
         DoNotUseParent = ...  # type: QAbstractItemModel.CheckIndexOption
         ParentIsInvalid = ...  # type: QAbstractItemModel.CheckIndexOption
+
     class LayoutChangeHint(enum.Enum):
         NoLayoutChangeHint = ...  # type: QAbstractItemModel.LayoutChangeHint
         VerticalSortHint = ...  # type: QAbstractItemModel.LayoutChangeHint
@@ -1848,6 +1940,7 @@ class QByteArray(PyQt6.sip.simplewrapper):
         IllegalInputLength = ...  # type: QByteArray.Base64DecodingStatus
         IllegalCharacter = ...  # type: QByteArray.Base64DecodingStatus
         IllegalPadding = ...  # type: QByteArray.Base64DecodingStatus
+
     class Base64Option(enum.Flag):
         Base64Encoding = ...  # type: QByteArray.Base64Option
         Base64UrlEncoding = ...  # type: QByteArray.Base64Option
@@ -1855,10 +1948,12 @@ class QByteArray(PyQt6.sip.simplewrapper):
         OmitTrailingEquals = ...  # type: QByteArray.Base64Option
         IgnoreBase64DecodingErrors = ...  # type: QByteArray.Base64Option
         AbortOnBase64DecodingErrors = ...  # type: QByteArray.Base64Option
+
     class FromBase64Result(PyQt6.sip.simplewrapper):
 
         decoded = ...  # type: 'QByteArray'
         decodingStatus = ...  # type: 'QByteArray.Base64DecodingStatus'
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
@@ -1866,6 +1961,7 @@ class QByteArray(PyQt6.sip.simplewrapper):
         def __hash__(self) -> int: ...
         def __int__(self) -> bool: ...
         def swap(self, other: "QByteArray.FromBase64Result") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -2001,11 +2097,13 @@ class QCalendar(PyQt6.sip.simplewrapper):
         Jalali = ...  # type: QCalendar.System
         IslamicCivil = ...  # type: QCalendar.System
     Unspecified = ...  # type: int
+
     class YearMonthDay(PyQt6.sip.simplewrapper):
 
         day = ...  # type: int
         month = ...  # type: int
         year = ...  # type: int
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
@@ -2013,6 +2111,7 @@ class QCalendar(PyQt6.sip.simplewrapper):
         @typing.overload
         def __init__(self, a0: "QCalendar.YearMonthDay") -> None: ...
         def isValid(self) -> bool: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -2079,6 +2178,7 @@ class QCborStreamReader(PyQt6.sip.simplewrapper):
         EndOfString = ...  # type: QCborStreamReader.StringResultCode
         Ok = ...  # type: QCborStreamReader.StringResultCode
         Error = ...  # type: QCborStreamReader.StringResultCode
+
     class Type(enum.Enum):
         UnsignedInteger = ...  # type: QCborStreamReader.Type
         NegativeInteger = ...  # type: QCborStreamReader.Type
@@ -2238,6 +2338,7 @@ class QCommandLineParser(PyQt6.sip.simplewrapper):
     class OptionsAfterPositionalArgumentsMode(enum.Enum):
         ParseAsOptions = ...  # type: QCommandLineParser.OptionsAfterPositionalArgumentsMode
         ParseAsPositionalArguments = ...  # type: QCommandLineParser.OptionsAfterPositionalArgumentsMode
+
     class SingleDashWordOptionMode(enum.Enum):
         ParseAsCompactedShortOptions = ...  # type: QCommandLineParser.SingleDashWordOptionMode
         ParseAsLongOptions = ...  # type: QCommandLineParser.SingleDashWordOptionMode
@@ -2626,14 +2727,17 @@ class QDataStream(QIODeviceBase):
     class FloatingPointPrecision(enum.Enum):
         SinglePrecision = ...  # type: QDataStream.FloatingPointPrecision
         DoublePrecision = ...  # type: QDataStream.FloatingPointPrecision
+
     class Status(enum.Enum):
         Ok = ...  # type: QDataStream.Status
         ReadPastEnd = ...  # type: QDataStream.Status
         ReadCorruptData = ...  # type: QDataStream.Status
         WriteFailed = ...  # type: QDataStream.Status
+
     class ByteOrder(enum.Enum):
         BigEndian = ...  # type: QDataStream.ByteOrder
         LittleEndian = ...  # type: QDataStream.ByteOrder
+
     class Version(enum.IntEnum):
         Qt_1_0 = ...  # type: QDataStream.Version
         Qt_2_0 = ...  # type: QDataStream.Version
@@ -2993,6 +3097,7 @@ class QDir(PyQt6.sip.simplewrapper):
         LocaleAware = ...  # type: QDir.SortFlag
         Type = ...  # type: QDir.SortFlag
         NoSort = ...  # type: QDir.SortFlag
+
     class Filter(enum.Flag):
         Dirs = ...  # type: QDir.Filter
         Files = ...  # type: QDir.Filter
@@ -3266,14 +3371,17 @@ class QFileDevice(QIODevice):
     class MemoryMapFlag(enum.Flag):
         NoOptions = ...  # type: QFileDevice.MemoryMapFlag
         MapPrivateOption = ...  # type: QFileDevice.MemoryMapFlag
+
     class FileTime(enum.Enum):
         FileAccessTime = ...  # type: QFileDevice.FileTime
         FileBirthTime = ...  # type: QFileDevice.FileTime
         FileMetadataChangeTime = ...  # type: QFileDevice.FileTime
         FileModificationTime = ...  # type: QFileDevice.FileTime
+
     class FileHandleFlag(enum.Flag):
         AutoCloseHandle = ...  # type: QFileDevice.FileHandleFlag
         DontCloseHandle = ...  # type: QFileDevice.FileHandleFlag
+
     class Permission(enum.Flag):
         ReadOwner = ...  # type: QFileDevice.Permission
         WriteOwner = ...  # type: QFileDevice.Permission
@@ -3287,6 +3395,7 @@ class QFileDevice(QIODevice):
         ReadOther = ...  # type: QFileDevice.Permission
         WriteOther = ...  # type: QFileDevice.Permission
         ExeOther = ...  # type: QFileDevice.Permission
+
     class FileError(enum.Enum):
         NoError = ...  # type: QFileDevice.FileError
         ReadError = ...  # type: QFileDevice.FileError
@@ -3488,6 +3597,7 @@ class QFileSystemWatcher(QObject):
     def __init__(self, parent: typing.Optional[QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, paths: typing.Iterable[str], parent: typing.Optional[QObject] = ...) -> None: ...
+
     fileChanged: typing.ClassVar[pyqtSignal]
     directoryChanged: typing.ClassVar[pyqtSignal]
     def removePaths(self, files: typing.Iterable[str]) -> typing.List[str]: ...
@@ -3566,6 +3676,7 @@ class QItemSelectionModel(QObject):
     def __init__(self, model: typing.Optional[QAbstractItemModel] = ...) -> None: ...
     @typing.overload
     def __init__(self, model: QAbstractItemModel, parent: QObject) -> None: ...
+
     modelChanged: typing.ClassVar[pyqtSignal]
     def setModel(self, model: QAbstractItemModel) -> None: ...
     def selectedColumns(self, row: int = ...) -> typing.List[QModelIndex]: ...
@@ -3662,6 +3773,7 @@ class QJsonParseError(PyQt6.sip.simplewrapper):
         GarbageAtEnd = ...  # type: QJsonParseError.ParseError
     error = ...  # type: 'QJsonParseError.ParseError'
     offset = ...  # type: int
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -3904,15 +4016,19 @@ class QLocale(PyQt6.sip.simplewrapper):
         DataSizeIecFormat = ...  # type: QLocale.DataSizeFormat
         DataSizeTraditionalFormat = ...  # type: QLocale.DataSizeFormat
         DataSizeSIFormat = ...  # type: QLocale.DataSizeFormat
+
     class FloatingPointPrecisionOption(enum.IntEnum):
         FloatingPointShortest = ...  # type: QLocale.FloatingPointPrecisionOption
+
     class QuotationStyle(enum.Enum):
         StandardQuotation = ...  # type: QLocale.QuotationStyle
         AlternateQuotation = ...  # type: QLocale.QuotationStyle
+
     class CurrencySymbolFormat(enum.Enum):
         CurrencyIsoCode = ...  # type: QLocale.CurrencySymbolFormat
         CurrencySymbol = ...  # type: QLocale.CurrencySymbolFormat
         CurrencyDisplayName = ...  # type: QLocale.CurrencySymbolFormat
+
     class Script(enum.Enum):
         AnyScript = ...  # type: QLocale.Script
         ArabicScript = ...  # type: QLocale.Script
@@ -4061,15 +4177,18 @@ class QLocale(PyQt6.sip.simplewrapper):
         BanglaScript = ...  # type: QLocale.Script
         MendeScript = ...  # type: QLocale.Script
         OdiaScript = ...  # type: QLocale.Script
+
     class MeasurementSystem(enum.Enum):
         MetricSystem = ...  # type: QLocale.MeasurementSystem
         ImperialSystem = ...  # type: QLocale.MeasurementSystem
         ImperialUSSystem = ...  # type: QLocale.MeasurementSystem
         ImperialUKSystem = ...  # type: QLocale.MeasurementSystem
+
     class FormatType(enum.Enum):
         LongFormat = ...  # type: QLocale.FormatType
         ShortFormat = ...  # type: QLocale.FormatType
         NarrowFormat = ...  # type: QLocale.FormatType
+
     class NumberOption(enum.Flag):
         OmitGroupSeparator = ...  # type: QLocale.NumberOption
         RejectGroupSeparator = ...  # type: QLocale.NumberOption
@@ -4078,6 +4197,7 @@ class QLocale(PyQt6.sip.simplewrapper):
         RejectLeadingZeroInExponent = ...  # type: QLocale.NumberOption
         IncludeTrailingZeroesAfterDot = ...  # type: QLocale.NumberOption
         RejectTrailingZeroesAfterDot = ...  # type: QLocale.NumberOption
+
     class Country(enum.Enum):
         AnyCountry = ...  # type: QLocale.Country
         AnyTerritory = ...  # type: QLocale.Country
@@ -4366,6 +4486,7 @@ class QLocale(PyQt6.sip.simplewrapper):
         NauruTerritory = ...  # type: QLocale.Country
         TokelauTerritory = ...  # type: QLocale.Country
         TuvaluTerritory = ...  # type: QLocale.Country
+
     class Language(enum.Enum):
         C = ...  # type: QLocale.Language
         Abkhazian = ...  # type: QLocale.Language
@@ -4967,6 +5088,7 @@ class QMetaMethod(PyQt6.sip.simplewrapper):
         Signal = ...  # type: QMetaMethod.MethodType
         Slot = ...  # type: QMetaMethod.MethodType
         Constructor = ...  # type: QMetaMethod.MethodType
+
     class Access(enum.Enum):
         Private = ...  # type: QMetaMethod.Access
         Protected = ...  # type: QMetaMethod.Access
@@ -5075,6 +5197,7 @@ class QMetaType(PyQt6.sip.simplewrapper):
         RelocatableType = ...  # type: QMetaType.TypeFlag
         IsQmlList = ...  # type: QMetaType.TypeFlag
         IsConst = ...  # type: QMetaType.TypeFlag
+
     class Type(enum.Enum):
         UnknownType = ...  # type: QMetaType.Type
         Void = ...  # type: QMetaType.Type
@@ -5293,6 +5416,7 @@ class QMetaObject(PyQt6.sip.simplewrapper):
         @typing.overload
         def __init__(self, other: "QMetaObject.Connection") -> None: ...
         def swap(self, o: "QMetaObject.Connection") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -5386,6 +5510,7 @@ class QOperatingSystemVersion(PyQt6.sip.simplewrapper):
     Windows7 = ...  # type: 'QOperatingSystemVersion'
     Windows8 = ...  # type: 'QOperatingSystemVersion'
     Windows8_1 = ...  # type: 'QOperatingSystemVersion'
+
     @typing.overload
     def __init__(self, osType: "QOperatingSystemVersion.OSType", vmajor: int, vminor: int = ..., vmicro: int = ...) -> None: ...
     @typing.overload
@@ -5530,19 +5655,23 @@ class QProcess(QIODevice):
     class InputChannelMode(enum.Enum):
         ManagedInputChannel = ...  # type: QProcess.InputChannelMode
         ForwardedInputChannel = ...  # type: QProcess.InputChannelMode
+
     class ProcessChannelMode(enum.Enum):
         SeparateChannels = ...  # type: QProcess.ProcessChannelMode
         MergedChannels = ...  # type: QProcess.ProcessChannelMode
         ForwardedChannels = ...  # type: QProcess.ProcessChannelMode
         ForwardedOutputChannel = ...  # type: QProcess.ProcessChannelMode
         ForwardedErrorChannel = ...  # type: QProcess.ProcessChannelMode
+
     class ProcessChannel(enum.Enum):
         StandardOutput = ...  # type: QProcess.ProcessChannel
         StandardError = ...  # type: QProcess.ProcessChannel
+
     class ProcessState(enum.Enum):
         NotRunning = ...  # type: QProcess.ProcessState
         Starting = ...  # type: QProcess.ProcessState
         Running = ...  # type: QProcess.ProcessState
+
     class ProcessError(enum.Enum):
         FailedToStart = ...  # type: QProcess.ProcessError
         Crashed = ...  # type: QProcess.ProcessError
@@ -5550,6 +5679,7 @@ class QProcess(QIODevice):
         ReadError = ...  # type: QProcess.ProcessError
         WriteError = ...  # type: QProcess.ProcessError
         UnknownError = ...  # type: QProcess.ProcessError
+
     class ExitStatus(enum.Enum):
         NormalExit = ...  # type: QProcess.ExitStatus
         CrashExit = ...  # type: QProcess.ExitStatus
@@ -5885,15 +6015,18 @@ class QRegularExpression(PyQt6.sip.simplewrapper):
     class WildcardConversionOption(enum.Flag):
         DefaultWildcardConversion = ...  # type: QRegularExpression.WildcardConversionOption
         UnanchoredWildcardConversion = ...  # type: QRegularExpression.WildcardConversionOption
+
     class MatchOption(enum.Flag):
         NoMatchOption = ...  # type: QRegularExpression.MatchOption
         AnchorAtOffsetMatchOption = ...  # type: QRegularExpression.MatchOption
         DontCheckSubjectStringMatchOption = ...  # type: QRegularExpression.MatchOption
+
     class MatchType(enum.Enum):
         NormalMatch = ...  # type: QRegularExpression.MatchType
         PartialPreferCompleteMatch = ...  # type: QRegularExpression.MatchType
         PartialPreferFirstMatch = ...  # type: QRegularExpression.MatchType
         NoMatch = ...  # type: QRegularExpression.MatchType
+
     class PatternOption(enum.Flag):
         NoPatternOption = ...  # type: QRegularExpression.PatternOption
         CaseInsensitiveOption = ...  # type: QRegularExpression.PatternOption
@@ -6067,10 +6200,12 @@ class QSettings(QObject):
     class Scope(enum.Enum):
         UserScope = ...  # type: QSettings.Scope
         SystemScope = ...  # type: QSettings.Scope
+
     class Format(enum.Enum):
         NativeFormat = ...  # type: QSettings.Format
         IniFormat = ...  # type: QSettings.Format
         InvalidFormat = ...  # type: QSettings.Format
+
     class Status(enum.Enum):
         NoError = ...  # type: QSettings.Status
         AccessError = ...  # type: QSettings.Status
@@ -6133,6 +6268,7 @@ class QSharedMemory(QObject):
         LockError = ...  # type: QSharedMemory.SharedMemoryError
         OutOfResources = ...  # type: QSharedMemory.SharedMemoryError
         UnknownError = ...  # type: QSharedMemory.SharedMemoryError
+
     class AccessMode(enum.Enum):
         ReadOnly = ...  # type: QSharedMemory.AccessMode
         ReadWrite = ...  # type: QSharedMemory.AccessMode
@@ -6287,6 +6423,7 @@ class QSocketNotifier(QObject):
 
 class QSortFilterProxyModel(QAbstractProxyModel):
     def __init__(self, parent: typing.Optional[QObject] = ...) -> None: ...
+
     autoAcceptChildRowsChanged: typing.ClassVar[pyqtSignal]
     def invalidateColumnsFilter(self) -> None: ...
     def invalidateRowsFilter(self) -> None: ...
@@ -6367,6 +6504,7 @@ class QStandardPaths(PyQt6.sip.simplewrapper):
     class LocateOption(enum.Flag):
         LocateFile = ...  # type: QStandardPaths.LocateOption
         LocateDirectory = ...  # type: QStandardPaths.LocateOption
+
     class StandardLocation(enum.Enum):
         DesktopLocation = ...  # type: QStandardPaths.StandardLocation
         DocumentsLocation = ...  # type: QStandardPaths.StandardLocation
@@ -6514,6 +6652,7 @@ class QSysInfo(PyQt6.sip.simplewrapper):
         BigEndian = ...  # type: QSysInfo.Endian
         LittleEndian = ...  # type: QSysInfo.Endian
         ByteOrder = ...  # type: QSysInfo.Endian
+
     class Sizes(enum.Enum):
         WordSize = ...  # type: QSysInfo.Sizes
     @typing.overload
@@ -6552,6 +6691,7 @@ class QSystemSemaphore(PyQt6.sip.simplewrapper):
         NotFound = ...  # type: QSystemSemaphore.SystemSemaphoreError
         OutOfResources = ...  # type: QSystemSemaphore.SystemSemaphoreError
         UnknownError = ...  # type: QSystemSemaphore.SystemSemaphoreError
+
     class AccessMode(enum.Enum):
         Open = ...  # type: QSystemSemaphore.AccessMode
         Create = ...  # type: QSystemSemaphore.AccessMode
@@ -6608,6 +6748,7 @@ class QTextBoundaryFinder(PyQt6.sip.simplewrapper):
         Word = ...  # type: QTextBoundaryFinder.BoundaryType
         Line = ...  # type: QTextBoundaryFinder.BoundaryType
         Sentence = ...  # type: QTextBoundaryFinder.BoundaryType
+
     class BoundaryReason(enum.Flag):
         NotAtBoundary = ...  # type: QTextBoundaryFinder.BoundaryReason
         SoftHyphen = ...  # type: QTextBoundaryFinder.BoundaryReason
@@ -6640,16 +6781,19 @@ class QTextStream(QIODeviceBase):
         ForceSign = ...  # type: QTextStream.NumberFlag
         UppercaseBase = ...  # type: QTextStream.NumberFlag
         UppercaseDigits = ...  # type: QTextStream.NumberFlag
+
     class Status(enum.Enum):
         Ok = ...  # type: QTextStream.Status
         ReadPastEnd = ...  # type: QTextStream.Status
         ReadCorruptData = ...  # type: QTextStream.Status
         WriteFailed = ...  # type: QTextStream.Status
+
     class FieldAlignment(enum.Enum):
         AlignLeft = ...  # type: QTextStream.FieldAlignment
         AlignRight = ...  # type: QTextStream.FieldAlignment
         AlignCenter = ...  # type: QTextStream.FieldAlignment
         AlignAccountingStyle = ...  # type: QTextStream.FieldAlignment
+
     class RealNumberNotation(enum.Enum):
         SmartNotation = ...  # type: QTextStream.RealNumberNotation
         FixedNotation = ...  # type: QTextStream.RealNumberNotation
@@ -6784,6 +6928,7 @@ class QTimeLine(QObject):
         NotRunning = ...  # type: QTimeLine.State
         Paused = ...  # type: QTimeLine.State
         Running = ...  # type: QTimeLine.State
+
     class Direction(enum.Enum):
         Forward = ...  # type: QTimeLine.Direction
         Backward = ...  # type: QTimeLine.Direction
@@ -6852,10 +6997,12 @@ class QTimeZone(PyQt6.sip.simplewrapper):
         LongName = ...  # type: QTimeZone.NameType
         ShortName = ...  # type: QTimeZone.NameType
         OffsetName = ...  # type: QTimeZone.NameType
+
     class TimeType(enum.Enum):
         StandardTime = ...  # type: QTimeZone.TimeType
         DaylightTime = ...  # type: QTimeZone.TimeType
         GenericTime = ...  # type: QTimeZone.TimeType
+
     class OffsetData(PyQt6.sip.simplewrapper):
 
         abbreviation = ...  # type: str
@@ -6863,10 +7010,12 @@ class QTimeZone(PyQt6.sip.simplewrapper):
         daylightTimeOffset = ...  # type: int
         offsetFromUtc = ...  # type: int
         standardTimeOffset = ...  # type: int
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QTimeZone.OffsetData") -> None: ...
+
     @typing.overload
     def __init__(self, zoneId: QByteArray, offsetSeconds: int, name: str, abbreviation: str, territory: QLocale.Country = ..., comment: str = ...) -> None: ...
     @typing.overload
@@ -6968,6 +7117,7 @@ class QUrl(PyQt6.sip.simplewrapper):
     class UserInputResolutionOption(enum.Flag):
         DefaultResolution = ...  # type: QUrl.UserInputResolutionOption
         AssumeLocalFile = ...  # type: QUrl.UserInputResolutionOption
+
     class ComponentFormattingOption(enum.IntFlag):
         PrettyDecoded = ...  # type: QUrl.ComponentFormattingOption
         EncodeSpaces = ...  # type: QUrl.ComponentFormattingOption
@@ -6977,6 +7127,7 @@ class QUrl(PyQt6.sip.simplewrapper):
         DecodeReserved = ...  # type: QUrl.ComponentFormattingOption
         FullyEncoded = ...  # type: QUrl.ComponentFormattingOption
         FullyDecoded = ...  # type: QUrl.ComponentFormattingOption
+
     class UrlFormattingOption(enum.IntFlag):
         None_ = ...  # type: QUrl.UrlFormattingOption
         RemoveScheme = ...  # type: QUrl.UrlFormattingOption
@@ -6991,6 +7142,7 @@ class QUrl(PyQt6.sip.simplewrapper):
         StripTrailingSlash = ...  # type: QUrl.UrlFormattingOption
         RemoveFilename = ...  # type: QUrl.UrlFormattingOption
         NormalizePathSegments = ...  # type: QUrl.UrlFormattingOption
+
     class ParsingMode(enum.Enum):
         TolerantMode = ...  # type: QUrl.ParsingMode
         StrictMode = ...  # type: QUrl.ParsingMode
@@ -7118,6 +7270,7 @@ class QUuid(PyQt6.sip.simplewrapper):
         WithBraces = ...  # type: QUuid.StringFormat
         WithoutBraces = ...  # type: QUuid.StringFormat
         Id128 = ...  # type: QUuid.StringFormat
+
     class Version(enum.Enum):
         VerUnknown = ...  # type: QUuid.Version
         Time = ...  # type: QUuid.Version
@@ -7126,6 +7279,7 @@ class QUuid(PyQt6.sip.simplewrapper):
         Name = ...  # type: QUuid.Version
         Random = ...  # type: QUuid.Version
         Sha1 = ...  # type: QUuid.Version
+
     class Variant(enum.Enum):
         VarUnknown = ...  # type: QUuid.Variant
         NCS = ...  # type: QUuid.Variant
@@ -7309,10 +7463,12 @@ class QXmlStreamReader(PyQt6.sip.simplewrapper):
         CustomError = ...  # type: QXmlStreamReader.Error
         NotWellFormedError = ...  # type: QXmlStreamReader.Error
         PrematureEndOfDocumentError = ...  # type: QXmlStreamReader.Error
+
     class ReadElementTextBehaviour(enum.Enum):
         ErrorOnUnexpectedElement = ...  # type: QXmlStreamReader.ReadElementTextBehaviour
         IncludeChildElements = ...  # type: QXmlStreamReader.ReadElementTextBehaviour
         SkipChildElements = ...  # type: QXmlStreamReader.ReadElementTextBehaviour
+
     class TokenType(enum.Enum):
         NoToken = ...  # type: QXmlStreamReader.TokenType
         Invalid = ...  # type: QXmlStreamReader.TokenType
@@ -7508,18 +7664,6 @@ class QMutexLocker(PyQt6.sip.simplewrapper):
     def relock(self) -> None: ...
     def unlock(self) -> None: ...
     def mutex(self) -> typing.Union[QMutex, QRecursiveMutex]: ...
-
-class QWinEventNotifier(QObject):
-    @typing.overload
-    def __init__(self, parent: typing.Optional[QObject] = ...) -> None: ...
-    @typing.overload
-    def __init__(self, hEvent: PyQt6.sip.voidptr, parent: typing.Optional[QObject] = ...) -> None: ...
-    def event(self, e: QEvent) -> bool: ...
-    activated: typing.ClassVar[pyqtSignal]
-    def setEnabled(self, enable: bool) -> None: ...
-    def setHandle(self, hEvent: PyQt6.sip.voidptr) -> None: ...
-    def isEnabled(self) -> bool: ...
-    def handle(self) -> PyQt6.sip.voidptr: ...
 
 PYQT_VERSION = ...  # type: int
 PYQT_VERSION_STR = ...  # type: str

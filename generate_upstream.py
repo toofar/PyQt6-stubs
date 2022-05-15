@@ -36,6 +36,7 @@ def download_stubs(download_folder: Path, file_filter: List[str]) -> None:
             "-d",
             str(download_folder),
             f"PyQt6=={'.'.join((str(nbr) for nbr in PYQT_VERSION))}",
+            f"PyQt6-WebEngine==6.3.0",
         ]
     )
 

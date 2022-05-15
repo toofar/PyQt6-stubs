@@ -38,10 +38,12 @@ class QNdefFilter(PyQt6.sip.simplewrapper):
         minimum = ...  # type: int
         type = ...  # type: QtCore.QByteArray
         typeNameFormat = ...  # type: 'QNdefRecord.TypeNameFormat'
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QNdefFilter.Record") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -224,11 +226,13 @@ class QNearFieldTarget(QtCore.QObject):
         CommandError = ...  # type: QNearFieldTarget.Error
         ConnectionError = ...  # type: QNearFieldTarget.Error
         TimeoutError = ...  # type: QNearFieldTarget.Error
+
     class AccessMethod(enum.Flag):
         UnknownAccess = ...  # type: QNearFieldTarget.AccessMethod
         NdefAccess = ...  # type: QNearFieldTarget.AccessMethod
         TagTypeSpecificAccess = ...  # type: QNearFieldTarget.AccessMethod
         AnyAccess = ...  # type: QNearFieldTarget.AccessMethod
+
     class Type(enum.Enum):
         ProprietaryTag = ...  # type: QNearFieldTarget.Type
         NfcTagType1 = ...  # type: QNearFieldTarget.Type
@@ -238,6 +242,7 @@ class QNearFieldTarget(QtCore.QObject):
         NfcTagType4A = ...  # type: QNearFieldTarget.Type
         NfcTagType4B = ...  # type: QNearFieldTarget.Type
         MifareTag = ...  # type: QNearFieldTarget.Type
+
     class RequestId(PyQt6.sip.simplewrapper):
         @typing.overload
         def __init__(self) -> None: ...
@@ -245,6 +250,7 @@ class QNearFieldTarget(QtCore.QObject):
         def __init__(self, other: "QNearFieldTarget.RequestId") -> None: ...
         def refCount(self) -> int: ...
         def isValid(self) -> bool: ...
+
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     def maxCommandLength(self) -> int: ...
     def disconnect(self) -> bool: ...  # type: ignore[override]

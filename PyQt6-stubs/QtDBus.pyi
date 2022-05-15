@@ -94,9 +94,11 @@ class QDBus(PyQt6.sip.simplewrapper):
 class QDBusConnection(PyQt6.sip.simplewrapper):
     class ConnectionCapability(enum.Flag):
         UnixFileDescriptorPassing = ...  # type: QDBusConnection.ConnectionCapability
+
     class UnregisterMode(enum.Enum):
         UnregisterNode = ...  # type: QDBusConnection.UnregisterMode
         UnregisterTree = ...  # type: QDBusConnection.UnregisterMode
+
     class RegisterOption(enum.Flag):
         ExportAdaptors = ...  # type: QDBusConnection.RegisterOption
         ExportScriptableSlots = ...  # type: QDBusConnection.RegisterOption
@@ -116,6 +118,7 @@ class QDBusConnection(PyQt6.sip.simplewrapper):
         ExportAllContents = ...  # type: QDBusConnection.RegisterOption
         ExportAllSignal = ...  # type: QDBusConnection.RegisterOption
         ExportChildObjects = ...  # type: QDBusConnection.RegisterOption
+
     class BusType(enum.Enum):
         SessionBus = ...  # type: QDBusConnection.BusType
         SystemBus = ...  # type: QDBusConnection.BusType
@@ -179,9 +182,11 @@ class QDBusConnectionInterface(QDBusAbstractInterface):
         ServiceNotRegistered = ...  # type: QDBusConnectionInterface.RegisterServiceReply
         ServiceRegistered = ...  # type: QDBusConnectionInterface.RegisterServiceReply
         ServiceQueued = ...  # type: QDBusConnectionInterface.RegisterServiceReply
+
     class ServiceReplacementOptions(enum.Enum):
         DontAllowReplacement = ...  # type: QDBusConnectionInterface.ServiceReplacementOptions
         AllowReplacement = ...  # type: QDBusConnectionInterface.ServiceReplacementOptions
+
     class ServiceQueueOptions(enum.Enum):
         DontQueueService = ...  # type: QDBusConnectionInterface.ServiceQueueOptions
         QueueService = ...  # type: QDBusConnectionInterface.ServiceQueueOptions
@@ -344,6 +349,7 @@ class QDBusPendingCall(PyQt6.sip.simplewrapper):
 
 class QDBusPendingCallWatcher(QtCore.QObject, QDBusPendingCall):
     def __init__(self, call: QDBusPendingCall, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     finished: typing.ClassVar[QtCore.pyqtSignal]
     def waitForFinished(self) -> None: ...
     def isFinished(self) -> bool: ...
@@ -357,6 +363,7 @@ class QDBusServiceWatcher(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, service: str, connection: QDBusConnection, watchMode: "QDBusServiceWatcher.WatchModeFlag" = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     serviceOwnerChanged: typing.ClassVar[QtCore.pyqtSignal]
     serviceUnregistered: typing.ClassVar[QtCore.pyqtSignal]
     serviceRegistered: typing.ClassVar[QtCore.pyqtSignal]
@@ -383,6 +390,19 @@ class QDBusUnixFileDescriptor(PyQt6.sip.simplewrapper):
     def fileDescriptor(self) -> int: ...
     def isValid(self) -> bool: ...
 
+class QDBusReply(PyQt6.sip.simplewrapper):
+    @typing.overload
+    def __init__(self, reply: QDBusMessage) -> None: ...
+    @typing.overload
+    def __init__(self, call: QDBusPendingCall) -> None: ...
+    @typing.overload
+    def __init__(self, error: QDBusError) -> None: ...
+    @typing.overload
+    def __init__(self, other: "QDBusReply") -> None: ...
+    def value(self, type: typing.Any = ...) -> typing.Any: ...
+    def isValid(self) -> bool: ...
+    def error(self) -> QDBusError: ...
+
 class QDBusPendingReply(QDBusPendingCall):
     @typing.overload
     def __init__(self) -> None: ...
@@ -400,16 +420,3 @@ class QDBusPendingReply(QDBusPendingCall):
     def isError(self) -> bool: ...
     def error(self) -> QDBusError: ...
     def argumentAt(self, index: int) -> typing.Any: ...
-
-class QDBusReply(PyQt6.sip.simplewrapper):
-    @typing.overload
-    def __init__(self, reply: QDBusMessage) -> None: ...
-    @typing.overload
-    def __init__(self, call: QDBusPendingCall) -> None: ...
-    @typing.overload
-    def __init__(self, error: QDBusError) -> None: ...
-    @typing.overload
-    def __init__(self, other: "QDBusReply") -> None: ...
-    def value(self, type: typing.Any = ...) -> typing.Any: ...
-    def isValid(self) -> bool: ...
-    def error(self) -> QDBusError: ...

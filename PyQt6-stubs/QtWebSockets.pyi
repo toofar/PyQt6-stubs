@@ -38,6 +38,7 @@ class QMaskGenerator(QtCore.QObject):
 
 class QWebSocket(QtCore.QObject):
     def __init__(self, origin: str = ..., version: "QWebSocketProtocol.Version" = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     handshakeInterruptedOnError: typing.ClassVar[QtCore.pyqtSignal]
     alertReceived: typing.ClassVar[QtCore.pyqtSignal]
     alertSent: typing.ClassVar[QtCore.pyqtSignal]
@@ -137,6 +138,7 @@ class QWebSocketProtocol(PyQt6.sip.simplewrapper):
         CloseCodeMissingExtension = ...  # type: QWebSocketProtocol.CloseCode
         CloseCodeBadOperation = ...  # type: QWebSocketProtocol.CloseCode
         CloseCodeTlsHandshakeFailed = ...  # type: QWebSocketProtocol.CloseCode
+
     class Version(enum.Enum):
         VersionUnknown = ...  # type: QWebSocketProtocol.Version
         Version0 = ...  # type: QWebSocketProtocol.Version

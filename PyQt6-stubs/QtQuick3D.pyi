@@ -57,12 +57,14 @@ class QQuick3DGeometry(QQuick3DObject):
         TriangleStrip = ...  # type: QQuick3DGeometry.PrimitiveType
         TriangleFan = ...  # type: QQuick3DGeometry.PrimitiveType
         Triangles = ...  # type: QQuick3DGeometry.PrimitiveType
+
     class Attribute(PyQt6.sip.simplewrapper):
         class ComponentType(enum.Enum):
             U16Type = ...  # type: QQuick3DGeometry.Attribute.ComponentType
             U32Type = ...  # type: QQuick3DGeometry.Attribute.ComponentType
             F32Type = ...  # type: QQuick3DGeometry.Attribute.ComponentType
             I32Type = ...  # type: QQuick3DGeometry.Attribute.ComponentType
+
         class Semantic(enum.Enum):
             IndexSemantic = ...  # type: QQuick3DGeometry.Attribute.Semantic
             PositionSemantic = ...  # type: QQuick3DGeometry.Attribute.Semantic
@@ -82,10 +84,12 @@ class QQuick3DGeometry(QQuick3DObject):
         componentType = ...  # type: 'QQuick3DGeometry.Attribute.ComponentType'
         offset = ...  # type: int
         semantic = ...  # type: 'QQuick3DGeometry.Attribute.Semantic'
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QQuick3DGeometry.Attribute") -> None: ...
+
     def __init__(self, parent: typing.Optional[QQuick3DObject] = ...) -> None: ...
     def indexData(self) -> QtCore.QByteArray: ...
     def vertexData(self) -> QtCore.QByteArray: ...
