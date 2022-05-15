@@ -137,6 +137,7 @@ class QDesignerFormWindowCursorInterface(PyQt6.sip.simplewrapper):
     class MoveMode(enum.Enum):
         MoveAnchor = ...  # type: QDesignerFormWindowCursorInterface.MoveMode
         KeepAnchor = ...  # type: QDesignerFormWindowCursorInterface.MoveMode
+
     class MoveOperation(enum.Enum):
         NoMove = ...  # type: QDesignerFormWindowCursorInterface.MoveOperation
         Start = ...  # type: QDesignerFormWindowCursorInterface.MoveOperation
@@ -166,6 +167,7 @@ class QDesignerFormWindowCursorInterface(PyQt6.sip.simplewrapper):
 class QDesignerFormWindowManagerInterface(QtCore.QObject):
     class ActionGroup(enum.Enum):
         StyledPreviewActionGroup = ...  # type: QDesignerFormWindowManagerInterface.ActionGroup
+
     class Action(enum.Enum):
         CutAction = ...  # type: QDesignerFormWindowManagerInterface.Action
         CopyAction = ...  # type: QDesignerFormWindowManagerInterface.Action
@@ -351,8 +353,8 @@ class QDesignerTaskMenuExtension(PyQt6.sip.simplewrapper):
 class QPyDesignerContainerExtension(QtCore.QObject, QDesignerContainerExtension):
     def __init__(self, parent: QtCore.QObject) -> None: ...
 
-class QPyDesignerCustomWidgetCollectionPlugin(QtCore.QObject, QDesignerCustomWidgetCollectionInterface):
-    def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+class QPyDesignerTaskMenuExtension(QtCore.QObject, QDesignerTaskMenuExtension):
+    def __init__(self, parent: QtCore.QObject) -> None: ...
 
 class QPyDesignerCustomWidgetPlugin(QtCore.QObject, QDesignerCustomWidgetInterface):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
@@ -363,5 +365,5 @@ class QPyDesignerMemberSheetExtension(QtCore.QObject, QDesignerMemberSheetExtens
 class QPyDesignerPropertySheetExtension(QtCore.QObject, QDesignerPropertySheetExtension):  # type: ignore[misc]
     def __init__(self, parent: QtCore.QObject) -> None: ...
 
-class QPyDesignerTaskMenuExtension(QtCore.QObject, QDesignerTaskMenuExtension):
-    def __init__(self, parent: QtCore.QObject) -> None: ...
+class QPyDesignerCustomWidgetCollectionPlugin(QtCore.QObject, QDesignerCustomWidgetCollectionInterface):
+    def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...

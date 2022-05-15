@@ -37,6 +37,7 @@ class QQuickWidget(QtWidgets.QWidget):
         Ready = ...  # type: QQuickWidget.Status
         Loading = ...  # type: QQuickWidget.Status
         Error = ...  # type: QQuickWidget.Status
+
     class ResizeMode(enum.Enum):
         SizeViewToRootObject = ...  # type: QQuickWidget.ResizeMode
         SizeRootObjectToView = ...  # type: QQuickWidget.ResizeMode

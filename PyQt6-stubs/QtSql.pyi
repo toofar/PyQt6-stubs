@@ -118,19 +118,23 @@ class QSqlDriver(QtCore.QObject):
         SQLite = ...  # type: QSqlDriver.DbmsType
         Interbase = ...  # type: QSqlDriver.DbmsType
         DB2 = ...  # type: QSqlDriver.DbmsType
+
     class NotificationSource(enum.Enum):
         UnknownSource = ...  # type: QSqlDriver.NotificationSource
         SelfSource = ...  # type: QSqlDriver.NotificationSource
         OtherSource = ...  # type: QSqlDriver.NotificationSource
+
     class IdentifierType(enum.Enum):
         FieldName = ...  # type: QSqlDriver.IdentifierType
         TableName = ...  # type: QSqlDriver.IdentifierType
+
     class StatementType(enum.Enum):
         WhereStatement = ...  # type: QSqlDriver.StatementType
         SelectStatement = ...  # type: QSqlDriver.StatementType
         UpdateStatement = ...  # type: QSqlDriver.StatementType
         InsertStatement = ...  # type: QSqlDriver.StatementType
         DeleteStatement = ...  # type: QSqlDriver.StatementType
+
     class DriverFeature(enum.Enum):
         Transactions = ...  # type: QSqlDriver.DriverFeature
         QuerySize = ...  # type: QSqlDriver.DriverFeature
@@ -558,16 +562,19 @@ class QSql(PyQt6.sip.simplewrapper):
         LowPrecisionInt64 = ...  # type: QSql.NumericalPrecisionPolicy
         LowPrecisionDouble = ...  # type: QSql.NumericalPrecisionPolicy
         HighPrecision = ...  # type: QSql.NumericalPrecisionPolicy
+
     class TableType(enum.Enum):
         Tables = ...  # type: QSql.TableType
         SystemTables = ...  # type: QSql.TableType
         Views = ...  # type: QSql.TableType
         AllTables = ...  # type: QSql.TableType
+
     class ParamTypeFlag(enum.Flag):
         In = ...  # type: QSql.ParamTypeFlag
         Out = ...  # type: QSql.ParamTypeFlag
         InOut = ...  # type: QSql.ParamTypeFlag
         Binary = ...  # type: QSql.ParamTypeFlag
+
     class Location(enum.Enum):
         BeforeFirstRow = ...  # type: QSql.Location
         AfterLastRow = ...  # type: QSql.Location

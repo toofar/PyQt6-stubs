@@ -82,11 +82,13 @@ class QAbstractSocket(QtCore.QIODevice):
     class PauseMode(enum.Flag):
         PauseNever = ...  # type: QAbstractSocket.PauseMode
         PauseOnSslErrors = ...  # type: QAbstractSocket.PauseMode
+
     class BindFlag(enum.Flag):
         DefaultForPlatform = ...  # type: QAbstractSocket.BindFlag
         ShareAddress = ...  # type: QAbstractSocket.BindFlag
         DontShareAddress = ...  # type: QAbstractSocket.BindFlag
         ReuseAddressHint = ...  # type: QAbstractSocket.BindFlag
+
     class SocketOption(enum.Enum):
         LowDelayOption = ...  # type: QAbstractSocket.SocketOption
         KeepAliveOption = ...  # type: QAbstractSocket.SocketOption
@@ -96,6 +98,7 @@ class QAbstractSocket(QtCore.QIODevice):
         SendBufferSizeSocketOption = ...  # type: QAbstractSocket.SocketOption
         ReceiveBufferSizeSocketOption = ...  # type: QAbstractSocket.SocketOption
         PathMtuSocketOption = ...  # type: QAbstractSocket.SocketOption
+
     class SocketState(enum.Enum):
         UnconnectedState = ...  # type: QAbstractSocket.SocketState
         HostLookupState = ...  # type: QAbstractSocket.SocketState
@@ -104,6 +107,7 @@ class QAbstractSocket(QtCore.QIODevice):
         BoundState = ...  # type: QAbstractSocket.SocketState
         ListeningState = ...  # type: QAbstractSocket.SocketState
         ClosingState = ...  # type: QAbstractSocket.SocketState
+
     class SocketError(enum.Enum):
         ConnectionRefusedError = ...  # type: QAbstractSocket.SocketError
         RemoteHostClosedError = ...  # type: QAbstractSocket.SocketError
@@ -129,11 +133,13 @@ class QAbstractSocket(QtCore.QIODevice):
         SslInvalidUserDataError = ...  # type: QAbstractSocket.SocketError
         TemporaryError = ...  # type: QAbstractSocket.SocketError
         UnknownSocketError = ...  # type: QAbstractSocket.SocketError
+
     class NetworkLayerProtocol(enum.Enum):
         IPv4Protocol = ...  # type: QAbstractSocket.NetworkLayerProtocol
         IPv6Protocol = ...  # type: QAbstractSocket.NetworkLayerProtocol
         AnyIPProtocol = ...  # type: QAbstractSocket.NetworkLayerProtocol
         UnknownNetworkLayerProtocol = ...  # type: QAbstractSocket.NetworkLayerProtocol
+
     class SocketType(enum.Enum):
         TcpSocket = ...  # type: QAbstractSocket.SocketType
         UdpSocket = ...  # type: QAbstractSocket.SocketType
@@ -279,6 +285,7 @@ class QDnsLookup(QtCore.QObject):
         PTR = ...  # type: QDnsLookup.Type
         SRV = ...  # type: QDnsLookup.Type
         TXT = ...  # type: QDnsLookup.Type
+
     class Error(enum.Enum):
         NoError = ...  # type: QDnsLookup.Error
         ResolverError = ...  # type: QDnsLookup.Error
@@ -294,6 +301,7 @@ class QDnsLookup(QtCore.QObject):
     def __init__(self, type: "QDnsLookup.Type", name: str, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, type: "QDnsLookup.Type", name: str, nameserver: typing.Union["QHostAddress", "QHostAddress.SpecialAddress"], parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     nameserverChanged: typing.ClassVar[QtCore.pyqtSignal]
     def setNameserver(self, nameserver: typing.Union["QHostAddress", "QHostAddress.SpecialAddress"]) -> None: ...
     def nameserver(self) -> "QHostAddress": ...
@@ -325,6 +333,7 @@ class QHostAddress(PyQt6.sip.simplewrapper):
         ConvertLocalHost = ...  # type: QHostAddress.ConversionModeFlag
         TolerantConversion = ...  # type: QHostAddress.ConversionModeFlag
         StrictConversion = ...  # type: QHostAddress.ConversionModeFlag
+
     class SpecialAddress(enum.Enum):
         Null = ...  # type: QHostAddress.SpecialAddress
         Broadcast = ...  # type: QHostAddress.SpecialAddress
@@ -505,11 +514,13 @@ class QLocalSocket(QtCore.QIODevice):
     class SocketOption(enum.Flag):
         NoOptions = ...  # type: QLocalSocket.SocketOption
         AbstractNamespaceOption = ...  # type: QLocalSocket.SocketOption
+
     class LocalSocketState(enum.Enum):
         UnconnectedState = ...  # type: QLocalSocket.LocalSocketState
         ConnectingState = ...  # type: QLocalSocket.LocalSocketState
         ConnectedState = ...  # type: QLocalSocket.LocalSocketState
         ClosingState = ...  # type: QLocalSocket.LocalSocketState
+
     class LocalSocketError(enum.Enum):
         ConnectionRefusedError = ...  # type: QLocalSocket.LocalSocketError
         PeerClosedError = ...  # type: QLocalSocket.LocalSocketError
@@ -633,6 +644,7 @@ class QNetworkCookie(PyQt6.sip.simplewrapper):
         None_ = ...  # type: QNetworkCookie.SameSite
         Lax = ...  # type: QNetworkCookie.SameSite
         Strict = ...  # type: QNetworkCookie.SameSite
+
     class RawForm(enum.Enum):
         NameAndValueOnly = ...  # type: QNetworkCookie.RawForm
         Full = ...  # type: QNetworkCookie.RawForm
@@ -721,6 +733,7 @@ class QNetworkInformation(QtCore.QObject):
     class Feature(enum.Enum):
         Reachability = ...  # type: QNetworkInformation.Feature
         CaptivePortal = ...  # type: QNetworkInformation.Feature
+
     class Reachability(enum.Enum):
         Unknown = ...  # type: QNetworkInformation.Reachability
         Disconnected = ...  # type: QNetworkInformation.Reachability
@@ -789,6 +802,7 @@ class QNetworkInterface(PyQt6.sip.simplewrapper):
         SixLoWPAN = ...  # type: QNetworkInterface.InterfaceType
         Ieee80216 = ...  # type: QNetworkInterface.InterfaceType
         Ieee1394 = ...  # type: QNetworkInterface.InterfaceType
+
     class InterfaceFlag(enum.Flag):
         IsUp = ...  # type: QNetworkInterface.InterfaceFlag
         IsRunning = ...  # type: QNetworkInterface.InterfaceFlag
@@ -832,6 +846,7 @@ class QNetworkProxy(PyQt6.sip.simplewrapper):
         HostNameLookupCapability = ...  # type: QNetworkProxy.Capability
         SctpTunnelingCapability = ...  # type: QNetworkProxy.Capability
         SctpListeningCapability = ...  # type: QNetworkProxy.Capability
+
     class ProxyType(enum.Enum):
         DefaultProxy = ...  # type: QNetworkProxy.ProxyType
         Socks5Proxy = ...  # type: QNetworkProxy.ProxyType
@@ -1007,23 +1022,28 @@ class QNetworkReply(QtCore.QIODevice):
 class QNetworkRequest(PyQt6.sip.simplewrapper):
     class TransferTimeoutConstant(enum.Enum):
         DefaultTransferTimeoutConstant = ...  # type: QNetworkRequest.TransferTimeoutConstant
+
     class RedirectPolicy(enum.Enum):
         ManualRedirectPolicy = ...  # type: QNetworkRequest.RedirectPolicy
         NoLessSafeRedirectPolicy = ...  # type: QNetworkRequest.RedirectPolicy
         SameOriginRedirectPolicy = ...  # type: QNetworkRequest.RedirectPolicy
         UserVerifiedRedirectPolicy = ...  # type: QNetworkRequest.RedirectPolicy
+
     class Priority(enum.Enum):
         HighPriority = ...  # type: QNetworkRequest.Priority
         NormalPriority = ...  # type: QNetworkRequest.Priority
         LowPriority = ...  # type: QNetworkRequest.Priority
+
     class LoadControl(enum.Enum):
         Automatic = ...  # type: QNetworkRequest.LoadControl
         Manual = ...  # type: QNetworkRequest.LoadControl
+
     class CacheLoadControl(enum.Enum):
         AlwaysNetwork = ...  # type: QNetworkRequest.CacheLoadControl
         PreferNetwork = ...  # type: QNetworkRequest.CacheLoadControl
         PreferCache = ...  # type: QNetworkRequest.CacheLoadControl
         AlwaysCache = ...  # type: QNetworkRequest.CacheLoadControl
+
     class Attribute(enum.Enum):
         HttpStatusCodeAttribute = ...  # type: QNetworkRequest.Attribute
         HttpReasonPhraseAttribute = ...  # type: QNetworkRequest.Attribute
@@ -1049,6 +1069,7 @@ class QNetworkRequest(PyQt6.sip.simplewrapper):
         AutoDeleteReplyOnFinishAttribute = ...  # type: QNetworkRequest.Attribute
         User = ...  # type: QNetworkRequest.Attribute
         UserMax = ...  # type: QNetworkRequest.Attribute
+
     class KnownHeaders(enum.Enum):
         ContentTypeHeader = ...  # type: QNetworkRequest.KnownHeaders
         ContentLengthHeader = ...  # type: QNetworkRequest.KnownHeaders
@@ -1122,6 +1143,7 @@ class QSsl(PyQt6.sip.simplewrapper):
         Psk = ...  # type: QSsl.SupportedFeature
         SessionTicket = ...  # type: QSsl.SupportedFeature
         Alerts = ...  # type: QSsl.SupportedFeature
+
     class ImplementedClass(enum.Enum):
         Key = ...  # type: QSsl.ImplementedClass
         Certificate = ...  # type: QSsl.ImplementedClass
@@ -1130,6 +1152,7 @@ class QSsl(PyQt6.sip.simplewrapper):
         EllipticCurve = ...  # type: QSsl.ImplementedClass
         Dtls = ...  # type: QSsl.ImplementedClass
         DtlsCookie = ...  # type: QSsl.ImplementedClass
+
     class AlertType(enum.Enum):
         CloseNotify = ...  # type: QSsl.AlertType
         UnexpectedMessage = ...  # type: QSsl.AlertType
@@ -1165,10 +1188,12 @@ class QSsl(PyQt6.sip.simplewrapper):
         CertificateRequired = ...  # type: QSsl.AlertType
         NoApplicationProtocol = ...  # type: QSsl.AlertType
         UnknownAlertMessage = ...  # type: QSsl.AlertType
+
     class AlertLevel(enum.Enum):
         Warning = ...  # type: QSsl.AlertLevel
         Fatal = ...  # type: QSsl.AlertLevel
         Unknown = ...  # type: QSsl.AlertLevel
+
     class SslOption(enum.Flag):
         SslOptionDisableEmptyFragments = ...  # type: QSsl.SslOption
         SslOptionDisableSessionTickets = ...  # type: QSsl.SslOption
@@ -1178,6 +1203,7 @@ class QSsl(PyQt6.sip.simplewrapper):
         SslOptionDisableSessionSharing = ...  # type: QSsl.SslOption
         SslOptionDisableSessionPersistence = ...  # type: QSsl.SslOption
         SslOptionDisableServerCipherPreference = ...  # type: QSsl.SslOption
+
     class SslProtocol(enum.Enum):
         UnknownProtocol = ...  # type: QSsl.SslProtocol
         TlsV1_0 = ...  # type: QSsl.SslProtocol
@@ -1194,19 +1220,23 @@ class QSsl(PyQt6.sip.simplewrapper):
         DtlsV1_2OrLater = ...  # type: QSsl.SslProtocol
         TlsV1_3 = ...  # type: QSsl.SslProtocol
         TlsV1_3OrLater = ...  # type: QSsl.SslProtocol
+
     class AlternativeNameEntryType(enum.Enum):
         EmailEntry = ...  # type: QSsl.AlternativeNameEntryType
         DnsEntry = ...  # type: QSsl.AlternativeNameEntryType
         IpAddressEntry = ...  # type: QSsl.AlternativeNameEntryType
+
     class KeyAlgorithm(enum.Enum):
         Opaque = ...  # type: QSsl.KeyAlgorithm
         Rsa = ...  # type: QSsl.KeyAlgorithm
         Dsa = ...  # type: QSsl.KeyAlgorithm
         Ec = ...  # type: QSsl.KeyAlgorithm
         Dh = ...  # type: QSsl.KeyAlgorithm
+
     class EncodingFormat(enum.Enum):
         Pem = ...  # type: QSsl.EncodingFormat
         Der = ...  # type: QSsl.EncodingFormat
+
     class KeyType(enum.Enum):
         PrivateKey = ...  # type: QSsl.KeyType
         PublicKey = ...  # type: QSsl.KeyType
@@ -1216,6 +1246,7 @@ class QSslCertificate(PyQt6.sip.simplewrapper):
         RegularExpression = ...  # type: QSslCertificate.PatternSyntax
         Wildcard = ...  # type: QSslCertificate.PatternSyntax
         FixedString = ...  # type: QSslCertificate.PatternSyntax
+
     class SubjectInfo(enum.Enum):
         Organization = ...  # type: QSslCertificate.SubjectInfo
         CommonName = ...  # type: QSslCertificate.SubjectInfo
@@ -1311,6 +1342,7 @@ class QSslConfiguration(PyQt6.sip.simplewrapper):
         NextProtocolNegotiationNegotiated = ...  # type: QSslConfiguration.NextProtocolNegotiationStatus
         NextProtocolNegotiationUnsupported = ...  # type: QSslConfiguration.NextProtocolNegotiationStatus
     NextProtocolHttp1_1 = ...  # type: bytes
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -1518,6 +1550,7 @@ class QSslSocket(QTcpSocket):
         QueryPeer = ...  # type: QSslSocket.PeerVerifyMode
         VerifyPeer = ...  # type: QSslSocket.PeerVerifyMode
         AutoVerifyPeer = ...  # type: QSslSocket.PeerVerifyMode
+
     class SslMode(enum.Enum):
         UnencryptedMode = ...  # type: QSslSocket.SslMode
         SslClientMode = ...  # type: QSslSocket.SslMode
@@ -1627,6 +1660,7 @@ class QSslSocket(QTcpSocket):
 
 class QTcpServer(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     acceptError: typing.ClassVar[QtCore.pyqtSignal]
     newConnection: typing.ClassVar[QtCore.pyqtSignal]
     def addPendingConnection(self, socket: QTcpSocket) -> None: ...

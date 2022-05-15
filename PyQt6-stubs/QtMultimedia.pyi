@@ -37,11 +37,13 @@ class QAudio(PyQt6.sip.simplewrapper):
         CubicVolumeScale = ...  # type: QAudio.VolumeScale
         LogarithmicVolumeScale = ...  # type: QAudio.VolumeScale
         DecibelVolumeScale = ...  # type: QAudio.VolumeScale
+
     class State(enum.Enum):
         ActiveState = ...  # type: QAudio.State
         SuspendedState = ...  # type: QAudio.State
         StoppedState = ...  # type: QAudio.State
         IdleState = ...  # type: QAudio.State
+
     class Error(enum.Enum):
         NoError = ...  # type: QAudio.Error
         OpenError = ...  # type: QAudio.Error
@@ -79,6 +81,7 @@ class QAudioDecoder(QtCore.QObject):
         AccessDeniedError = ...  # type: QAudioDecoder.Error
         NotSupportedError = ...  # type: QAudioDecoder.Error
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     formatChanged: typing.ClassVar[QtCore.pyqtSignal]
     durationChanged: typing.ClassVar[QtCore.pyqtSignal]
     positionChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -134,6 +137,7 @@ class QAudioFormat(PyQt6.sip.simplewrapper):
         Int16 = ...  # type: QAudioFormat.SampleFormat
         Int32 = ...  # type: QAudioFormat.SampleFormat
         Float = ...  # type: QAudioFormat.SampleFormat
+
     class ChannelConfig(enum.Enum):
         ChannelConfigUnknown = ...  # type: QAudioFormat.ChannelConfig
         ChannelConfigMono = ...  # type: QAudioFormat.ChannelConfig
@@ -143,6 +147,7 @@ class QAudioFormat(PyQt6.sip.simplewrapper):
         ChannelConfigSurround5Dot1 = ...  # type: QAudioFormat.ChannelConfig
         ChannelConfigSurround7Dot0 = ...  # type: QAudioFormat.ChannelConfig
         ChannelConfigSurround7Dot1 = ...  # type: QAudioFormat.ChannelConfig
+
     class AudioChannelPosition(enum.Enum):
         UnknownPosition = ...  # type: QAudioFormat.AudioChannelPosition
         FrontLeft = ...  # type: QAudioFormat.AudioChannelPosition
@@ -198,6 +203,7 @@ class QAudioInput(QtCore.QObject):
     def __init__(self, deviceInfo: QAudioDevice, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     mutedChanged: typing.ClassVar[QtCore.pyqtSignal]
     volumeChanged: typing.ClassVar[QtCore.pyqtSignal]
     deviceChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -213,6 +219,7 @@ class QAudioOutput(QtCore.QObject):
     def __init__(self, device: QAudioDevice, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     mutedChanged: typing.ClassVar[QtCore.pyqtSignal]
     volumeChanged: typing.ClassVar[QtCore.pyqtSignal]
     deviceChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -228,6 +235,7 @@ class QAudioSink(QtCore.QObject):
     def __init__(self, audioDeviceInfo: QAudioDevice, format: QAudioFormat = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, format: QAudioFormat = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     stateChanged: typing.ClassVar[QtCore.pyqtSignal]
     def volume(self) -> float: ...
     def setVolume(self, a0: float) -> None: ...
@@ -253,6 +261,7 @@ class QAudioSource(QtCore.QObject):
     def __init__(self, audioDeviceInfo: QAudioDevice, format: QAudioFormat = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, format: QAudioFormat = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     stateChanged: typing.ClassVar[QtCore.pyqtSignal]
     def state(self) -> QAudio.State: ...
     def error(self) -> QAudio.Error: ...
@@ -281,6 +290,7 @@ class QCamera(QtCore.QObject):
         ManualExposureTime = ...  # type: QCamera.Feature
         CustomFocusPoint = ...  # type: QCamera.Feature
         FocusDistance = ...  # type: QCamera.Feature
+
     class WhiteBalanceMode(enum.Enum):
         WhiteBalanceAuto = ...  # type: QCamera.WhiteBalanceMode
         WhiteBalanceManual = ...  # type: QCamera.WhiteBalanceMode
@@ -291,6 +301,7 @@ class QCamera(QtCore.QObject):
         WhiteBalanceFluorescent = ...  # type: QCamera.WhiteBalanceMode
         WhiteBalanceFlash = ...  # type: QCamera.WhiteBalanceMode
         WhiteBalanceSunset = ...  # type: QCamera.WhiteBalanceMode
+
     class ExposureMode(enum.Enum):
         ExposureAuto = ...  # type: QCamera.ExposureMode
         ExposureManual = ...  # type: QCamera.ExposureMode
@@ -309,14 +320,17 @@ class QCamera(QtCore.QObject):
         ExposureParty = ...  # type: QCamera.ExposureMode
         ExposureCandlelight = ...  # type: QCamera.ExposureMode
         ExposureBarcode = ...  # type: QCamera.ExposureMode
+
     class TorchMode(enum.Enum):
         TorchOff = ...  # type: QCamera.TorchMode
         TorchOn = ...  # type: QCamera.TorchMode
         TorchAuto = ...  # type: QCamera.TorchMode
+
     class FlashMode(enum.Enum):
         FlashOff = ...  # type: QCamera.FlashMode
         FlashOn = ...  # type: QCamera.FlashMode
         FlashAuto = ...  # type: QCamera.FlashMode
+
     class FocusMode(enum.Enum):
         FocusModeAuto = ...  # type: QCamera.FocusMode
         FocusModeAutoNear = ...  # type: QCamera.FocusMode
@@ -324,6 +338,7 @@ class QCamera(QtCore.QObject):
         FocusModeHyperfocal = ...  # type: QCamera.FocusMode
         FocusModeInfinity = ...  # type: QCamera.FocusMode
         FocusModeManual = ...  # type: QCamera.FocusMode
+
     class Error(enum.Enum):
         NoError = ...  # type: QCamera.Error
         CameraError = ...  # type: QCamera.Error
@@ -333,6 +348,7 @@ class QCamera(QtCore.QObject):
     def __init__(self, position: "QCameraDevice.Position", parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     manualIsoSensitivityChanged: typing.ClassVar[QtCore.pyqtSignal]
     manualExposureTimeChanged: typing.ClassVar[QtCore.pyqtSignal]
     focusPointChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -448,12 +464,14 @@ class QImageCapture(QtCore.QObject):
         PNG = ...  # type: QImageCapture.FileFormat
         WebP = ...  # type: QImageCapture.FileFormat
         Tiff = ...  # type: QImageCapture.FileFormat
+
     class Quality(enum.Enum):
         VeryLowQuality = ...  # type: QImageCapture.Quality
         LowQuality = ...  # type: QImageCapture.Quality
         NormalQuality = ...  # type: QImageCapture.Quality
         HighQuality = ...  # type: QImageCapture.Quality
         VeryHighQuality = ...  # type: QImageCapture.Quality
+
     class Error(enum.Enum):
         NoError = ...  # type: QImageCapture.Error
         NotReadyError = ...  # type: QImageCapture.Error
@@ -462,6 +480,7 @@ class QImageCapture(QtCore.QObject):
         NotSupportedFeatureError = ...  # type: QImageCapture.Error
         FormatError = ...  # type: QImageCapture.Error
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     imageSaved: typing.ClassVar[QtCore.pyqtSignal]
     imageAvailable: typing.ClassVar[QtCore.pyqtSignal]
     imageCaptured: typing.ClassVar[QtCore.pyqtSignal]
@@ -501,6 +520,7 @@ class QImageCapture(QtCore.QObject):
 
 class QMediaCaptureSession(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     audioOutputChanged: typing.ClassVar[QtCore.pyqtSignal]
     videoOutputChanged: typing.ClassVar[QtCore.pyqtSignal]
     recorderChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -524,6 +544,7 @@ class QMediaCaptureSession(QtCore.QObject):
 
 class QMediaDevices(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     videoInputsChanged: typing.ClassVar[QtCore.pyqtSignal]
     audioOutputsChanged: typing.ClassVar[QtCore.pyqtSignal]
     audioInputsChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -544,9 +565,11 @@ class QMediaFormat(PyQt6.sip.simplewrapper):
     class ResolveFlags(enum.Enum):
         NoFlags = ...  # type: QMediaFormat.ResolveFlags
         RequiresVideo = ...  # type: QMediaFormat.ResolveFlags
+
     class ConversionMode(enum.Enum):
         Encode = ...  # type: QMediaFormat.ConversionMode
         Decode = ...  # type: QMediaFormat.ConversionMode
+
     class VideoCodec(enum.Enum):
         Unspecified = ...  # type: QMediaFormat.VideoCodec
         MPEG1 = ...  # type: QMediaFormat.VideoCodec
@@ -560,6 +583,7 @@ class QMediaFormat(PyQt6.sip.simplewrapper):
         Theora = ...  # type: QMediaFormat.VideoCodec
         WMV = ...  # type: QMediaFormat.VideoCodec
         MotionJPEG = ...  # type: QMediaFormat.VideoCodec
+
     class AudioCodec(enum.Enum):
         Unspecified = ...  # type: QMediaFormat.AudioCodec
         MP3 = ...  # type: QMediaFormat.AudioCodec
@@ -573,6 +597,7 @@ class QMediaFormat(PyQt6.sip.simplewrapper):
         Wave = ...  # type: QMediaFormat.AudioCodec
         WMA = ...  # type: QMediaFormat.AudioCodec
         ALAC = ...  # type: QMediaFormat.AudioCodec
+
     class FileFormat(enum.Enum):
         UnspecifiedFormat = ...  # type: QMediaFormat.FileFormat
         WMV = ...  # type: QMediaFormat.FileFormat
@@ -663,12 +688,14 @@ class QMediaPlayer(QtCore.QObject):
     class Loops(enum.IntEnum):
         Infinite = ...  # type: QMediaPlayer.Loops
         Once = ...  # type: QMediaPlayer.Loops
+
     class Error(enum.Enum):
         NoError = ...  # type: QMediaPlayer.Error
         ResourceError = ...  # type: QMediaPlayer.Error
         FormatError = ...  # type: QMediaPlayer.Error
         NetworkError = ...  # type: QMediaPlayer.Error
         AccessDeniedError = ...  # type: QMediaPlayer.Error
+
     class MediaStatus(enum.Enum):
         NoMedia = ...  # type: QMediaPlayer.MediaStatus
         LoadingMedia = ...  # type: QMediaPlayer.MediaStatus
@@ -678,11 +705,13 @@ class QMediaPlayer(QtCore.QObject):
         BufferedMedia = ...  # type: QMediaPlayer.MediaStatus
         EndOfMedia = ...  # type: QMediaPlayer.MediaStatus
         InvalidMedia = ...  # type: QMediaPlayer.MediaStatus
+
     class PlaybackState(enum.Enum):
         StoppedState = ...  # type: QMediaPlayer.PlaybackState
         PlayingState = ...  # type: QMediaPlayer.PlaybackState
         PausedState = ...  # type: QMediaPlayer.PlaybackState
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     loopsChanged: typing.ClassVar[QtCore.pyqtSignal]
     def setLoops(self, loops: int) -> None: ...
     def loops(self) -> int: ...
@@ -749,15 +778,18 @@ class QMediaRecorder(QtCore.QObject):
         FormatError = ...  # type: QMediaRecorder.Error
         OutOfSpaceError = ...  # type: QMediaRecorder.Error
         LocationNotWritable = ...  # type: QMediaRecorder.Error
+
     class RecorderState(enum.Enum):
         StoppedState = ...  # type: QMediaRecorder.RecorderState
         RecordingState = ...  # type: QMediaRecorder.RecorderState
         PausedState = ...  # type: QMediaRecorder.RecorderState
+
     class EncodingMode(enum.Enum):
         ConstantQualityEncoding = ...  # type: QMediaRecorder.EncodingMode
         ConstantBitRateEncoding = ...  # type: QMediaRecorder.EncodingMode
         AverageBitRateEncoding = ...  # type: QMediaRecorder.EncodingMode
         TwoPassEncoding = ...  # type: QMediaRecorder.EncodingMode
+
     class Quality(enum.Enum):
         VeryLowQuality = ...  # type: QMediaRecorder.Quality
         LowQuality = ...  # type: QMediaRecorder.Quality
@@ -765,6 +797,7 @@ class QMediaRecorder(QtCore.QObject):
         HighQuality = ...  # type: QMediaRecorder.Quality
         VeryHighQuality = ...  # type: QMediaRecorder.Quality
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     audioSampleRateChanged: typing.ClassVar[QtCore.pyqtSignal]
     audioChannelCountChanged: typing.ClassVar[QtCore.pyqtSignal]
     audioBitRateChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -828,6 +861,7 @@ class QMediaTimeRange(PyQt6.sip.simplewrapper):
         def contains(self, time: int) -> bool: ...
         def end(self) -> int: ...
         def start(self) -> int: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -860,12 +894,14 @@ class QSoundEffect(QtCore.QObject):
         Loading = ...  # type: QSoundEffect.Status
         Ready = ...  # type: QSoundEffect.Status
         Error = ...  # type: QSoundEffect.Status
+
     class Loop(enum.Enum):
         Infinite = ...  # type: QSoundEffect.Loop
     @typing.overload
     def __init__(self, audioDevice: QAudioDevice, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     statusChanged: typing.ClassVar[QtCore.pyqtSignal]
     playingChanged: typing.ClassVar[QtCore.pyqtSignal]
     loadedChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -900,19 +936,23 @@ class QVideoFrame(PyQt6.sip.simplewrapper):
         ReadOnly = ...  # type: QVideoFrame.MapMode
         WriteOnly = ...  # type: QVideoFrame.MapMode
         ReadWrite = ...  # type: QVideoFrame.MapMode
+
     class HandleType(enum.Enum):
         NoHandle = ...  # type: QVideoFrame.HandleType
         RhiTextureHandle = ...  # type: QVideoFrame.HandleType
+
     class PaintOptions(PyQt6.sip.simplewrapper):
         class PaintFlag(enum.Flag):
             DontDrawSubtitles = ...  # type: QVideoFrame.PaintOptions.PaintFlag
         aspectRatioMode = ...  # type: QtCore.Qt.AspectRatioMode
         backgroundColor = ...  # type: typing.Union[QtGui.QColor, QtCore.Qt.GlobalColor, int]
         paintFlags = ...  # type: 'QVideoFrame.PaintOptions.PaintFlag'
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QVideoFrame.PaintOptions") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -953,9 +993,11 @@ class QVideoFrameFormat(PyQt6.sip.simplewrapper):
         YCbCr_xvYCC601 = ...  # type: QVideoFrameFormat.YCbCrColorSpace
         YCbCr_xvYCC709 = ...  # type: QVideoFrameFormat.YCbCrColorSpace
         YCbCr_JPEG = ...  # type: QVideoFrameFormat.YCbCrColorSpace
+
     class Direction(enum.Enum):
         TopToBottom = ...  # type: QVideoFrameFormat.Direction
         BottomToTop = ...  # type: QVideoFrameFormat.Direction
+
     class PixelFormat(enum.Enum):
         Format_Invalid = ...  # type: QVideoFrameFormat.PixelFormat
         Format_YUV420P = ...  # type: QVideoFrameFormat.PixelFormat

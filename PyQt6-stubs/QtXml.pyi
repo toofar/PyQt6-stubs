@@ -53,6 +53,7 @@ class QDomNode(PyQt6.sip.simplewrapper):
     class EncodingPolicy(enum.Enum):
         EncodingFromDocument = ...  # type: QDomNode.EncodingPolicy
         EncodingFromTextStream = ...  # type: QDomNode.EncodingPolicy
+
     class NodeType(enum.Enum):
         ElementNode = ...  # type: QDomNode.NodeType
         AttributeNode = ...  # type: QDomNode.NodeType

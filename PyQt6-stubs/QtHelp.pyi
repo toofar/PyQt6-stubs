@@ -175,6 +175,7 @@ class QHelpLink(PyQt6.sip.simplewrapper):
 
     title = ...  # type: str
     url = ...  # type: QtCore.QUrl
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload

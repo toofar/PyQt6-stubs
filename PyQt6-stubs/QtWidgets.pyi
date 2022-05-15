@@ -440,6 +440,7 @@ class QAbstractItemDelegate(QtCore.QObject):
         SubmitModelCache = ...  # type: QAbstractItemDelegate.EndEditHint
         RevertModelCache = ...  # type: QAbstractItemDelegate.EndEditHint
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     sizeHintChanged: typing.ClassVar[QtCore.pyqtSignal]
     closeEditor: typing.ClassVar[QtCore.pyqtSignal]
     commitData: typing.ClassVar[QtCore.pyqtSignal]
@@ -457,6 +458,7 @@ class QFrame(QWidget):
     class StyleMask(enum.Enum):
         Shadow_Mask = ...  # type: QFrame.StyleMask
         Shape_Mask = ...  # type: QFrame.StyleMask
+
     class Shape(enum.IntEnum):
         NoFrame = ...  # type: QFrame.Shape
         Box = ...  # type: QFrame.Shape
@@ -465,6 +467,7 @@ class QFrame(QWidget):
         HLine = ...  # type: QFrame.Shape
         VLine = ...  # type: QFrame.Shape
         StyledPanel = ...  # type: QFrame.Shape
+
     class Shadow(enum.IntEnum):
         Plain = ...  # type: QFrame.Shadow
         Raised = ...  # type: QFrame.Shadow
@@ -546,6 +549,7 @@ class QAbstractItemView(QAbstractScrollArea):
         AboveItem = ...  # type: QAbstractItemView.DropIndicatorPosition
         BelowItem = ...  # type: QAbstractItemView.DropIndicatorPosition
         OnViewport = ...  # type: QAbstractItemView.DropIndicatorPosition
+
     class State(enum.Enum):
         NoState = ...  # type: QAbstractItemView.State
         DraggingState = ...  # type: QAbstractItemView.State
@@ -554,6 +558,7 @@ class QAbstractItemView(QAbstractScrollArea):
         ExpandingState = ...  # type: QAbstractItemView.State
         CollapsingState = ...  # type: QAbstractItemView.State
         AnimatingState = ...  # type: QAbstractItemView.State
+
     class CursorAction(enum.Enum):
         MoveUp = ...  # type: QAbstractItemView.CursorAction
         MoveDown = ...  # type: QAbstractItemView.CursorAction
@@ -565,24 +570,29 @@ class QAbstractItemView(QAbstractScrollArea):
         MovePageDown = ...  # type: QAbstractItemView.CursorAction
         MoveNext = ...  # type: QAbstractItemView.CursorAction
         MovePrevious = ...  # type: QAbstractItemView.CursorAction
+
     class SelectionMode(enum.Enum):
         NoSelection = ...  # type: QAbstractItemView.SelectionMode
         SingleSelection = ...  # type: QAbstractItemView.SelectionMode
         MultiSelection = ...  # type: QAbstractItemView.SelectionMode
         ExtendedSelection = ...  # type: QAbstractItemView.SelectionMode
         ContiguousSelection = ...  # type: QAbstractItemView.SelectionMode
+
     class SelectionBehavior(enum.Enum):
         SelectItems = ...  # type: QAbstractItemView.SelectionBehavior
         SelectRows = ...  # type: QAbstractItemView.SelectionBehavior
         SelectColumns = ...  # type: QAbstractItemView.SelectionBehavior
+
     class ScrollMode(enum.Enum):
         ScrollPerItem = ...  # type: QAbstractItemView.ScrollMode
         ScrollPerPixel = ...  # type: QAbstractItemView.ScrollMode
+
     class ScrollHint(enum.Enum):
         EnsureVisible = ...  # type: QAbstractItemView.ScrollHint
         PositionAtTop = ...  # type: QAbstractItemView.ScrollHint
         PositionAtBottom = ...  # type: QAbstractItemView.ScrollHint
         PositionAtCenter = ...  # type: QAbstractItemView.ScrollHint
+
     class EditTrigger(enum.Flag):
         NoEditTriggers = ...  # type: QAbstractItemView.EditTrigger
         CurrentChanged = ...  # type: QAbstractItemView.EditTrigger
@@ -591,6 +601,7 @@ class QAbstractItemView(QAbstractScrollArea):
         EditKeyPressed = ...  # type: QAbstractItemView.EditTrigger
         AnyKeyPressed = ...  # type: QAbstractItemView.EditTrigger
         AllEditTriggers = ...  # type: QAbstractItemView.EditTrigger
+
     class DragDropMode(enum.Enum):
         NoDragDrop = ...  # type: QAbstractItemView.DragDropMode
         DragOnly = ...  # type: QAbstractItemView.DragDropMode
@@ -739,6 +750,7 @@ class QAbstractSlider(QWidget):
         SliderOrientationChange = ...  # type: QAbstractSlider.SliderChange
         SliderStepsChange = ...  # type: QAbstractSlider.SliderChange
         SliderValueChange = ...  # type: QAbstractSlider.SliderChange
+
     class SliderAction(enum.Enum):
         SliderNoAction = ...  # type: QAbstractSlider.SliderAction
         SliderSingleStepAdd = ...  # type: QAbstractSlider.SliderAction
@@ -792,13 +804,16 @@ class QAbstractSpinBox(QWidget):
     class StepType(enum.Enum):
         DefaultStepType = ...  # type: QAbstractSpinBox.StepType
         AdaptiveDecimalStepType = ...  # type: QAbstractSpinBox.StepType
+
     class CorrectionMode(enum.Enum):
         CorrectToPreviousValue = ...  # type: QAbstractSpinBox.CorrectionMode
         CorrectToNearestValue = ...  # type: QAbstractSpinBox.CorrectionMode
+
     class ButtonSymbols(enum.Enum):
         UpDownArrows = ...  # type: QAbstractSpinBox.ButtonSymbols
         PlusMinus = ...  # type: QAbstractSpinBox.ButtonSymbols
         NoButtons = ...  # type: QAbstractSpinBox.ButtonSymbols
+
     class StepEnabledFlag(enum.Flag):
         StepNone = ...  # type: QAbstractSpinBox.StepEnabledFlag
         StepUpEnabled = ...  # type: QAbstractSpinBox.StepEnabledFlag
@@ -1114,6 +1129,7 @@ class QVBoxLayout(QBoxLayout):
 
 class QButtonGroup(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     idToggled: typing.ClassVar[QtCore.pyqtSignal]
     idReleased: typing.ClassVar[QtCore.pyqtSignal]
     idPressed: typing.ClassVar[QtCore.pyqtSignal]
@@ -1137,9 +1153,11 @@ class QCalendarWidget(QWidget):
     class SelectionMode(enum.Enum):
         NoSelection = ...  # type: QCalendarWidget.SelectionMode
         SingleSelection = ...  # type: QCalendarWidget.SelectionMode
+
     class VerticalHeaderFormat(enum.Enum):
         NoVerticalHeader = ...  # type: QCalendarWidget.VerticalHeaderFormat
         ISOWeekNumbers = ...  # type: QCalendarWidget.VerticalHeaderFormat
+
     class HorizontalHeaderFormat(enum.Enum):
         NoHorizontalHeader = ...  # type: QCalendarWidget.HorizontalHeaderFormat
         SingleLetterDayNames = ...  # type: QCalendarWidget.HorizontalHeaderFormat
@@ -1325,6 +1343,7 @@ class QComboBox(QWidget):
         AdjustToContents = ...  # type: QComboBox.SizeAdjustPolicy
         AdjustToContentsOnFirstShow = ...  # type: QComboBox.SizeAdjustPolicy
         AdjustToMinimumContentsLengthWithIcon = ...  # type: QComboBox.SizeAdjustPolicy
+
     class InsertPolicy(enum.Enum):
         NoInsert = ...  # type: QComboBox.InsertPolicy
         InsertAtTop = ...  # type: QComboBox.InsertPolicy
@@ -1479,6 +1498,7 @@ class QStyle(QtCore.QObject):
     class RequestSoftwareInputPanel(enum.Enum):
         RSIP_OnMouseClickAndAlreadyFocused = ...  # type: QStyle.RequestSoftwareInputPanel
         RSIP_OnMouseClick = ...  # type: QStyle.RequestSoftwareInputPanel
+
     class StandardPixmap(enum.IntEnum):
         SP_TitleBarMenuButton = ...  # type: QStyle.StandardPixmap
         SP_TitleBarMinButton = ...  # type: QStyle.StandardPixmap
@@ -1559,6 +1579,7 @@ class QStyle(QtCore.QObject):
         SP_DialogIgnoreButton = ...  # type: QStyle.StandardPixmap
         SP_RestoreDefaultsButton = ...  # type: QStyle.StandardPixmap
         SP_CustomBase = ...  # type: QStyle.StandardPixmap
+
     class StyleHint(enum.IntEnum):
         SH_EtchDisabledText = ...  # type: QStyle.StyleHint
         SH_DitherDisabledText = ...  # type: QStyle.StyleHint
@@ -1678,6 +1699,7 @@ class QStyle(QtCore.QObject):
         SH_SpinBox_StepModifier = ...  # type: QStyle.StyleHint
         SH_TabBar_AllowWheelScrolling = ...  # type: QStyle.StyleHint
         SH_CustomBase = ...  # type: QStyle.StyleHint
+
     class ContentsType(enum.IntEnum):
         CT_PushButton = ...  # type: QStyle.ContentsType
         CT_CheckBox = ...  # type: QStyle.ContentsType
@@ -1703,6 +1725,7 @@ class QStyle(QtCore.QObject):
         CT_MdiControls = ...  # type: QStyle.ContentsType
         CT_ItemViewItem = ...  # type: QStyle.ContentsType
         CT_CustomBase = ...  # type: QStyle.ContentsType
+
     class PixelMetric(enum.IntEnum):
         PM_ButtonMargin = ...  # type: QStyle.PixelMetric
         PM_ButtonDefaultIndicator = ...  # type: QStyle.PixelMetric
@@ -1799,6 +1822,7 @@ class QStyle(QtCore.QObject):
         PM_TitleBarButtonSize = ...  # type: QStyle.PixelMetric
         PM_LineEditIconSize = ...  # type: QStyle.PixelMetric
         PM_CustomBase = ...  # type: QStyle.PixelMetric
+
     class SubControl(enum.Flag):
         SC_None = ...  # type: QStyle.SubControl
         SC_ScrollBarAddLine = ...  # type: QStyle.SubControl
@@ -1843,6 +1867,7 @@ class QStyle(QtCore.QObject):
         SC_MdiCloseButton = ...  # type: QStyle.SubControl
         SC_CustomBase = ...  # type: QStyle.SubControl
         SC_All = ...  # type: QStyle.SubControl
+
     class ComplexControl(enum.IntEnum):
         CC_SpinBox = ...  # type: QStyle.ComplexControl
         CC_ComboBox = ...  # type: QStyle.ComplexControl
@@ -1854,6 +1879,7 @@ class QStyle(QtCore.QObject):
         CC_GroupBox = ...  # type: QStyle.ComplexControl
         CC_MdiControls = ...  # type: QStyle.ComplexControl
         CC_CustomBase = ...  # type: QStyle.ComplexControl
+
     class SubElement(enum.IntEnum):
         SE_PushButtonContents = ...  # type: QStyle.SubElement
         SE_PushButtonFocusRect = ...  # type: QStyle.SubElement
@@ -1914,6 +1940,7 @@ class QStyle(QtCore.QObject):
         SE_TabBarTearIndicatorRight = ...  # type: QStyle.SubElement
         SE_PushButtonBevel = ...  # type: QStyle.SubElement
         SE_CustomBase = ...  # type: QStyle.SubElement
+
     class ControlElement(enum.IntEnum):
         CE_PushButton = ...  # type: QStyle.ControlElement
         CE_PushButtonBevel = ...  # type: QStyle.ControlElement
@@ -1963,6 +1990,7 @@ class QStyle(QtCore.QObject):
         CE_ItemViewItem = ...  # type: QStyle.ControlElement
         CE_ShapedFrame = ...  # type: QStyle.ControlElement
         CE_CustomBase = ...  # type: QStyle.ControlElement
+
     class PrimitiveElement(enum.IntEnum):
         PE_Frame = ...  # type: QStyle.PrimitiveElement
         PE_FrameDefaultButton = ...  # type: QStyle.PrimitiveElement
@@ -2016,6 +2044,7 @@ class QStyle(QtCore.QObject):
         PE_IndicatorTabTearLeft = ...  # type: QStyle.PrimitiveElement
         PE_IndicatorTabTearRight = ...  # type: QStyle.PrimitiveElement
         PE_CustomBase = ...  # type: QStyle.PrimitiveElement
+
     class StateFlag(enum.Flag):
         State_None = ...  # type: QStyle.StateFlag
         State_Enabled = ...  # type: QStyle.StateFlag
@@ -2121,6 +2150,7 @@ class QCompleter(QtCore.QObject):
         UnsortedModel = ...  # type: QCompleter.ModelSorting
         CaseSensitivelySortedModel = ...  # type: QCompleter.ModelSorting
         CaseInsensitivelySortedModel = ...  # type: QCompleter.ModelSorting
+
     class CompletionMode(enum.Enum):
         PopupCompletion = ...  # type: QCompleter.CompletionMode
         UnfilteredPopupCompletion = ...  # type: QCompleter.CompletionMode
@@ -2174,6 +2204,7 @@ class QDataWidgetMapper(QtCore.QObject):
         AutoSubmit = ...  # type: QDataWidgetMapper.SubmitPolicy
         ManualSubmit = ...  # type: QDataWidgetMapper.SubmitPolicy
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     currentIndexChanged: typing.ClassVar[QtCore.pyqtSignal]
     def toPrevious(self) -> None: ...
     def toNext(self) -> None: ...
@@ -2344,6 +2375,7 @@ class QDialogButtonBox(QWidget):
         Apply = ...  # type: QDialogButtonBox.StandardButton
         Reset = ...  # type: QDialogButtonBox.StandardButton
         RestoreDefaults = ...  # type: QDialogButtonBox.StandardButton
+
     class ButtonRole(enum.Enum):
         InvalidRole = ...  # type: QDialogButtonBox.ButtonRole
         AcceptRole = ...  # type: QDialogButtonBox.ButtonRole
@@ -2355,6 +2387,7 @@ class QDialogButtonBox(QWidget):
         NoRole = ...  # type: QDialogButtonBox.ButtonRole
         ResetRole = ...  # type: QDialogButtonBox.ButtonRole
         ApplyRole = ...  # type: QDialogButtonBox.ButtonRole
+
     class ButtonLayout(enum.Enum):
         WinLayout = ...  # type: QDialogButtonBox.ButtonLayout
         MacLayout = ...  # type: QDialogButtonBox.ButtonLayout
@@ -2448,20 +2481,24 @@ class QFileDialog(QDialog):
         ReadOnly = ...  # type: QFileDialog.Option
         HideNameFilterDetails = ...  # type: QFileDialog.Option
         DontUseCustomDirectoryIcons = ...  # type: QFileDialog.Option
+
     class DialogLabel(enum.Enum):
         LookIn = ...  # type: QFileDialog.DialogLabel
         FileName = ...  # type: QFileDialog.DialogLabel
         FileType = ...  # type: QFileDialog.DialogLabel
         Accept = ...  # type: QFileDialog.DialogLabel
         Reject = ...  # type: QFileDialog.DialogLabel
+
     class AcceptMode(enum.Enum):
         AcceptOpen = ...  # type: QFileDialog.AcceptMode
         AcceptSave = ...  # type: QFileDialog.AcceptMode
+
     class FileMode(enum.Enum):
         AnyFile = ...  # type: QFileDialog.FileMode
         ExistingFile = ...  # type: QFileDialog.FileMode
         Directory = ...  # type: QFileDialog.FileMode
         ExistingFiles = ...  # type: QFileDialog.FileMode
+
     class ViewMode(enum.Enum):
         Detail = ...  # type: QFileDialog.ViewMode
         List = ...  # type: QFileDialog.ViewMode
@@ -2601,6 +2638,7 @@ class QFontDialog(QDialog):
     def __init__(self, parent: typing.Optional[QWidget] = ...) -> None: ...
     @typing.overload
     def __init__(self, initial: QtGui.QFont, parent: typing.Optional[QWidget] = ...) -> None: ...
+
     fontSelected: typing.ClassVar[QtCore.pyqtSignal]
     currentFontChanged: typing.ClassVar[QtCore.pyqtSignal]
     def setVisible(self, visible: bool) -> None: ...
@@ -2630,22 +2668,27 @@ class QFormLayout(QLayout):
         LabelRole = ...  # type: QFormLayout.ItemRole
         FieldRole = ...  # type: QFormLayout.ItemRole
         SpanningRole = ...  # type: QFormLayout.ItemRole
+
     class RowWrapPolicy(enum.Enum):
         DontWrapRows = ...  # type: QFormLayout.RowWrapPolicy
         WrapLongRows = ...  # type: QFormLayout.RowWrapPolicy
         WrapAllRows = ...  # type: QFormLayout.RowWrapPolicy
+
     class FieldGrowthPolicy(enum.Enum):
         FieldsStayAtSizeHint = ...  # type: QFormLayout.FieldGrowthPolicy
         ExpandingFieldsGrow = ...  # type: QFormLayout.FieldGrowthPolicy
         AllNonFixedFieldsGrow = ...  # type: QFormLayout.FieldGrowthPolicy
+
     class TakeRowResult(PyQt6.sip.simplewrapper):
 
         fieldItem = ...  # type: QLayoutItem
         labelItem = ...  # type: QLayoutItem
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QFormLayout.TakeRowResult") -> None: ...
+
     def __init__(self, parent: typing.Optional[QWidget] = ...) -> None: ...
     @typing.overload
     def takeRow(self, row: int) -> "QFormLayout.TakeRowResult": ...
@@ -2954,6 +2997,7 @@ class QGraphicsEffect(QtCore.QObject):
         NoPad = ...  # type: QGraphicsEffect.PixmapPadMode
         PadToTransparentBorder = ...  # type: QGraphicsEffect.PixmapPadMode
         PadToEffectiveBoundingRect = ...  # type: QGraphicsEffect.PixmapPadMode
+
     class ChangeFlag(enum.Flag):
         SourceAttached = ...  # type: QGraphicsEffect.ChangeFlag
         SourceDetached = ...  # type: QGraphicsEffect.ChangeFlag
@@ -3089,6 +3133,7 @@ class QGraphicsItem(PyQt6.sip.wrapper):
         NonModal = ...  # type: QGraphicsItem.PanelModality
         PanelModal = ...  # type: QGraphicsItem.PanelModality
         SceneModal = ...  # type: QGraphicsItem.PanelModality
+
     class GraphicsItemFlag(enum.Flag):
         ItemIsMovable = ...  # type: QGraphicsItem.GraphicsItemFlag
         ItemIsSelectable = ...  # type: QGraphicsItem.GraphicsItemFlag
@@ -3107,6 +3152,7 @@ class QGraphicsItem(PyQt6.sip.wrapper):
         ItemIsPanel = ...  # type: QGraphicsItem.GraphicsItemFlag
         ItemSendsScenePositionChanges = ...  # type: QGraphicsItem.GraphicsItemFlag
         ItemContainsChildrenInShape = ...  # type: QGraphicsItem.GraphicsItemFlag
+
     class GraphicsItemChange(enum.Enum):
         ItemPositionChange = ...  # type: QGraphicsItem.GraphicsItemChange
         ItemVisibleChange = ...  # type: QGraphicsItem.GraphicsItemChange
@@ -3141,12 +3187,14 @@ class QGraphicsItem(PyQt6.sip.wrapper):
         ItemScaleHasChanged = ...  # type: QGraphicsItem.GraphicsItemChange
         ItemTransformOriginPointChange = ...  # type: QGraphicsItem.GraphicsItemChange
         ItemTransformOriginPointHasChanged = ...  # type: QGraphicsItem.GraphicsItemChange
+
     class CacheMode(enum.Enum):
         NoCache = ...  # type: QGraphicsItem.CacheMode
         ItemCoordinateCache = ...  # type: QGraphicsItem.CacheMode
         DeviceCoordinateCache = ...  # type: QGraphicsItem.CacheMode
     Type = ...  # type: int
     UserType = ...  # type: int
+
     def __init__(self, parent: typing.Optional["QGraphicsItem"] = ...) -> None: ...
     def updateMicroFocus(self) -> None: ...
     def setInputMethodHints(self, hints: QtCore.Qt.InputMethodHint) -> None: ...
@@ -3668,6 +3716,7 @@ class QGraphicsLinearLayout(QGraphicsLayout):
 
 class QGraphicsWidget(QGraphicsObject, QGraphicsLayoutItem):
     def __init__(self, parent: typing.Optional[QGraphicsItem] = ..., flags: QtCore.Qt.WindowType = ...) -> None: ...
+
     geometryChanged: typing.ClassVar[QtCore.pyqtSignal]
     def setAutoFillBackground(self, enabled: bool) -> None: ...
     def autoFillBackground(self) -> bool: ...
@@ -3806,6 +3855,7 @@ class QGraphicsScene(QtCore.QObject):
         BackgroundLayer = ...  # type: QGraphicsScene.SceneLayer
         ForegroundLayer = ...  # type: QGraphicsScene.SceneLayer
         AllLayers = ...  # type: QGraphicsScene.SceneLayer
+
     class ItemIndexMethod(enum.Enum):
         BspTreeIndex = ...  # type: QGraphicsScene.ItemIndexMethod
         NoIndex = ...  # type: QGraphicsScene.ItemIndexMethod
@@ -4027,6 +4077,7 @@ class QGraphicsTransform(QtCore.QObject):
 
 class QGraphicsScale(QGraphicsTransform):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     zScaleChanged: typing.ClassVar[QtCore.pyqtSignal]
     yScaleChanged: typing.ClassVar[QtCore.pyqtSignal]
     xScaleChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -4044,6 +4095,7 @@ class QGraphicsScale(QGraphicsTransform):
 
 class QGraphicsRotation(QGraphicsTransform):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     axisChanged: typing.ClassVar[QtCore.pyqtSignal]
     angleChanged: typing.ClassVar[QtCore.pyqtSignal]
     originChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -4062,20 +4114,24 @@ class QGraphicsView(QAbstractScrollArea):
     class OptimizationFlag(enum.Flag):
         DontSavePainterState = ...  # type: QGraphicsView.OptimizationFlag
         DontAdjustForAntialiasing = ...  # type: QGraphicsView.OptimizationFlag
+
     class ViewportUpdateMode(enum.Enum):
         FullViewportUpdate = ...  # type: QGraphicsView.ViewportUpdateMode
         MinimalViewportUpdate = ...  # type: QGraphicsView.ViewportUpdateMode
         SmartViewportUpdate = ...  # type: QGraphicsView.ViewportUpdateMode
         BoundingRectViewportUpdate = ...  # type: QGraphicsView.ViewportUpdateMode
         NoViewportUpdate = ...  # type: QGraphicsView.ViewportUpdateMode
+
     class ViewportAnchor(enum.Enum):
         NoAnchor = ...  # type: QGraphicsView.ViewportAnchor
         AnchorViewCenter = ...  # type: QGraphicsView.ViewportAnchor
         AnchorUnderMouse = ...  # type: QGraphicsView.ViewportAnchor
+
     class DragMode(enum.Enum):
         NoDrag = ...  # type: QGraphicsView.DragMode
         ScrollHandDrag = ...  # type: QGraphicsView.DragMode
         RubberBandDrag = ...  # type: QGraphicsView.DragMode
+
     class CacheModeFlag(enum.Flag):
         CacheNone = ...  # type: QGraphicsView.CacheModeFlag
         CacheBackground = ...  # type: QGraphicsView.CacheModeFlag
@@ -4083,6 +4139,7 @@ class QGraphicsView(QAbstractScrollArea):
     def __init__(self, parent: typing.Optional[QWidget] = ...) -> None: ...
     @typing.overload
     def __init__(self, scene: QGraphicsScene, parent: typing.Optional[QWidget] = ...) -> None: ...
+
     rubberBandChanged: typing.ClassVar[QtCore.pyqtSignal]
     def rubberBandRect(self) -> QtCore.QRect: ...
     def isTransformed(self) -> bool: ...
@@ -4308,6 +4365,7 @@ class QHeaderView(QAbstractItemView):
         ResizeToContents = ...  # type: QHeaderView.ResizeMode
         Custom = ...  # type: QHeaderView.ResizeMode
     def __init__(self, orientation: QtCore.Qt.Orientation, parent: typing.Optional[QWidget] = ...) -> None: ...
+
     sortIndicatorClearableChanged: typing.ClassVar[QtCore.pyqtSignal]
     def isSortIndicatorClearable(self) -> bool: ...
     def setSortIndicatorClearable(self, clearable: bool) -> None: ...
@@ -4436,6 +4494,7 @@ class QInputDialog(QDialog):
         TextInput = ...  # type: QInputDialog.InputMode
         IntInput = ...  # type: QInputDialog.InputMode
         DoubleInput = ...  # type: QInputDialog.InputMode
+
     class InputDialogOption(enum.Flag):
         NoButtons = ...  # type: QInputDialog.InputDialogOption
         UseListViewForComboBoxItems = ...  # type: QInputDialog.InputDialogOption
@@ -4654,6 +4713,7 @@ class QLCDNumber(QFrame):
         Outline = ...  # type: QLCDNumber.SegmentStyle
         Filled = ...  # type: QLCDNumber.SegmentStyle
         Flat = ...  # type: QLCDNumber.SegmentStyle
+
     class Mode(enum.Enum):
         Hex = ...  # type: QLCDNumber.Mode
         Dec = ...  # type: QLCDNumber.Mode
@@ -4692,6 +4752,7 @@ class QLineEdit(QWidget):
     class ActionPosition(enum.Enum):
         LeadingPosition = ...  # type: QLineEdit.ActionPosition
         TrailingPosition = ...  # type: QLineEdit.ActionPosition
+
     class EchoMode(enum.Enum):
         Normal = ...  # type: QLineEdit.EchoMode
         NoEcho = ...  # type: QLineEdit.EchoMode
@@ -4701,6 +4762,7 @@ class QLineEdit(QWidget):
     def __init__(self, parent: typing.Optional[QWidget] = ...) -> None: ...
     @typing.overload
     def __init__(self, contents: str, parent: typing.Optional[QWidget] = ...) -> None: ...
+
     inputRejected: typing.ClassVar[QtCore.pyqtSignal]
     def selectionLength(self) -> int: ...
     def selectionEnd(self) -> int: ...
@@ -4809,15 +4871,19 @@ class QListView(QAbstractItemView):
     class ViewMode(enum.Enum):
         ListMode = ...  # type: QListView.ViewMode
         IconMode = ...  # type: QListView.ViewMode
+
     class LayoutMode(enum.Enum):
         SinglePass = ...  # type: QListView.LayoutMode
         Batched = ...  # type: QListView.LayoutMode
+
     class ResizeMode(enum.Enum):
         Fixed = ...  # type: QListView.ResizeMode
         Adjust = ...  # type: QListView.ResizeMode
+
     class Flow(enum.Enum):
         LeftToRight = ...  # type: QListView.Flow
         TopToBottom = ...  # type: QListView.Flow
+
     class Movement(enum.Enum):
         Static = ...  # type: QListView.Movement
         Free = ...  # type: QListView.Movement
@@ -5082,9 +5148,11 @@ class QMdiArea(QAbstractScrollArea):
         CreationOrder = ...  # type: QMdiArea.WindowOrder
         StackingOrder = ...  # type: QMdiArea.WindowOrder
         ActivationHistoryOrder = ...  # type: QMdiArea.WindowOrder
+
     class ViewMode(enum.Enum):
         SubWindowView = ...  # type: QMdiArea.ViewMode
         TabbedView = ...  # type: QMdiArea.ViewMode
+
     class AreaOption(enum.Flag):
         DontMaximizeSubWindowOnActivation = ...  # type: QMdiArea.AreaOption
     def __init__(self, parent: typing.Optional[QWidget] = ...) -> None: ...
@@ -5343,12 +5411,14 @@ class QMessageBox(QDialog):
         Escape = ...  # type: QMessageBox.StandardButton
         FlagMask = ...  # type: QMessageBox.StandardButton
         ButtonMask = ...  # type: QMessageBox.StandardButton
+
     class Icon(enum.Enum):
         NoIcon = ...  # type: QMessageBox.Icon
         Information = ...  # type: QMessageBox.Icon
         Warning = ...  # type: QMessageBox.Icon
         Critical = ...  # type: QMessageBox.Icon
         Question = ...  # type: QMessageBox.Icon
+
     class ButtonRole(enum.Enum):
         InvalidRole = ...  # type: QMessageBox.ButtonRole
         AcceptRole = ...  # type: QMessageBox.ButtonRole
@@ -5759,11 +5829,13 @@ class QScroller(QtCore.QObject):
         InputPress = ...  # type: QScroller.Input
         InputMove = ...  # type: QScroller.Input
         InputRelease = ...  # type: QScroller.Input
+
     class ScrollerGestureType(enum.Enum):
         TouchGesture = ...  # type: QScroller.ScrollerGestureType
         LeftMouseButtonGesture = ...  # type: QScroller.ScrollerGestureType
         RightMouseButtonGesture = ...  # type: QScroller.ScrollerGestureType
         MiddleMouseButtonGesture = ...  # type: QScroller.ScrollerGestureType
+
     class State(enum.Enum):
         Inactive = ...  # type: QScroller.State
         Pressed = ...  # type: QScroller.State
@@ -5833,11 +5905,13 @@ class QScrollerProperties(PyQt6.sip.simplewrapper):
         VerticalOvershootPolicy = ...  # type: QScrollerProperties.ScrollMetric
         FrameRate = ...  # type: QScrollerProperties.ScrollMetric
         ScrollMetricCount = ...  # type: QScrollerProperties.ScrollMetric
+
     class FrameRates(enum.Enum):
         Standard = ...  # type: QScrollerProperties.FrameRates
         Fps60 = ...  # type: QScrollerProperties.FrameRates
         Fps30 = ...  # type: QScrollerProperties.FrameRates
         Fps20 = ...  # type: QScrollerProperties.FrameRates
+
     class OvershootPolicy(enum.Enum):
         OvershootWhenScrollable = ...  # type: QScrollerProperties.OvershootPolicy
         OvershootAlwaysOff = ...  # type: QScrollerProperties.OvershootPolicy
@@ -5884,6 +5958,7 @@ class QSizePolicy(PyQt6.sip.simplewrapper):
         SpinBox = ...  # type: QSizePolicy.ControlType
         TabWidget = ...  # type: QSizePolicy.ControlType
         ToolButton = ...  # type: QSizePolicy.ControlType
+
     class Policy(enum.Enum):
         Fixed = ...  # type: QSizePolicy.Policy
         Minimum = ...  # type: QSizePolicy.Policy
@@ -5892,6 +5967,7 @@ class QSizePolicy(PyQt6.sip.simplewrapper):
         MinimumExpanding = ...  # type: QSizePolicy.Policy
         Expanding = ...  # type: QSizePolicy.Policy
         Ignored = ...  # type: QSizePolicy.Policy
+
     class PolicyFlag(enum.IntFlag):
         GrowFlag = ...  # type: QSizePolicy.PolicyFlag
         ExpandFlag = ...  # type: QSizePolicy.PolicyFlag
@@ -6177,8 +6253,10 @@ class QStyleFactory(PyQt6.sip.simplewrapper):
 class QStyleOption(PyQt6.sip.simplewrapper):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOption.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOption.StyleOptionType
+
     class OptionType(enum.Enum):
         SO_Default = ...  # type: QStyleOption.OptionType
         SO_FocusRect = ...  # type: QStyleOption.OptionType
@@ -6214,6 +6292,7 @@ class QStyleOption(PyQt6.sip.simplewrapper):
     styleObject = ...  # type: QtCore.QObject
     type = ...  # type: int
     version = ...  # type: int
+
     @typing.overload
     def __init__(self, version: int = ..., type: int = ...) -> None: ...
     @typing.overload
@@ -6223,9 +6302,11 @@ class QStyleOption(PyQt6.sip.simplewrapper):
 class QStyleOptionFocusRect(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionFocusRect.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionFocusRect.StyleOptionType
     backgroundColor = ...  # type: typing.Union[QtGui.QColor, QtCore.Qt.GlobalColor, int, QtGui.QGradient]
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6236,14 +6317,17 @@ class QStyleOptionFrame(QStyleOption):
         None_ = ...  # type: QStyleOptionFrame.FrameFeature
         Flat = ...  # type: QStyleOptionFrame.FrameFeature
         Rounded = ...  # type: QStyleOptionFrame.FrameFeature
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionFrame.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionFrame.StyleOptionType
     features = ...  # type: 'QStyleOptionFrame.FrameFeature'
     frameShape = ...  # type: QFrame.Shape
     lineWidth = ...  # type: int
     midLineWidth = ...  # type: int
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6252,6 +6336,7 @@ class QStyleOptionFrame(QStyleOption):
 class QStyleOptionTabWidgetFrame(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionTabWidgetFrame.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionTabWidgetFrame.StyleOptionType
     leftCornerWidgetSize = ...  # type: QtCore.QSize
@@ -6262,6 +6347,7 @@ class QStyleOptionTabWidgetFrame(QStyleOption):
     shape = ...  # type: 'QTabBar.Shape'
     tabBarRect = ...  # type: QtCore.QRect
     tabBarSize = ...  # type: QtCore.QSize
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6270,12 +6356,14 @@ class QStyleOptionTabWidgetFrame(QStyleOption):
 class QStyleOptionTabBarBase(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionTabBarBase.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionTabBarBase.StyleOptionType
     documentMode = ...  # type: bool
     selectedTabRect = ...  # type: QtCore.QRect
     shape = ...  # type: 'QTabBar.Shape'
     tabBarRect = ...  # type: QtCore.QRect
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6286,18 +6374,22 @@ class QStyleOptionHeader(QStyleOption):
         None_ = ...  # type: QStyleOptionHeader.SortIndicator
         SortUp = ...  # type: QStyleOptionHeader.SortIndicator
         SortDown = ...  # type: QStyleOptionHeader.SortIndicator
+
     class SelectedPosition(enum.Enum):
         NotAdjacent = ...  # type: QStyleOptionHeader.SelectedPosition
         NextIsSelected = ...  # type: QStyleOptionHeader.SelectedPosition
         PreviousIsSelected = ...  # type: QStyleOptionHeader.SelectedPosition
         NextAndPreviousAreSelected = ...  # type: QStyleOptionHeader.SelectedPosition
+
     class SectionPosition(enum.Enum):
         Beginning = ...  # type: QStyleOptionHeader.SectionPosition
         Middle = ...  # type: QStyleOptionHeader.SectionPosition
         End = ...  # type: QStyleOptionHeader.SectionPosition
         OnlyOneSection = ...  # type: QStyleOptionHeader.SectionPosition
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionHeader.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionHeader.StyleOptionType
     icon = ...  # type: QtGui.QIcon
@@ -6309,6 +6401,7 @@ class QStyleOptionHeader(QStyleOption):
     sortIndicator = ...  # type: 'QStyleOptionHeader.SortIndicator'
     text = ...  # type: str
     textAlignment = ...  # type: QtCore.Qt.AlignmentFlag
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6317,10 +6410,12 @@ class QStyleOptionHeader(QStyleOption):
 class QStyleOptionHeaderV2(QStyleOptionHeader):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionHeaderV2.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionHeaderV2.StyleOptionType
     isSectionDragTarget = ...  # type: bool
     textElideMode = ...  # type: QtCore.Qt.TextElideMode
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6334,14 +6429,17 @@ class QStyleOptionButton(QStyleOption):
         DefaultButton = ...  # type: QStyleOptionButton.ButtonFeature
         AutoDefaultButton = ...  # type: QStyleOptionButton.ButtonFeature
         CommandLinkButton = ...  # type: QStyleOptionButton.ButtonFeature
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionButton.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionButton.StyleOptionType
     features = ...  # type: 'QStyleOptionButton.ButtonFeature'
     icon = ...  # type: QtGui.QIcon
     iconSize = ...  # type: QtCore.QSize
     text = ...  # type: str
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6351,21 +6449,26 @@ class QStyleOptionTab(QStyleOption):
     class TabFeature(enum.Flag):
         None_ = ...  # type: QStyleOptionTab.TabFeature
         HasFrame = ...  # type: QStyleOptionTab.TabFeature
+
     class CornerWidget(enum.Flag):
         NoCornerWidgets = ...  # type: QStyleOptionTab.CornerWidget
         LeftCornerWidget = ...  # type: QStyleOptionTab.CornerWidget
         RightCornerWidget = ...  # type: QStyleOptionTab.CornerWidget
+
     class SelectedPosition(enum.Enum):
         NotAdjacent = ...  # type: QStyleOptionTab.SelectedPosition
         NextIsSelected = ...  # type: QStyleOptionTab.SelectedPosition
         PreviousIsSelected = ...  # type: QStyleOptionTab.SelectedPosition
+
     class TabPosition(enum.Enum):
         Beginning = ...  # type: QStyleOptionTab.TabPosition
         Middle = ...  # type: QStyleOptionTab.TabPosition
         End = ...  # type: QStyleOptionTab.TabPosition
         OnlyOneTab = ...  # type: QStyleOptionTab.TabPosition
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionTab.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionTab.StyleOptionType
     cornerWidgets = ...  # type: 'QStyleOptionTab.CornerWidget'
@@ -6381,6 +6484,7 @@ class QStyleOptionTab(QStyleOption):
     shape = ...  # type: 'QTabBar.Shape'
     tabIndex = ...  # type: int
     text = ...  # type: str
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6389,6 +6493,7 @@ class QStyleOptionTab(QStyleOption):
 class QStyleOptionProgressBar(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionProgressBar.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionProgressBar.StyleOptionType
     bottomToTop = ...  # type: bool
@@ -6399,6 +6504,7 @@ class QStyleOptionProgressBar(QStyleOption):
     text = ...  # type: str
     textAlignment = ...  # type: QtCore.Qt.AlignmentFlag
     textVisible = ...  # type: bool
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6409,6 +6515,7 @@ class QStyleOptionMenuItem(QStyleOption):
         NotCheckable = ...  # type: QStyleOptionMenuItem.CheckType
         Exclusive = ...  # type: QStyleOptionMenuItem.CheckType
         NonExclusive = ...  # type: QStyleOptionMenuItem.CheckType
+
     class MenuItemType(enum.Enum):
         Normal = ...  # type: QStyleOptionMenuItem.MenuItemType
         DefaultItem = ...  # type: QStyleOptionMenuItem.MenuItemType
@@ -6418,8 +6525,10 @@ class QStyleOptionMenuItem(QStyleOption):
         TearOff = ...  # type: QStyleOptionMenuItem.MenuItemType
         Margin = ...  # type: QStyleOptionMenuItem.MenuItemType
         EmptyArea = ...  # type: QStyleOptionMenuItem.MenuItemType
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionMenuItem.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionMenuItem.StyleOptionType
     checkType = ...  # type: 'QStyleOptionMenuItem.CheckType'
@@ -6432,6 +6541,7 @@ class QStyleOptionMenuItem(QStyleOption):
     menuRect = ...  # type: QtCore.QRect
     reservedShortcutWidth = ...  # type: int
     text = ...  # type: str
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6440,6 +6550,7 @@ class QStyleOptionMenuItem(QStyleOption):
 class QStyleOptionDockWidget(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionDockWidget.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionDockWidget.StyleOptionType
     closable = ...  # type: bool
@@ -6447,6 +6558,7 @@ class QStyleOptionDockWidget(QStyleOption):
     movable = ...  # type: bool
     title = ...  # type: str
     verticalTitleBar = ...  # type: bool
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6459,6 +6571,7 @@ class QStyleOptionViewItem(QStyleOption):
         Middle = ...  # type: QStyleOptionViewItem.ViewItemPosition
         End = ...  # type: QStyleOptionViewItem.ViewItemPosition
         OnlyOne = ...  # type: QStyleOptionViewItem.ViewItemPosition
+
     class ViewItemFeature(enum.Flag):
         None_ = ...  # type: QStyleOptionViewItem.ViewItemFeature
         WrapText = ...  # type: QStyleOptionViewItem.ViewItemFeature
@@ -6466,13 +6579,16 @@ class QStyleOptionViewItem(QStyleOption):
         HasCheckIndicator = ...  # type: QStyleOptionViewItem.ViewItemFeature
         HasDisplay = ...  # type: QStyleOptionViewItem.ViewItemFeature
         HasDecoration = ...  # type: QStyleOptionViewItem.ViewItemFeature
+
     class Position(enum.Enum):
         Left = ...  # type: QStyleOptionViewItem.Position
         Right = ...  # type: QStyleOptionViewItem.Position
         Top = ...  # type: QStyleOptionViewItem.Position
         Bottom = ...  # type: QStyleOptionViewItem.Position
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionViewItem.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionViewItem.StyleOptionType
     backgroundBrush = ...  # type: typing.Union[QtGui.QBrush, QtGui.QColor, QtCore.Qt.GlobalColor, int, QtGui.QGradient]
@@ -6491,6 +6607,7 @@ class QStyleOptionViewItem(QStyleOption):
     textElideMode = ...  # type: QtCore.Qt.TextElideMode
     viewItemPosition = ...  # type: 'QStyleOptionViewItem.ViewItemPosition'
     widget = ...  # type: QWidget
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6501,19 +6618,23 @@ class QStyleOptionToolBox(QStyleOption):
         NotAdjacent = ...  # type: QStyleOptionToolBox.SelectedPosition
         NextIsSelected = ...  # type: QStyleOptionToolBox.SelectedPosition
         PreviousIsSelected = ...  # type: QStyleOptionToolBox.SelectedPosition
+
     class TabPosition(enum.Enum):
         Beginning = ...  # type: QStyleOptionToolBox.TabPosition
         Middle = ...  # type: QStyleOptionToolBox.TabPosition
         End = ...  # type: QStyleOptionToolBox.TabPosition
         OnlyOneTab = ...  # type: QStyleOptionToolBox.TabPosition
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionToolBox.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionToolBox.StyleOptionType
     icon = ...  # type: QtGui.QIcon
     position = ...  # type: 'QStyleOptionToolBox.TabPosition'
     selectedPosition = ...  # type: 'QStyleOptionToolBox.SelectedPosition'
     text = ...  # type: str
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6522,10 +6643,12 @@ class QStyleOptionToolBox(QStyleOption):
 class QStyleOptionRubberBand(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionRubberBand.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionRubberBand.StyleOptionType
     opaque = ...  # type: bool
     shape = ...  # type: QRubberBand.Shape
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6534,10 +6657,12 @@ class QStyleOptionRubberBand(QStyleOption):
 class QStyleOptionComplex(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionComplex.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionComplex.StyleOptionType
     activeSubControls = ...  # type: QStyle.SubControl
     subControls = ...  # type: QStyle.SubControl
+
     @typing.overload
     def __init__(self, version: int = ..., type: int = ...) -> None: ...
     @typing.overload
@@ -6546,6 +6671,7 @@ class QStyleOptionComplex(QStyleOption):
 class QStyleOptionSlider(QStyleOptionComplex):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionSlider.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionSlider.StyleOptionType
     dialWrapping = ...  # type: bool
@@ -6561,6 +6687,7 @@ class QStyleOptionSlider(QStyleOptionComplex):
     tickInterval = ...  # type: int
     tickPosition = ...  # type: QSlider.TickPosition
     upsideDown = ...  # type: bool
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6569,11 +6696,13 @@ class QStyleOptionSlider(QStyleOptionComplex):
 class QStyleOptionSpinBox(QStyleOptionComplex):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionSpinBox.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionSpinBox.StyleOptionType
     buttonSymbols = ...  # type: QAbstractSpinBox.ButtonSymbols
     frame = ...  # type: bool
     stepEnabled = ...  # type: QAbstractSpinBox.StepEnabledFlag
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6587,8 +6716,10 @@ class QStyleOptionToolButton(QStyleOptionComplex):
         PopupDelay = ...  # type: QStyleOptionToolButton.ToolButtonFeature
         MenuButtonPopup = ...  # type: QStyleOptionToolButton.ToolButtonFeature
         HasMenu = ...  # type: QStyleOptionToolButton.ToolButtonFeature
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionToolButton.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionToolButton.StyleOptionType
     arrowType = ...  # type: QtCore.Qt.ArrowType
@@ -6599,6 +6730,7 @@ class QStyleOptionToolButton(QStyleOptionComplex):
     pos = ...  # type: QtCore.QPoint
     text = ...  # type: str
     toolButtonStyle = ...  # type: QtCore.Qt.ToolButtonStyle
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6607,6 +6739,7 @@ class QStyleOptionToolButton(QStyleOptionComplex):
 class QStyleOptionComboBox(QStyleOptionComplex):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionComboBox.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionComboBox.StyleOptionType
     currentIcon = ...  # type: QtGui.QIcon
@@ -6616,6 +6749,7 @@ class QStyleOptionComboBox(QStyleOptionComplex):
     iconSize = ...  # type: QtCore.QSize
     popupRect = ...  # type: QtCore.QRect
     textAlignment = ...  # type: QtCore.Qt.AlignmentFlag
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6624,12 +6758,14 @@ class QStyleOptionComboBox(QStyleOptionComplex):
 class QStyleOptionTitleBar(QStyleOptionComplex):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionTitleBar.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionTitleBar.StyleOptionType
     icon = ...  # type: QtGui.QIcon
     text = ...  # type: str
     titleBarFlags = ...  # type: QtCore.Qt.WindowType
     titleBarState = ...  # type: int
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6638,14 +6774,17 @@ class QStyleOptionTitleBar(QStyleOptionComplex):
 class QStyleHintReturn(PyQt6.sip.simplewrapper):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleHintReturn.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleHintReturn.StyleOptionType
+
     class HintReturnType(enum.Enum):
         SH_Default = ...  # type: QStyleHintReturn.HintReturnType
         SH_Mask = ...  # type: QStyleHintReturn.HintReturnType
         SH_Variant = ...  # type: QStyleHintReturn.HintReturnType
     type = ...  # type: int
     version = ...  # type: int
+
     @typing.overload
     def __init__(self, version: int = ..., type: int = ...) -> None: ...
     @typing.overload
@@ -6654,9 +6793,11 @@ class QStyleHintReturn(PyQt6.sip.simplewrapper):
 class QStyleHintReturnMask(QStyleHintReturn):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleHintReturnMask.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleHintReturnMask.StyleOptionType
     region = ...  # type: QtGui.QRegion
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6666,13 +6807,16 @@ class QStyleOptionToolBar(QStyleOption):
     class ToolBarFeature(enum.Flag):
         None_ = ...  # type: QStyleOptionToolBar.ToolBarFeature
         Movable = ...  # type: QStyleOptionToolBar.ToolBarFeature
+
     class ToolBarPosition(enum.Enum):
         Beginning = ...  # type: QStyleOptionToolBar.ToolBarPosition
         Middle = ...  # type: QStyleOptionToolBar.ToolBarPosition
         End = ...  # type: QStyleOptionToolBar.ToolBarPosition
         OnlyOne = ...  # type: QStyleOptionToolBar.ToolBarPosition
+
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionToolBar.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionToolBar.StyleOptionType
     features = ...  # type: 'QStyleOptionToolBar.ToolBarFeature'
@@ -6681,6 +6825,7 @@ class QStyleOptionToolBar(QStyleOption):
     positionOfLine = ...  # type: 'QStyleOptionToolBar.ToolBarPosition'
     positionWithinLine = ...  # type: 'QStyleOptionToolBar.ToolBarPosition'
     toolBarArea = ...  # type: QtCore.Qt.ToolBarArea
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6689,6 +6834,7 @@ class QStyleOptionToolBar(QStyleOption):
 class QStyleOptionGroupBox(QStyleOptionComplex):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionGroupBox.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionGroupBox.StyleOptionType
     features = ...  # type: QStyleOptionFrame.FrameFeature
@@ -6697,6 +6843,7 @@ class QStyleOptionGroupBox(QStyleOptionComplex):
     text = ...  # type: str
     textAlignment = ...  # type: QtCore.Qt.AlignmentFlag
     textColor = ...  # type: typing.Union[QtGui.QColor, QtCore.Qt.GlobalColor, int, QtGui.QGradient]
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6705,9 +6852,11 @@ class QStyleOptionGroupBox(QStyleOptionComplex):
 class QStyleOptionSizeGrip(QStyleOptionComplex):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionSizeGrip.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionSizeGrip.StyleOptionType
     corner = ...  # type: QtCore.Qt.Corner
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6716,9 +6865,11 @@ class QStyleOptionSizeGrip(QStyleOptionComplex):
 class QStyleOptionGraphicsItem(QStyleOption):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleOptionGraphicsItem.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleOptionGraphicsItem.StyleOptionType
     exposedRect = ...  # type: QtCore.QRectF
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6729,9 +6880,11 @@ class QStyleOptionGraphicsItem(QStyleOption):
 class QStyleHintReturnVariant(QStyleHintReturn):
     class StyleOptionVersion(enum.Enum):
         Version = ...  # type: QStyleHintReturnVariant.StyleOptionVersion
+
     class StyleOptionType(enum.Enum):
         Type = ...  # type: QStyleHintReturnVariant.StyleOptionType
     variant = ...  # type: typing.Any
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6761,6 +6914,7 @@ class QSystemTrayIcon(QtCore.QObject):
         Information = ...  # type: QSystemTrayIcon.MessageIcon
         Warning = ...  # type: QSystemTrayIcon.MessageIcon
         Critical = ...  # type: QSystemTrayIcon.MessageIcon
+
     class ActivationReason(enum.Enum):
         Unknown = ...  # type: QSystemTrayIcon.ActivationReason
         Context = ...  # type: QSystemTrayIcon.ActivationReason
@@ -6799,9 +6953,11 @@ class QTabBar(QWidget):
         SelectLeftTab = ...  # type: QTabBar.SelectionBehavior
         SelectRightTab = ...  # type: QTabBar.SelectionBehavior
         SelectPreviousTab = ...  # type: QTabBar.SelectionBehavior
+
     class ButtonPosition(enum.Enum):
         LeftSide = ...  # type: QTabBar.ButtonPosition
         RightSide = ...  # type: QTabBar.ButtonPosition
+
     class Shape(enum.Enum):
         RoundedNorth = ...  # type: QTabBar.Shape
         RoundedSouth = ...  # type: QTabBar.Shape
@@ -7134,6 +7290,7 @@ class QTabWidget(QWidget):
     class TabShape(enum.Enum):
         Rounded = ...  # type: QTabWidget.TabShape
         Triangular = ...  # type: QTabWidget.TabShape
+
     class TabPosition(enum.Enum):
         North = ...  # type: QTabWidget.TabPosition
         South = ...  # type: QTabWidget.TabPosition
@@ -7215,19 +7372,23 @@ class QTextEdit(QAbstractScrollArea):
         AutoNone = ...  # type: QTextEdit.AutoFormattingFlag
         AutoBulletList = ...  # type: QTextEdit.AutoFormattingFlag
         AutoAll = ...  # type: QTextEdit.AutoFormattingFlag
+
     class LineWrapMode(enum.Enum):
         NoWrap = ...  # type: QTextEdit.LineWrapMode
         WidgetWidth = ...  # type: QTextEdit.LineWrapMode
         FixedPixelWidth = ...  # type: QTextEdit.LineWrapMode
         FixedColumnWidth = ...  # type: QTextEdit.LineWrapMode
+
     class ExtraSelection(PyQt6.sip.simplewrapper):
 
         cursor = ...  # type: QtGui.QTextCursor
         format = ...  # type: QtGui.QTextCharFormat
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QTextEdit.ExtraSelection") -> None: ...
+
     @typing.overload
     def __init__(self, parent: typing.Optional[QWidget] = ...) -> None: ...
     @typing.overload
@@ -7654,6 +7815,7 @@ class QTreeWidgetItem(PyQt6.sip.wrapper):
         ShowIndicator = ...  # type: QTreeWidgetItem.ChildIndicatorPolicy
         DontShowIndicator = ...  # type: QTreeWidgetItem.ChildIndicatorPolicy
         DontShowIndicatorWhenChildless = ...  # type: QTreeWidgetItem.ChildIndicatorPolicy
+
     class ItemType(enum.IntEnum):
         Type = ...  # type: QTreeWidgetItem.ItemType
         UserType = ...  # type: QTreeWidgetItem.ItemType
@@ -7893,16 +8055,19 @@ class QWizard(QDialog):
         HaveCustomButton2 = ...  # type: QWizard.WizardOption
         HaveCustomButton3 = ...  # type: QWizard.WizardOption
         NoCancelButtonOnLastPage = ...  # type: QWizard.WizardOption
+
     class WizardStyle(enum.Enum):
         ClassicStyle = ...  # type: QWizard.WizardStyle
         ModernStyle = ...  # type: QWizard.WizardStyle
         MacStyle = ...  # type: QWizard.WizardStyle
         AeroStyle = ...  # type: QWizard.WizardStyle
+
     class WizardPixmap(enum.Enum):
         WatermarkPixmap = ...  # type: QWizard.WizardPixmap
         LogoPixmap = ...  # type: QWizard.WizardPixmap
         BannerPixmap = ...  # type: QWizard.WizardPixmap
         BackgroundPixmap = ...  # type: QWizard.WizardPixmap
+
     class WizardButton(enum.Enum):
         BackButton = ...  # type: QWizard.WizardButton
         NextButton = ...  # type: QWizard.WizardButton
@@ -7915,6 +8080,7 @@ class QWizard(QDialog):
         CustomButton3 = ...  # type: QWizard.WizardButton
         Stretch = ...  # type: QWizard.WizardButton
     def __init__(self, parent: typing.Optional[QWidget] = ..., flags: QtCore.Qt.WindowType = ...) -> None: ...
+
     pageRemoved: typing.ClassVar[QtCore.pyqtSignal]
     pageAdded: typing.ClassVar[QtCore.pyqtSignal]
     def sideWidget(self) -> QWidget: ...

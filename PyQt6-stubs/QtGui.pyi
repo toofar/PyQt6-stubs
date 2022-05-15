@@ -34,6 +34,7 @@ PYQT_SLOT = typing.Union[typing.Callable[..., None], QtCore.pyqtBoundSignal]
 class QAbstractFileIconProvider(PyQt6.sip.simplewrapper):
     class Option(enum.Flag):
         DontUseCustomDirectoryIcons = ...  # type: QAbstractFileIconProvider.Option
+
     class IconType(enum.Enum):
         Computer = ...  # type: QAbstractFileIconProvider.IconType
         Desktop = ...  # type: QAbstractFileIconProvider.IconType
@@ -56,20 +57,24 @@ class QAbstractTextDocumentLayout(QtCore.QObject):
 
         cursor = ...  # type: 'QTextCursor'
         format = ...  # type: 'QTextCharFormat'
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QAbstractTextDocumentLayout.Selection") -> None: ...
+
     class PaintContext(PyQt6.sip.simplewrapper):
 
         clip = ...  # type: QtCore.QRectF
         cursorPosition = ...  # type: int
         palette = ...  # type: 'QPalette'
         selections = ...  # type: typing.Iterable['QAbstractTextDocumentLayout.Selection']
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QAbstractTextDocumentLayout.PaintContext") -> None: ...
+
     def __init__(self, doc: "QTextDocument") -> None: ...
     def blockWithMarkerAt(self, pos: QtCore.QPointF) -> "QTextBlock": ...
     def formatAt(self, pos: QtCore.QPointF) -> "QTextFormat": ...
@@ -110,6 +115,7 @@ class QAction(QtCore.QObject):
         LowPriority = ...  # type: QAction.Priority
         NormalPriority = ...  # type: QAction.Priority
         HighPriority = ...  # type: QAction.Priority
+
     class MenuRole(enum.Enum):
         NoRole = ...  # type: QAction.MenuRole
         TextHeuristicRole = ...  # type: QAction.MenuRole
@@ -118,6 +124,7 @@ class QAction(QtCore.QObject):
         AboutRole = ...  # type: QAction.MenuRole
         PreferencesRole = ...  # type: QAction.MenuRole
         QuitRole = ...  # type: QAction.MenuRole
+
     class ActionEvent(enum.Enum):
         Trigger = ...  # type: QAction.ActionEvent
         Hover = ...  # type: QAction.ActionEvent
@@ -127,6 +134,7 @@ class QAction(QtCore.QObject):
     def __init__(self, text: str, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, icon: "QIcon", text: str, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     visibleChanged: typing.ClassVar[QtCore.pyqtSignal]
     checkableChanged: typing.ClassVar[QtCore.pyqtSignal]
     enabledChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -197,6 +205,7 @@ class QActionGroup(QtCore.QObject):
         Exclusive = ...  # type: QActionGroup.ExclusionPolicy
         ExclusiveOptional = ...  # type: QActionGroup.ExclusionPolicy
     def __init__(self, parent: QtCore.QObject) -> None: ...
+
     hovered: typing.ClassVar[QtCore.pyqtSignal]
     triggered: typing.ClassVar[QtCore.pyqtSignal]
     def setExclusionPolicy(self, policy: "QActionGroup.ExclusionPolicy") -> None: ...
@@ -365,6 +374,7 @@ class QColor(PyQt6.sip.simplewrapper):
     class NameFormat(enum.Enum):
         HexRgb = ...  # type: QColor.NameFormat
         HexArgb = ...  # type: QColor.NameFormat
+
     class Spec(enum.Enum):
         Invalid = ...  # type: QColor.Spec
         Rgb = ...  # type: QColor.Spec
@@ -873,15 +883,18 @@ class QGradient(PyQt6.sip.simplewrapper):
         FabledSunset = ...  # type: QGradient.Preset
         PerfectBlue = ...  # type: QGradient.Preset
         NumPresets = ...  # type: QGradient.Preset
+
     class Spread(enum.Enum):
         PadSpread = ...  # type: QGradient.Spread
         ReflectSpread = ...  # type: QGradient.Spread
         RepeatSpread = ...  # type: QGradient.Spread
+
     class Type(enum.Enum):
         LinearGradient = ...  # type: QGradient.Type
         RadialGradient = ...  # type: QGradient.Type
         ConicalGradient = ...  # type: QGradient.Type
         NoGradient = ...  # type: QGradient.Type
+
     class CoordinateMode(enum.Enum):
         LogicalMode = ...  # type: QGradient.CoordinateMode
         StretchToDeviceMode = ...  # type: QGradient.CoordinateMode
@@ -1007,12 +1020,14 @@ class QColorSpace(PyQt6.sip.simplewrapper):
         Gamma = ...  # type: QColorSpace.TransferFunction
         SRgb = ...  # type: QColorSpace.TransferFunction
         ProPhotoRgb = ...  # type: QColorSpace.TransferFunction
+
     class Primaries(enum.Enum):
         Custom = ...  # type: QColorSpace.Primaries
         SRgb = ...  # type: QColorSpace.Primaries
         AdobeRgb = ...  # type: QColorSpace.Primaries
         DciP3D65 = ...  # type: QColorSpace.Primaries
         ProPhotoRgb = ...  # type: QColorSpace.Primaries
+
     class NamedColorSpace(enum.Enum):
         SRgb = ...  # type: QColorSpace.NamedColorSpace
         SRgbLinear = ...  # type: QColorSpace.NamedColorSpace
@@ -1242,18 +1257,21 @@ class QInputMethodEvent(QtCore.QEvent):
         Language = ...  # type: QInputMethodEvent.AttributeType
         Ruby = ...  # type: QInputMethodEvent.AttributeType
         Selection = ...  # type: QInputMethodEvent.AttributeType
+
     class Attribute(PyQt6.sip.simplewrapper):
 
         length = ...  # type: int
         start = ...  # type: int
         type = ...  # type: 'QInputMethodEvent.AttributeType'
         value = ...  # type: typing.Any
+
         @typing.overload
         def __init__(self, t: "QInputMethodEvent.AttributeType", s: int, l: int, val: typing.Any) -> None: ...
         @typing.overload
         def __init__(self, typ: "QInputMethodEvent.AttributeType", s: int, l: int) -> None: ...
         @typing.overload
         def __init__(self, a0: "QInputMethodEvent.Attribute") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -1518,6 +1536,7 @@ class QFileSystemModel(QtCore.QAbstractItemModel):
         DontWatchForChanges = ...  # type: QFileSystemModel.Option
         DontResolveSymlinks = ...  # type: QFileSystemModel.Option
         DontUseCustomDirectoryIcons = ...  # type: QFileSystemModel.Option
+
     class Roles(enum.IntEnum):
         FileIconRole = ...  # type: QFileSystemModel.Roles
         FilePathRole = ...  # type: QFileSystemModel.Roles
@@ -1589,15 +1608,18 @@ class QFont(PyQt6.sip.simplewrapper):
         PreferNoHinting = ...  # type: QFont.HintingPreference
         PreferVerticalHinting = ...  # type: QFont.HintingPreference
         PreferFullHinting = ...  # type: QFont.HintingPreference
+
     class SpacingType(enum.Enum):
         PercentageSpacing = ...  # type: QFont.SpacingType
         AbsoluteSpacing = ...  # type: QFont.SpacingType
+
     class Capitalization(enum.Enum):
         MixedCase = ...  # type: QFont.Capitalization
         AllUppercase = ...  # type: QFont.Capitalization
         AllLowercase = ...  # type: QFont.Capitalization
         SmallCaps = ...  # type: QFont.Capitalization
         Capitalize = ...  # type: QFont.Capitalization
+
     class Stretch(enum.IntEnum):
         AnyStretch = ...  # type: QFont.Stretch
         UltraCondensed = ...  # type: QFont.Stretch
@@ -1609,10 +1631,12 @@ class QFont(PyQt6.sip.simplewrapper):
         Expanded = ...  # type: QFont.Stretch
         ExtraExpanded = ...  # type: QFont.Stretch
         UltraExpanded = ...  # type: QFont.Stretch
+
     class Style(enum.Enum):
         StyleNormal = ...  # type: QFont.Style
         StyleItalic = ...  # type: QFont.Style
         StyleOblique = ...  # type: QFont.Style
+
     class Weight(enum.IntEnum):
         Thin = ...  # type: QFont.Weight
         ExtraLight = ...  # type: QFont.Weight
@@ -1623,6 +1647,7 @@ class QFont(PyQt6.sip.simplewrapper):
         Bold = ...  # type: QFont.Weight
         ExtraBold = ...  # type: QFont.Weight
         Black = ...  # type: QFont.Weight
+
     class StyleStrategy(enum.Flag):
         PreferDefault = ...  # type: QFont.StyleStrategy
         PreferBitmap = ...  # type: QFont.StyleStrategy
@@ -1636,6 +1661,7 @@ class QFont(PyQt6.sip.simplewrapper):
         NoSubpixelAntialias = ...  # type: QFont.StyleStrategy
         NoFontMerging = ...  # type: QFont.StyleStrategy
         PreferNoShaping = ...  # type: QFont.StyleStrategy
+
     class StyleHint(enum.Enum):
         Helvetica = ...  # type: QFont.StyleHint
         SansSerif = ...  # type: QFont.StyleHint
@@ -1739,6 +1765,7 @@ class QFontDatabase(PyQt6.sip.simplewrapper):
         FixedFont = ...  # type: QFontDatabase.SystemFont
         TitleFont = ...  # type: QFontDatabase.SystemFont
         SmallestReadableFont = ...  # type: QFontDatabase.SystemFont
+
     class WritingSystem(enum.Enum):
         Any = ...  # type: QFontDatabase.WritingSystem
         Latin = ...  # type: QFontDatabase.WritingSystem
@@ -2214,6 +2241,7 @@ class QIcon(PyQt6.sip.wrapper):
     class State(enum.Enum):
         On = ...  # type: QIcon.State
         Off = ...  # type: QIcon.State
+
     class Mode(enum.Enum):
         Normal = ...  # type: QIcon.Mode
         Disabled = ...  # type: QIcon.Mode
@@ -2283,6 +2311,7 @@ class QIconEngine(PyQt6.sip.wrapper):
     class IconEngineHook(enum.Enum):
         IsNullHook = ...  # type: QIconEngine.IconEngineHook
         ScaledPixmapHook = ...  # type: QIconEngine.IconEngineHook
+
     class ScaledPixmapArgument(PyQt6.sip.simplewrapper):
 
         mode = ...  # type: QIcon.Mode
@@ -2290,10 +2319,12 @@ class QIconEngine(PyQt6.sip.wrapper):
         scale = ...  # type: float
         size = ...  # type: QtCore.QSize
         state = ...  # type: QIcon.State
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QIconEngine.ScaledPixmapArgument") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -2350,6 +2381,7 @@ class QImage(QPaintDevice):
         Format_RGBX32FPx4 = ...  # type: QImage.Format
         Format_RGBA32FPx4 = ...  # type: QImage.Format
         Format_RGBA32FPx4_Premultiplied = ...  # type: QImage.Format
+
     class InvertMode(enum.Enum):
         InvertRgb = ...  # type: QImage.InvertMode
         InvertRgba = ...  # type: QImage.InvertMode
@@ -2507,6 +2539,7 @@ class QImageIOHandler(PyQt6.sip.simplewrapper):
         TransformationMirrorAndRotate90 = ...  # type: QImageIOHandler.Transformation
         TransformationFlipAndRotate90 = ...  # type: QImageIOHandler.Transformation
         TransformationRotate270 = ...  # type: QImageIOHandler.Transformation
+
     class ImageOption(enum.Enum):
         Size = ...  # type: QImageIOHandler.ImageOption
         ClipRect = ...  # type: QImageIOHandler.ImageOption
@@ -2679,6 +2712,7 @@ class QInputDevice(QtCore.QObject):
         TangentialPressure = ...  # type: QInputDevice.Capability
         ZPosition = ...  # type: QInputDevice.Capability
         All = ...  # type: QInputDevice.Capability
+
     class DeviceType(enum.Flag):
         Unknown = ...  # type: QInputDevice.DeviceType
         Mouse = ...  # type: QInputDevice.DeviceType
@@ -2693,6 +2727,7 @@ class QInputDevice(QtCore.QObject):
     def __init__(self, name: str, systemId: int, type: "QInputDevice.DeviceType", seatName: str = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     availableVirtualGeometryChanged: typing.ClassVar[QtCore.pyqtSignal]
     @staticmethod
     def primaryKeyboard(seatName: str = ...) -> "QInputDevice": ...
@@ -2813,10 +2848,12 @@ class QKeySequence(PyQt6.sip.simplewrapper):
         DeleteCompleteLine = ...  # type: QKeySequence.StandardKey
         Backspace = ...  # type: QKeySequence.StandardKey
         Cancel = ...  # type: QKeySequence.StandardKey
+
     class SequenceMatch(enum.Enum):
         NoMatch = ...  # type: QKeySequence.SequenceMatch
         PartialMatch = ...  # type: QKeySequence.SequenceMatch
         ExactMatch = ...  # type: QKeySequence.SequenceMatch
+
     class SequenceFormat(enum.Enum):
         NativeText = ...  # type: QKeySequence.SequenceFormat
         PortableText = ...  # type: QKeySequence.SequenceFormat
@@ -2939,6 +2976,7 @@ class QMovie(QtCore.QObject):
     class CacheMode(enum.Enum):
         CacheNone = ...  # type: QMovie.CacheMode
         CacheAll = ...  # type: QMovie.CacheMode
+
     class MovieState(enum.Enum):
         NotRunning = ...  # type: QMovie.MovieState
         Paused = ...  # type: QMovie.MovieState
@@ -2998,6 +3036,7 @@ class QSurface(PyQt6.sip.simplewrapper):
         VulkanSurface = ...  # type: QSurface.SurfaceType
         MetalSurface = ...  # type: QSurface.SurfaceType
         Direct3DSurface = ...  # type: QSurface.SurfaceType
+
     class SurfaceClass(enum.Enum):
         Window = ...  # type: QSurface.SurfaceClass
         Offscreen = ...  # type: QSurface.SurfaceClass
@@ -3013,6 +3052,7 @@ class QSurface(PyQt6.sip.simplewrapper):
 
 class QOffscreenSurface(QtCore.QObject, QSurface):
     def __init__(self, screen: typing.Optional["QScreen"] = ..., parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     screenChanged: typing.ClassVar[QtCore.pyqtSignal]
     def setScreen(self, screen: "QScreen") -> None: ...
     def screen(self) -> "QScreen": ...
@@ -3083,9 +3123,11 @@ class QPageLayout(PyQt6.sip.simplewrapper):
     class Mode(enum.Enum):
         StandardMode = ...  # type: QPageLayout.Mode
         FullPageMode = ...  # type: QPageLayout.Mode
+
     class Orientation(enum.Enum):
         Portrait = ...  # type: QPageLayout.Orientation
         Landscape = ...  # type: QPageLayout.Orientation
+
     class Unit(enum.Enum):
         Millimeter = ...  # type: QPageLayout.Unit
         Point = ...  # type: QPageLayout.Unit
@@ -3142,11 +3184,13 @@ class QPageRanges(PyQt6.sip.simplewrapper):
 
         from_ = ...  # type: int
         to = ...  # type: int
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QPageRanges.Range") -> None: ...
         def contains(self, pageNumber: int) -> bool: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -3169,6 +3213,7 @@ class QPageSize(PyQt6.sip.simplewrapper):
         FuzzyMatch = ...  # type: QPageSize.SizeMatchPolicy
         FuzzyOrientationMatch = ...  # type: QPageSize.SizeMatchPolicy
         ExactMatch = ...  # type: QPageSize.SizeMatchPolicy
+
     class Unit(enum.Enum):
         Millimeter = ...  # type: QPageSize.Unit
         Point = ...  # type: QPageSize.Unit
@@ -3176,6 +3221,7 @@ class QPageSize(PyQt6.sip.simplewrapper):
         Pica = ...  # type: QPageSize.Unit
         Didot = ...  # type: QPageSize.Unit
         Cicero = ...  # type: QPageSize.Unit
+
     class PageSizeId(enum.Enum):
         A4 = ...  # type: QPageSize.PageSizeId
         B5 = ...  # type: QPageSize.PageSizeId
@@ -3378,6 +3424,7 @@ class QWindow(QtCore.QObject, QSurface):
         Minimized = ...  # type: QWindow.Visibility
         Maximized = ...  # type: QWindow.Visibility
         FullScreen = ...  # type: QWindow.Visibility
+
     class AncestorMode(enum.Enum):
         ExcludeTransients = ...  # type: QWindow.AncestorMode
         IncludeTransients = ...  # type: QWindow.AncestorMode
@@ -3593,11 +3640,13 @@ class QPaintEngine(PyQt6.sip.simplewrapper):
         Direct2D = ...  # type: QPaintEngine.Type
         User = ...  # type: QPaintEngine.Type
         MaxUser = ...  # type: QPaintEngine.Type
+
     class PolygonDrawMode(enum.Enum):
         OddEvenMode = ...  # type: QPaintEngine.PolygonDrawMode
         WindingMode = ...  # type: QPaintEngine.PolygonDrawMode
         ConvexMode = ...  # type: QPaintEngine.PolygonDrawMode
         PolylineMode = ...  # type: QPaintEngine.PolygonDrawMode
+
     class DirtyFlag(enum.Flag):
         DirtyPen = ...  # type: QPaintEngine.DirtyFlag
         DirtyBrush = ...  # type: QPaintEngine.DirtyFlag
@@ -3613,6 +3662,7 @@ class QPaintEngine(PyQt6.sip.simplewrapper):
         DirtyClipEnabled = ...  # type: QPaintEngine.DirtyFlag
         DirtyOpacity = ...  # type: QPaintEngine.DirtyFlag
         AllDirty = ...  # type: QPaintEngine.DirtyFlag
+
     class PaintEngineFeature(enum.Flag):
         PrimitiveTransform = ...  # type: QPaintEngine.PaintEngineFeature
         PatternTransform = ...  # type: QPaintEngine.PaintEngineFeature
@@ -3698,6 +3748,7 @@ class QPaintEngineState(PyQt6.sip.simplewrapper):
 class QPainter(PyQt6.sip.simplewrapper):
     class PixmapFragmentHint(enum.Flag):
         OpaqueHint = ...  # type: QPainter.PixmapFragmentHint
+
     class CompositionMode(enum.Enum):
         CompositionMode_SourceOver = ...  # type: QPainter.CompositionMode
         CompositionMode_DestinationOver = ...  # type: QPainter.CompositionMode
@@ -3737,12 +3788,14 @@ class QPainter(PyQt6.sip.simplewrapper):
         RasterOp_ClearDestination = ...  # type: QPainter.CompositionMode
         RasterOp_SetDestination = ...  # type: QPainter.CompositionMode
         RasterOp_NotDestination = ...  # type: QPainter.CompositionMode
+
     class RenderHint(enum.Flag):
         Antialiasing = ...  # type: QPainter.RenderHint
         TextAntialiasing = ...  # type: QPainter.RenderHint
         SmoothPixmapTransform = ...  # type: QPainter.RenderHint
         LosslessImageRendering = ...  # type: QPainter.RenderHint
         VerticalSubpixelPositioning = ...  # type: QPainter.RenderHint
+
     class PixmapFragment(PyQt6.sip.simplewrapper):
 
         height = ...  # type: float
@@ -3755,12 +3808,14 @@ class QPainter(PyQt6.sip.simplewrapper):
         width = ...  # type: float
         x = ...  # type: float
         y = ...  # type: float
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QPainter.PixmapFragment") -> None: ...
         @staticmethod
         def create(pos: QtCore.QPointF, sourceRect: QtCore.QRectF, scaleX: float = ..., scaleY: float = ..., rotation: float = ..., opacity: float = ...) -> "QPainter.PixmapFragment": ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -4094,11 +4149,13 @@ class QPainterPath(PyQt6.sip.simplewrapper):
         LineToElement = ...  # type: QPainterPath.ElementType
         CurveToElement = ...  # type: QPainterPath.ElementType
         CurveToDataElement = ...  # type: QPainterPath.ElementType
+
     class Element(PyQt6.sip.simplewrapper):
 
         type = ...  # type: 'QPainterPath.ElementType'
         x = ...  # type: float
         y = ...  # type: float
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
@@ -4106,6 +4163,7 @@ class QPainterPath(PyQt6.sip.simplewrapper):
         def isCurveTo(self) -> bool: ...
         def isLineTo(self) -> bool: ...
         def isMoveTo(self) -> bool: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -4252,6 +4310,7 @@ class QPalette(PyQt6.sip.simplewrapper):
         PlaceholderText = ...  # type: QPalette.ColorRole
         NoRole = ...  # type: QPalette.ColorRole
         NColorRoles = ...  # type: QPalette.ColorRole
+
     class ColorGroup(enum.Enum):
         Active = ...  # type: QPalette.ColorGroup
         Disabled = ...  # type: QPalette.ColorGroup
@@ -4406,6 +4465,7 @@ class QPixelFormat(PyQt6.sip.simplewrapper):
         LittleEndian = ...  # type: QPixelFormat.ByteOrder
         BigEndian = ...  # type: QPixelFormat.ByteOrder
         CurrentSystemEndian = ...  # type: QPixelFormat.ByteOrder
+
     class YUVLayout(enum.Enum):
         YUV444 = ...  # type: QPixelFormat.YUVLayout
         YUV422 = ...  # type: QPixelFormat.YUVLayout
@@ -4423,20 +4483,25 @@ class QPixelFormat(PyQt6.sip.simplewrapper):
         IMC4 = ...  # type: QPixelFormat.YUVLayout
         Y8 = ...  # type: QPixelFormat.YUVLayout
         Y16 = ...  # type: QPixelFormat.YUVLayout
+
     class TypeInterpretation(enum.Enum):
         UnsignedInteger = ...  # type: QPixelFormat.TypeInterpretation
         UnsignedShort = ...  # type: QPixelFormat.TypeInterpretation
         UnsignedByte = ...  # type: QPixelFormat.TypeInterpretation
         FloatingPoint = ...  # type: QPixelFormat.TypeInterpretation
+
     class AlphaPremultiplied(enum.Enum):
         NotPremultiplied = ...  # type: QPixelFormat.AlphaPremultiplied
         Premultiplied = ...  # type: QPixelFormat.AlphaPremultiplied
+
     class AlphaPosition(enum.Enum):
         AtBeginning = ...  # type: QPixelFormat.AlphaPosition
         AtEnd = ...  # type: QPixelFormat.AlphaPosition
+
     class AlphaUsage(enum.Enum):
         UsesAlpha = ...  # type: QPixelFormat.AlphaUsage
         IgnoresAlpha = ...  # type: QPixelFormat.AlphaUsage
+
     class ColorModel(enum.Enum):
         RGB = ...  # type: QPixelFormat.ColorModel
         BGR = ...  # type: QPixelFormat.ColorModel
@@ -4484,6 +4549,7 @@ class QPixmapCache(PyQt6.sip.simplewrapper):
         def __init__(self, other: "QPixmapCache.Key") -> None: ...
         def isValid(self) -> bool: ...
         def swap(self, other: "QPixmapCache.Key") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -4775,6 +4841,7 @@ class QRawFont(PyQt6.sip.simplewrapper):
         SeparateAdvances = ...  # type: QRawFont.LayoutFlag
         KernedAdvances = ...  # type: QRawFont.LayoutFlag
         UseDesignMetrics = ...  # type: QRawFont.LayoutFlag
+
     class AntialiasingType(enum.Enum):
         PixelAntialiasing = ...  # type: QRawFont.AntialiasingType
         SubPixelAntialiasing = ...  # type: QRawFont.AntialiasingType
@@ -5016,6 +5083,7 @@ class QStandardItemModel(QtCore.QAbstractItemModel):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     @typing.overload
     def __init__(self, rows: int, columns: int, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     itemChanged: typing.ClassVar[QtCore.pyqtSignal]
     def roleNames(self) -> typing.Dict[int, QtCore.QByteArray]: ...
     def clearItemData(self, index: QtCore.QModelIndex) -> bool: ...
@@ -5260,16 +5328,19 @@ class QSurfaceFormat(PyQt6.sip.simplewrapper):
         NoProfile = ...  # type: QSurfaceFormat.OpenGLContextProfile
         CoreProfile = ...  # type: QSurfaceFormat.OpenGLContextProfile
         CompatibilityProfile = ...  # type: QSurfaceFormat.OpenGLContextProfile
+
     class RenderableType(enum.Enum):
         DefaultRenderableType = ...  # type: QSurfaceFormat.RenderableType
         OpenGL = ...  # type: QSurfaceFormat.RenderableType
         OpenGLES = ...  # type: QSurfaceFormat.RenderableType
         OpenVG = ...  # type: QSurfaceFormat.RenderableType
+
     class SwapBehavior(enum.Enum):
         DefaultSwapBehavior = ...  # type: QSurfaceFormat.SwapBehavior
         SingleBuffer = ...  # type: QSurfaceFormat.SwapBehavior
         DoubleBuffer = ...  # type: QSurfaceFormat.SwapBehavior
         TripleBuffer = ...  # type: QSurfaceFormat.SwapBehavior
+
     class FormatOption(enum.Flag):
         StereoBuffers = ...  # type: QSurfaceFormat.FormatOption
         DebugContext = ...  # type: QSurfaceFormat.FormatOption
@@ -5354,6 +5425,7 @@ class QTextCursor(PyQt6.sip.simplewrapper):
         LineUnderCursor = ...  # type: QTextCursor.SelectionType
         BlockUnderCursor = ...  # type: QTextCursor.SelectionType
         Document = ...  # type: QTextCursor.SelectionType
+
     class MoveOperation(enum.Enum):
         NoMove = ...  # type: QTextCursor.MoveOperation
         Start = ...  # type: QTextCursor.MoveOperation
@@ -5380,6 +5452,7 @@ class QTextCursor(PyQt6.sip.simplewrapper):
         PreviousCell = ...  # type: QTextCursor.MoveOperation
         NextRow = ...  # type: QTextCursor.MoveOperation
         PreviousRow = ...  # type: QTextCursor.MoveOperation
+
     class MoveMode(enum.Enum):
         MoveAnchor = ...  # type: QTextCursor.MoveMode
         KeepAnchor = ...  # type: QTextCursor.MoveMode
@@ -5481,10 +5554,12 @@ class QTextDocument(QtCore.QObject):
         MarkdownNoHTML = ...  # type: QTextDocument.MarkdownFeature
         MarkdownDialectCommonMark = ...  # type: QTextDocument.MarkdownFeature
         MarkdownDialectGitHub = ...  # type: QTextDocument.MarkdownFeature
+
     class Stacks(enum.Enum):
         UndoStack = ...  # type: QTextDocument.Stacks
         RedoStack = ...  # type: QTextDocument.Stacks
         UndoAndRedoStacks = ...  # type: QTextDocument.Stacks
+
     class ResourceType(enum.Enum):
         UnknownResource = ...  # type: QTextDocument.ResourceType
         HtmlResource = ...  # type: QTextDocument.ResourceType
@@ -5492,10 +5567,12 @@ class QTextDocument(QtCore.QObject):
         StyleSheetResource = ...  # type: QTextDocument.ResourceType
         MarkdownResource = ...  # type: QTextDocument.ResourceType
         UserResource = ...  # type: QTextDocument.ResourceType
+
     class FindFlag(enum.Flag):
         FindBackward = ...  # type: QTextDocument.FindFlag
         FindCaseSensitively = ...  # type: QTextDocument.FindFlag
         FindWholeWords = ...  # type: QTextDocument.FindFlag
+
     class MetaInformation(enum.Enum):
         DocumentTitle = ...  # type: QTextDocument.MetaInformation
         DocumentUrl = ...  # type: QTextDocument.MetaInformation
@@ -5780,16 +5857,19 @@ class QTextFormat(PyQt6.sip.simplewrapper):
         OldFontStretch = ...  # type: QTextFormat.Property
         OldTextUnderlineColor = ...  # type: QTextFormat.Property
         UserProperty = ...  # type: QTextFormat.Property
+
     class PageBreakFlag(enum.Flag):
         PageBreak_Auto = ...  # type: QTextFormat.PageBreakFlag
         PageBreak_AlwaysBefore = ...  # type: QTextFormat.PageBreakFlag
         PageBreak_AlwaysAfter = ...  # type: QTextFormat.PageBreakFlag
+
     class ObjectTypes(enum.IntEnum):
         NoObject = ...  # type: QTextFormat.ObjectTypes
         ImageObject = ...  # type: QTextFormat.ObjectTypes
         TableObject = ...  # type: QTextFormat.ObjectTypes
         TableCellObject = ...  # type: QTextFormat.ObjectTypes
         UserObject = ...  # type: QTextFormat.ObjectTypes
+
     class FormatType(enum.IntEnum):
         InvalidFormat = ...  # type: QTextFormat.FormatType
         BlockFormat = ...  # type: QTextFormat.FormatType
@@ -5859,6 +5939,7 @@ class QTextCharFormat(QTextFormat):
     class FontPropertiesInheritanceBehavior(enum.Enum):
         FontPropertiesSpecifiedOnly = ...  # type: QTextCharFormat.FontPropertiesInheritanceBehavior
         FontPropertiesAll = ...  # type: QTextCharFormat.FontPropertiesInheritanceBehavior
+
     class UnderlineStyle(enum.Enum):
         NoUnderline = ...  # type: QTextCharFormat.UnderlineStyle
         SingleUnderline = ...  # type: QTextCharFormat.UnderlineStyle
@@ -5868,6 +5949,7 @@ class QTextCharFormat(QTextFormat):
         DashDotDotLine = ...  # type: QTextCharFormat.UnderlineStyle
         WaveUnderline = ...  # type: QTextCharFormat.UnderlineStyle
         SpellCheckUnderline = ...  # type: QTextCharFormat.UnderlineStyle
+
     class VerticalAlignment(enum.Enum):
         AlignNormal = ...  # type: QTextCharFormat.VerticalAlignment
         AlignSuperScript = ...  # type: QTextCharFormat.VerticalAlignment
@@ -5953,6 +6035,7 @@ class QTextBlockFormat(QTextFormat):
         NoMarker = ...  # type: QTextBlockFormat.MarkerType
         Unchecked = ...  # type: QTextBlockFormat.MarkerType
         Checked = ...  # type: QTextBlockFormat.MarkerType
+
     class LineHeightTypes(enum.Enum):
         SingleHeight = ...  # type: QTextBlockFormat.LineHeightTypes
         ProportionalHeight = ...  # type: QTextBlockFormat.LineHeightTypes
@@ -6047,6 +6130,7 @@ class QTextFrameFormat(QTextFormat):
         BorderStyle_Ridge = ...  # type: QTextFrameFormat.BorderStyle
         BorderStyle_Inset = ...  # type: QTextFrameFormat.BorderStyle
         BorderStyle_Outset = ...  # type: QTextFrameFormat.BorderStyle
+
     class Position(enum.Enum):
         InFlow = ...  # type: QTextFrameFormat.Position
         FloatLeft = ...  # type: QTextFrameFormat.Position
@@ -6177,15 +6261,18 @@ class QTextLayout(PyQt6.sip.simplewrapper):
     class CursorMode(enum.Enum):
         SkipCharacters = ...  # type: QTextLayout.CursorMode
         SkipWords = ...  # type: QTextLayout.CursorMode
+
     class FormatRange(PyQt6.sip.simplewrapper):
 
         format = ...  # type: QTextCharFormat
         length = ...  # type: int
         start = ...  # type: int
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, a0: "QTextLayout.FormatRange") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6238,6 +6325,7 @@ class QTextLine(PyQt6.sip.simplewrapper):
     class CursorPosition(enum.Enum):
         CursorBetweenCharacters = ...  # type: QTextLine.CursorPosition
         CursorOnCharacter = ...  # type: QTextLine.CursorPosition
+
     class Edge(enum.Enum):
         Leading = ...  # type: QTextLine.Edge
         Trailing = ...  # type: QTextLine.Edge
@@ -6312,6 +6400,7 @@ class QTextFrame(QTextObject):
         def currentBlock(self) -> "QTextBlock": ...
         def currentFrame(self) -> "QTextFrame": ...
         def parentFrame(self) -> "QTextFrame": ...
+
     def __init__(self, doc: QTextDocument) -> None: ...
     def setFrameFormat(self, aformat: QTextFrameFormat) -> None: ...
     def end(self) -> "QTextFrame.iterator": ...
@@ -6332,6 +6421,7 @@ class QTextBlock(PyQt6.sip.wrapper):
         def __init__(self, a0: "QTextBlock.iterator") -> None: ...
         def atEnd(self) -> bool: ...
         def fragment(self) -> "QTextFragment": ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6394,6 +6484,7 @@ class QTextOption(PyQt6.sip.simplewrapper):
         RightTab = ...  # type: QTextOption.TabType
         CenterTab = ...  # type: QTextOption.TabType
         DelimiterTab = ...  # type: QTextOption.TabType
+
     class Flag(enum.Flag):
         IncludeTrailingSpaces = ...  # type: QTextOption.Flag
         ShowTabsAndSpaces = ...  # type: QTextOption.Flag
@@ -6401,23 +6492,27 @@ class QTextOption(PyQt6.sip.simplewrapper):
         AddSpaceForLineAndParagraphSeparators = ...  # type: QTextOption.Flag
         SuppressColors = ...  # type: QTextOption.Flag
         ShowDocumentTerminator = ...  # type: QTextOption.Flag
+
     class WrapMode(enum.Enum):
         NoWrap = ...  # type: QTextOption.WrapMode
         WordWrap = ...  # type: QTextOption.WrapMode
         ManualWrap = ...  # type: QTextOption.WrapMode
         WrapAnywhere = ...  # type: QTextOption.WrapMode
         WrapAtWordBoundaryOrAnywhere = ...  # type: QTextOption.WrapMode
+
     class Tab(PyQt6.sip.simplewrapper):
 
         delimiter = ...  # type: str
         position = ...  # type: float
         type = ...  # type: 'QTextOption.TabType'
+
         @typing.overload
         def __init__(self) -> None: ...
         @typing.overload
         def __init__(self, pos: float, tabType: "QTextOption.TabType", delim: str = ...) -> None: ...
         @typing.overload
         def __init__(self, a0: "QTextOption.Tab") -> None: ...
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
@@ -6568,6 +6663,7 @@ class QTransform(PyQt6.sip.simplewrapper):
 
 class QUndoGroup(QtCore.QObject):
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     undoTextChanged: typing.ClassVar[QtCore.pyqtSignal]
     redoTextChanged: typing.ClassVar[QtCore.pyqtSignal]
     indexChanged: typing.ClassVar[QtCore.pyqtSignal]
@@ -6648,6 +6744,7 @@ class QValidator(QtCore.QObject):
         Intermediate = ...  # type: QValidator.State
         Acceptable = ...  # type: QValidator.State
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     changed: typing.ClassVar[QtCore.pyqtSignal]
     def locale(self) -> QtCore.QLocale: ...
     def setLocale(self, locale: QtCore.QLocale) -> None: ...

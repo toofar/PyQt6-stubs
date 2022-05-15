@@ -45,10 +45,12 @@ class QOpenGLBuffer(PyQt6.sip.simplewrapper):
         RangeInvalidateBuffer = ...  # type: QOpenGLBuffer.RangeAccessFlag
         RangeFlushExplicit = ...  # type: QOpenGLBuffer.RangeAccessFlag
         RangeUnsynchronized = ...  # type: QOpenGLBuffer.RangeAccessFlag
+
     class Access(enum.Enum):
         ReadOnly = ...  # type: QOpenGLBuffer.Access
         WriteOnly = ...  # type: QOpenGLBuffer.Access
         ReadWrite = ...  # type: QOpenGLBuffer.Access
+
     class UsagePattern(enum.Enum):
         StreamDraw = ...  # type: QOpenGLBuffer.UsagePattern
         StreamRead = ...  # type: QOpenGLBuffer.UsagePattern
@@ -59,6 +61,7 @@ class QOpenGLBuffer(PyQt6.sip.simplewrapper):
         DynamicDraw = ...  # type: QOpenGLBuffer.UsagePattern
         DynamicRead = ...  # type: QOpenGLBuffer.UsagePattern
         DynamicCopy = ...  # type: QOpenGLBuffer.UsagePattern
+
     class Type(enum.Enum):
         VertexBuffer = ...  # type: QOpenGLBuffer.Type
         IndexBuffer = ...  # type: QOpenGLBuffer.Type
@@ -103,6 +106,7 @@ class QOpenGLDebugMessage(PyQt6.sip.simplewrapper):
         LowSeverity = ...  # type: QOpenGLDebugMessage.Severity
         NotificationSeverity = ...  # type: QOpenGLDebugMessage.Severity
         AnySeverity = ...  # type: QOpenGLDebugMessage.Severity
+
     class Type(enum.Flag):
         InvalidType = ...  # type: QOpenGLDebugMessage.Type
         ErrorType = ...  # type: QOpenGLDebugMessage.Type
@@ -115,6 +119,7 @@ class QOpenGLDebugMessage(PyQt6.sip.simplewrapper):
         GroupPushType = ...  # type: QOpenGLDebugMessage.Type
         GroupPopType = ...  # type: QOpenGLDebugMessage.Type
         AnyType = ...  # type: QOpenGLDebugMessage.Type
+
     class Source(enum.Flag):
         InvalidSource = ...  # type: QOpenGLDebugMessage.Source
         APISource = ...  # type: QOpenGLDebugMessage.Source
@@ -144,6 +149,7 @@ class QOpenGLDebugLogger(QtCore.QObject):
         AsynchronousLogging = ...  # type: QOpenGLDebugLogger.LoggingMode
         SynchronousLogging = ...  # type: QOpenGLDebugLogger.LoggingMode
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
+
     messageLogged: typing.ClassVar[QtCore.pyqtSignal]
     def stopLogging(self) -> None: ...
     def startLogging(self, loggingMode: "QOpenGLDebugLogger.LoggingMode" = ...) -> None: ...
@@ -169,6 +175,7 @@ class QOpenGLFramebufferObject(PyQt6.sip.simplewrapper):
         DontRestoreFramebufferBinding = ...  # type: QOpenGLFramebufferObject.FramebufferRestorePolicy
         RestoreFramebufferBindingToDefault = ...  # type: QOpenGLFramebufferObject.FramebufferRestorePolicy
         RestoreFrameBufferBinding = ...  # type: QOpenGLFramebufferObject.FramebufferRestorePolicy
+
     class Attachment(enum.Enum):
         NoAttachment = ...  # type: QOpenGLFramebufferObject.Attachment
         CombinedDepthStencil = ...  # type: QOpenGLFramebufferObject.Attachment
@@ -505,6 +512,7 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
     class ComparisonMode(enum.Enum):
         CompareRefToTexture = ...  # type: QOpenGLTexture.ComparisonMode
         CompareNone = ...  # type: QOpenGLTexture.ComparisonMode
+
     class ComparisonFunction(enum.Enum):
         CompareLessEqual = ...  # type: QOpenGLTexture.ComparisonFunction
         CompareGreaterEqual = ...  # type: QOpenGLTexture.ComparisonFunction
@@ -515,15 +523,18 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         CompareAlways = ...  # type: QOpenGLTexture.ComparisonFunction
         CompareNever = ...  # type: QOpenGLTexture.ComparisonFunction
         CompareNotEqual = ...  # type: QOpenGLTexture.ComparisonFunction
+
     class CoordinateDirection(enum.Enum):
         DirectionS = ...  # type: QOpenGLTexture.CoordinateDirection
         DirectionT = ...  # type: QOpenGLTexture.CoordinateDirection
         DirectionR = ...  # type: QOpenGLTexture.CoordinateDirection
+
     class WrapMode(enum.Enum):
         Repeat = ...  # type: QOpenGLTexture.WrapMode
         MirroredRepeat = ...  # type: QOpenGLTexture.WrapMode
         ClampToEdge = ...  # type: QOpenGLTexture.WrapMode
         ClampToBorder = ...  # type: QOpenGLTexture.WrapMode
+
     class Filter(enum.Enum):
         Nearest = ...  # type: QOpenGLTexture.Filter
         Linear = ...  # type: QOpenGLTexture.Filter
@@ -531,9 +542,11 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         NearestMipMapLinear = ...  # type: QOpenGLTexture.Filter
         LinearMipMapNearest = ...  # type: QOpenGLTexture.Filter
         LinearMipMapLinear = ...  # type: QOpenGLTexture.Filter
+
     class DepthStencilMode(enum.Enum):
         DepthMode = ...  # type: QOpenGLTexture.DepthStencilMode
         StencilMode = ...  # type: QOpenGLTexture.DepthStencilMode
+
     class SwizzleValue(enum.Enum):
         RedValue = ...  # type: QOpenGLTexture.SwizzleValue
         GreenValue = ...  # type: QOpenGLTexture.SwizzleValue
@@ -541,11 +554,13 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         AlphaValue = ...  # type: QOpenGLTexture.SwizzleValue
         ZeroValue = ...  # type: QOpenGLTexture.SwizzleValue
         OneValue = ...  # type: QOpenGLTexture.SwizzleValue
+
     class SwizzleComponent(enum.Enum):
         SwizzleRed = ...  # type: QOpenGLTexture.SwizzleComponent
         SwizzleGreen = ...  # type: QOpenGLTexture.SwizzleComponent
         SwizzleBlue = ...  # type: QOpenGLTexture.SwizzleComponent
         SwizzleAlpha = ...  # type: QOpenGLTexture.SwizzleComponent
+
     class Feature(enum.Flag):
         ImmutableStorage = ...  # type: QOpenGLTexture.Feature
         ImmutableMultisampleStorage = ...  # type: QOpenGLTexture.Feature
@@ -563,6 +578,7 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         Texture1D = ...  # type: QOpenGLTexture.Feature
         TextureComparisonOperators = ...  # type: QOpenGLTexture.Feature
         TextureMipMapLevel = ...  # type: QOpenGLTexture.Feature
+
     class PixelType(enum.Enum):
         NoPixelType = ...  # type: QOpenGLTexture.PixelType
         Int8 = ...  # type: QOpenGLTexture.PixelType
@@ -590,6 +606,7 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         UInt32_RGBA8_Rev = ...  # type: QOpenGLTexture.PixelType
         UInt32_D24S8 = ...  # type: QOpenGLTexture.PixelType
         Float32_D32_UInt32_S8_X24 = ...  # type: QOpenGLTexture.PixelType
+
     class PixelFormat(enum.Enum):
         NoSourceFormat = ...  # type: QOpenGLTexture.PixelFormat
         Red = ...  # type: QOpenGLTexture.PixelFormat
@@ -610,6 +627,7 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         Luminance = ...  # type: QOpenGLTexture.PixelFormat
         LuminanceAlpha = ...  # type: QOpenGLTexture.PixelFormat
         Stencil = ...  # type: QOpenGLTexture.PixelFormat
+
     class CubeMapFace(enum.Enum):
         CubeMapPositiveX = ...  # type: QOpenGLTexture.CubeMapFace
         CubeMapNegativeX = ...  # type: QOpenGLTexture.CubeMapFace
@@ -617,6 +635,7 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         CubeMapNegativeY = ...  # type: QOpenGLTexture.CubeMapFace
         CubeMapPositiveZ = ...  # type: QOpenGLTexture.CubeMapFace
         CubeMapNegativeZ = ...  # type: QOpenGLTexture.CubeMapFace
+
     class TextureFormat(enum.Enum):
         NoFormat = ...  # type: QOpenGLTexture.TextureFormat
         R8_UNorm = ...  # type: QOpenGLTexture.TextureFormat
@@ -744,12 +763,15 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         SRGB8_Alpha8_ASTC_10x10 = ...  # type: QOpenGLTexture.TextureFormat
         SRGB8_Alpha8_ASTC_12x10 = ...  # type: QOpenGLTexture.TextureFormat
         SRGB8_Alpha8_ASTC_12x12 = ...  # type: QOpenGLTexture.TextureFormat
+
     class TextureUnitReset(enum.Enum):
         ResetTextureUnit = ...  # type: QOpenGLTexture.TextureUnitReset
         DontResetTextureUnit = ...  # type: QOpenGLTexture.TextureUnitReset
+
     class MipMapGeneration(enum.Enum):
         GenerateMipMaps = ...  # type: QOpenGLTexture.MipMapGeneration
         DontGenerateMipMaps = ...  # type: QOpenGLTexture.MipMapGeneration
+
     class BindingTarget(enum.Enum):
         BindingTarget1D = ...  # type: QOpenGLTexture.BindingTarget
         BindingTarget1DArray = ...  # type: QOpenGLTexture.BindingTarget
@@ -762,6 +784,7 @@ class QOpenGLTexture(PyQt6.sip.simplewrapper):
         BindingTarget2DMultisampleArray = ...  # type: QOpenGLTexture.BindingTarget
         BindingTargetRectangle = ...  # type: QOpenGLTexture.BindingTarget
         BindingTargetBuffer = ...  # type: QOpenGLTexture.BindingTarget
+
     class Target(enum.Enum):
         Target1D = ...  # type: QOpenGLTexture.Target
         Target1DArray = ...  # type: QOpenGLTexture.Target
@@ -971,6 +994,7 @@ class QOpenGLVertexArrayObject(QtCore.QObject):
         def __enter__(self) -> typing.Any: ...
         def rebind(self) -> None: ...
         def release(self) -> None: ...
+
     def __init__(self, parent: typing.Optional[QtCore.QObject] = ...) -> None: ...
     def release(self) -> None: ...
     def bind(self) -> None: ...
